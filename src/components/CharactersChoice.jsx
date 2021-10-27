@@ -71,10 +71,66 @@ const basicRoster = [
       url: 'https://www.superherodb.com/pictures2/portraits/10/100/248.jpg',
     },
   },
+  {
+    name: 'Wonder Woman',
+    powerstats: {
+      intelligence: '88',
+      strength: '100',
+      speed: '79',
+      durability: '100',
+      power: '100',
+      combat: '100',
+    },
+    biography: {
+      placeofbirth: 'Themyscira',
+      alignment: 'good',
+    },
+    appearance: {
+      height: ['6', '183 cm'],
+      weight: ['165 lb', '74 kg'],
+    },
+    image: {
+      url: 'https://www.superherodb.com/pictures2/portraits/10/100/807.jpg',
+    },
+  },
+  {
+    name: 'Storm',
+    powerstats: {
+      intelligence: '75',
+      strength: '10',
+      speed: '47',
+      durability: '30',
+      power: '88',
+      combat: '75',
+    },
+    biography: {
+      placeofbirth: 'New York, New York',
+      alignment: 'good',
+    },
+    appearance: {
+      height: ['5.11', '180 cm'],
+      weight: ['127 lb', '57 kg'],
+    },
+    image: {
+      url: 'https://www.superherodb.com/pictures2/portraits/10/100/135.jpg',
+    },
+  },
 ];
 
+// const heroes = [
+//   18, 70, 78, 106, 107, 127, 140, 165, 208, 213, 228, 236, 238, 287, 289, 303, 309, 310, 341, 346, 381, 485, 540, 555, 574, 627, 638, 644, 650, 720,
+// ];
+
 function CharactersChoice() {
-  const [selectedCharacter, setSelectedCharacter] = useState(basicRoster[1]);
+  // const [heroList, setHeroList] = useState();
+  const [selectedCharacter, setSelectedCharacter] = useState(basicRoster[2]);
+
+  // useEffect(() => {
+  //   fetch('../../fakeApi.json')
+  //     .then((res) => res.json())
+  //     .then((data) => setHeroList(data[heroes.map()]));
+  // }, []);
+
   return (
     <div className={styles.choiceContener}>
       {selectedCharacter && <CharacterDetail character={selectedCharacter} />}

@@ -8,9 +8,10 @@ function CharactersList({ basicRoster, selected }) {
   return (
     <div className={styles.charactersList}>
       <ul className={styles.cards}>
-        {basicRoster.map((character, index) => {
-          return <CharacterCard key={index} character={character} handleSelected={selected} />;
-        })}
+        {basicRoster &&
+          basicRoster.map((character, index) => {
+            return <CharacterCard key={index} character={character} handleSelected={selected} />;
+          })}
       </ul>
       <div className={styles.actions}>
         <button className={styles.prev}>Prev</button>
