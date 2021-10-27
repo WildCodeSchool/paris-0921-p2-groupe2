@@ -6,7 +6,7 @@ import DisplayFight from './components/DisplayFight';
 
 function App() {
   const heroA = '18';
-  const heroB = '236';
+  const heroB = '309';
 
   return (
     <>
