@@ -2,6 +2,7 @@ import React from 'react';
 
 import logo from './logo.png';
 import './App.css';
+import Fight from './components/Fight';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         className="rsw-item"
         style={{
           paddingBottom: '2rem',
-        }}>
+        }}
+      >
         <img src={logo} width="20%" alt="WCS logo" />
       </div>
       <div className="rsw-item">
@@ -21,6 +23,7 @@ function App() {
           Start in the <code>App.jsx</code> component !
         </p>
       </div>
+      <Fight />
     </main>
   );
 }
