@@ -2,11 +2,17 @@ import React from 'react';
 
 import styles from './CharacterCard.module.css';
 
-function CharacterCard(props) {
+function CharacterCard({ handleSelected, character }) {
+  const handleClick = () => {
+    handleSelected(character);
+  };
+
   return (
     <li className={styles.charactersCard}>
-      <img src={props.image.url} alt={props.name} className={styles.cardImage} />
-      <p className={styles.cardName}>{props.name}</p>
+      <img src={character.image.url} alt={character.name} className={styles.cardImage} />
+      <button className={styles.button} onClick={handleClick}>
+        {character.name}
+      </button>
     </li>
   );
 }

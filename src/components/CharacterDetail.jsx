@@ -2,24 +2,24 @@ import React from 'react';
 
 import styles from './CharacterDetail.module.css';
 
-function CharacterDetail() {
+function CharacterDetail({ character }) {
   return (
     <div className={styles.charactersCard}>
-      <img className={styles.detailImage} src="https://www.superherodb.com/pictures2/portraits/10/100/10449.jpg" alt="Superhero" />
+      <img className={styles.detailImage} src={character.image.url} alt={character.name} />
       <div className={styles.detailStats}>
-        <h2>Character</h2>
+        <h2>{character.name}</h2>
         <h3>Power stats</h3>
-        <p>intelligence : 50</p>
-        <p>strength : 28</p>
-        <p>speed : 42</p>
-        <p>durability : 90</p>
-        <p>power : 57</p>
-        <p>combat : 60</p>
+        <p>intelligence : {character.powerstats.intelligence}</p>
+        <p>strength : {character.powerstats.strength}</p>
+        <p>speed : {character.powerstats.speed}</p>
+        <p>durability : {character.powerstats.durability}</p>
+        <p>power : {character.powerstats.power}</p>
+        <p>combat : {character.powerstats.combat}</p>
         <h3>Other facts</h3>
-        <p>Place of birth : </p>
-        <p>Alignement : </p>
-        <p>Height : </p>
-        <p>Weight : </p>
+        <p>Born in : {character.biography.placeofbirth}</p>
+        <p>Alignement : {character.biography.alignment}</p>
+        <p>Height : {character.appearance.height[2]}</p>
+        <p>Weight : {character.appearance.weight[2]}</p>
       </div>
     </div>
   );
