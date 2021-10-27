@@ -1,0 +1,30 @@
+.charactersCard {
+  /* list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 14rem;
+	height: 18rem;
+	text-align: center;
+	line-height: 18rem;
+	font-size: 2rem;
+	font-family: sans-serif;
+	background-color: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 0.8rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20vh;
+}
+
+.cardImage {
+  height: 80%;
+  object-fit: cover;
+}
+
+.cardName {
+  height: 20%;
+  margin: 0;
+}
