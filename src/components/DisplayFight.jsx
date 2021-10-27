@@ -1,7 +1,10 @@
 import './DisplayFight.css';
 import React, { useEffect, useState } from 'react';
 
+import CombatAlgorithm from '../algorithms/CombatAlgorithm';
+
 import FighterCard from './FighterCard';
+import FigthtingReport from './FightingReport';
 import Fighter from '../algorithms/CharacterClass';
 
 export default function DisplayFight(props) {
@@ -23,21 +26,20 @@ export default function DisplayFight(props) {
       .then((data) => setCharacterB(data[heroB]));
   }, []);
 
-  let FighterA, FighterB;
-  if (characterA != '') {
+  let FighterA, FighterB, report;
+  if (characterA != '' && characterB != '') {
     FighterA = new Fighter(characterA);
-  }
-  if (characterB != '') {
     FighterB = new Fighter(characterB);
+    report = CombatAlgorithm(FighterA, FighterB);
   }
 
   return (
     <>
-      <h2 className="fight-title">FIGHT!</h2>
       <div className="heroes-display">
         {FighterA && <FighterCard {...FighterA} />}
         {FighterB && <FighterCard {...FighterB} />}
       </div>
+      {report && <FigthtingReport report={report} />}
     </>
   );
 }
