@@ -5,6 +5,7 @@
   "author": "Basile V. <basile64.v@gmail.com>",
   "license": "MIT",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
@@ -21,6 +22,8 @@
     "since 2017-06"
   ],
   "dependencies": {
+    "axios": "^0.24.0",
+    "http-proxy-middleware": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
