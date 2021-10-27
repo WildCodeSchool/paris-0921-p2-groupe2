@@ -11,7 +11,6 @@ export default function DisplayFight(props) {
   const [characterA, setCharacterA] = useState('');
   const [characterB, setCharacterB] = useState('');
 
-  // eslint-disable-next-line react/prop-types
   const { heroA, heroB } = props;
 
   useEffect(() => {
