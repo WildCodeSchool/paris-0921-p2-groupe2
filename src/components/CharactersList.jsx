@@ -4,7 +4,13 @@ import CharacterCard from './CharacterCard';
 
 import styles from './CharactersList.module.css';
 
-function CharactersList({ basicRoster, selected }) {
+function CharactersList({ heroesList, selected }) {
+  let basicRoster = [];
+
+  for (let key in heroesList) {
+    basicRoster.push(heroesList[key]);
+  }
+
   return (
     <div className={styles.charactersList}>
       <ul className={styles.cards}>

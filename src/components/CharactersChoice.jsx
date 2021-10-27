@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CharacterDetail from './CharacterDetail';
 import CharactersList from './CharactersList';
 
@@ -122,19 +122,19 @@ const basicRoster = [
 // ];
 
 function CharactersChoice() {
-  // const [heroList, setHeroList] = useState();
   const [selectedCharacter, setSelectedCharacter] = useState(basicRoster[2]);
+  const [heroesList, setHeroesList] = useState('');
 
-  // useEffect(() => {
-  //   fetch('../../fakeApi.json')
-  //     .then((res) => res.json())
-  //     .then((data) => setHeroList(data[heroes.map()]));
-  // }, []);
+  useEffect(() => {
+    fetch('../../fakeApi.json')
+      .then((res) => res.json())
+      .then((data) => setHeroesList(data));
+  }, []);
 
   return (
     <div className={styles.choiceContener}>
       {selectedCharacter && <CharacterDetail character={selectedCharacter} />}
-      <CharactersList basicRoster={basicRoster} selected={setSelectedCharacter} />
+      {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
     </div>
   );
 }
