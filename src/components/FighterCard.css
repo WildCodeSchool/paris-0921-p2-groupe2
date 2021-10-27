@@ -1,0 +1,13 @@
+.hero-card {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  text-align: center;
+}
+
+.hero-picture {
+  height: 320px;
+  width: 240px;
+}

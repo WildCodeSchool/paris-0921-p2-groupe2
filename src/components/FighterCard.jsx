@@ -2,10 +2,11 @@ import './FighterCard.css';
 
 import React from 'react';
 
-export default function FighterCard() {
+export default function FighterCard(hero) {
   return (
-    <>
-      <h3>The hero !</h3>
-    </>
+    <div className="hero-card">
+      <h3>{hero.name}</h3>
+      <img src={hero.picture} alt={hero.name} className="hero-picture" />
+    </div>
   );
 }
