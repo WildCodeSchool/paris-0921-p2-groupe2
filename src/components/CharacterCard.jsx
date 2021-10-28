@@ -9,10 +9,10 @@ function CharacterCard({ handleSelected, character }) {
 
   return (
     <li className={styles.charactersCard}>
-      <img src={character.image.url} alt={character.name} className={styles.cardImage} />
-      <button className={styles.button} onClick={handleClick}>
-        {character.name}
-      </button>
+      <div role="button" tabIndex={0} onClick={handleClick} onKeyDown={handleClick}>
+        <img src={character.image.url} alt={character.name} className={styles.cardImage} />
+        <button className={styles.button}>{character.name}</button>
+      </div>
     </li>
   );
 }
