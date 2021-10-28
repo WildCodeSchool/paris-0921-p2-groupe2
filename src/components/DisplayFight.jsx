@@ -34,7 +34,7 @@ export default function DisplayFight(props) {
   }
 
   return (
-    <>
+    <div className="fighting-component">
       <div className="heroes-display">
         {FighterA && <FighterCard {...FighterA} />}
         {FighterB && <FighterCard {...FighterB} />}
@@ -49,6 +49,6 @@ export default function DisplayFight(props) {
           <button className="endgame-choice-button">Main menu</button>
         </Link>
       </div>
-    </>
+    </div>
   );
 }

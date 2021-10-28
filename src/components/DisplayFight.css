@@ -1,5 +1,9 @@
 @import '../Fonts.css';
 
+.fighting-component {
+  margin-top: 19vh;
+}
+
 .fight-title {
   text-align: center;
 }
