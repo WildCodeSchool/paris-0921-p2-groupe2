@@ -3,12 +3,18 @@
   height: 30vh;
   display: flex;
   flex-direction: column;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  left: 5vw;
 }
 
 .cards {
   display: flex;
   justify-content: space-around;
   padding: 0;
+  height: 90%;
+  width: 900%;
+  margin: 2vw;
 }
 
 .actions {
@@ -27,3 +33,9 @@
 
 /* button:hover {
 } */
+
+@media screen and (min-width: 768px) {
+  .cards {
+    width: 400%;
+  }
+}

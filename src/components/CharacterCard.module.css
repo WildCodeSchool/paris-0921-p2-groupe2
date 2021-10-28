@@ -4,11 +4,13 @@
   display: flex;
   flex-direction: column;
   height: 20vh;
+  width: 27vw;
   margin: 3vh 0;
 }
 
 .cardImage {
   height: 77%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -21,4 +23,11 @@
   height: 23%;
   margin: 0;
   width: 100%;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .charactersCard {
+    width: 10vw;
+  }
 }

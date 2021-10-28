@@ -17,7 +17,7 @@ function CharacterDetail({ character }) {
           <p>power : {character.powerstats.power}</p>
           <p>combat : {character.powerstats.combat}</p>
           <h3>Other facts</h3>
-          <p>Born in : {character.biography.placeofbirth}</p>
+          {/* <p>Born in : {character.biography.placeofbirth}</p> */}
           <p>Alignement : {character.biography.alignment}</p>
           {/* <p>Height : {character.appearance.height[2]}</p>
           <p>Weight : {character.appearance.weight[2]}</p> */}

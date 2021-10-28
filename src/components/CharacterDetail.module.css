@@ -42,3 +42,19 @@
   margin: 0;
   width: 30vw;
 }
+
+@media screen and (min-width: 768px) {
+  .detailImage {
+    width: 20vw;
+    margin: 0 2vw;
+  }
+  .charactersCard {
+    justify-content: center;
+  }
+  .detailStats button {
+    width: 15vw;
+  }
+  .detailStats {
+    width: 20vw;
+  }
+}
