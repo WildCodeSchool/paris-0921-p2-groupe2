@@ -1,13 +1,22 @@
 import React from 'react';
-import './App.css';
-import Header from './components/Header';
+
+import CharactersChoice from './components/CharactersChoice';
+import Fight from './components/Fight';
 import Footer from './components/Footer';
+import Header from './components/Header';
+
+import styles from './App.css';
 
 function App() {
   return (
-    <main className="mainContainer">
+    <main className={styles.mainContainer}>
       <Header />
-      <div className="bodyContainer"></div>
+      <div className="bodyContainer">
+        <Switch>
+        <Route path="/characterschoice" component={CharactersChoice} />
+        <Route path="/fight" component={Fight} />
+        </Switch>
+      </div>
       <Footer />
     </main>
   );
