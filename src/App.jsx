@@ -6,7 +6,7 @@ import styles from './App.module.css';
 import Button from './components/Button';
 import CharactersChoice from './components/CharactersChoice';
 import DisplayFight from './components/DisplayFight';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import LaunchFightButton from './components/LaunchFightButton';
 
@@ -37,7 +37,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

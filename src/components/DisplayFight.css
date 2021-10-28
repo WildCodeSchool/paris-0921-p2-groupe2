@@ -18,7 +18,7 @@
 .endgame-choice {
   display: flex;
   justify-content: space-around;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 }
 
 .endgame-choice-button {
