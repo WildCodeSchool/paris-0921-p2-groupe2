@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './CharacterDetail.module.css';
 
-function CharacterDetail({ character }) {
+function CharacterDetail({ character, handleChange }) {
   return (
     <div className={styles.charactersCard}>
       <img className={styles.detailImage} src={character.image.url} alt={character.name} />
@@ -22,7 +22,9 @@ function CharacterDetail({ character }) {
           {/* <p>Height : {character.appearance.height[2]}</p>
           <p>Weight : {character.appearance.weight[2]}</p> */}
         </div>
-        <button>Fight !</button>
+        <button onClick={handleChange} value={character.id}>
+          Fight !
+        </button>
       </div>
     </div>
   );
