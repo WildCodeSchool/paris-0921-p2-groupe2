@@ -23,7 +23,7 @@ function CharacterDetail({ character, handleChange }) {
           <p>Weight : {character.appearance.weight[2]}</p> */}
         </div>
         <button onClick={handleChange} value={character.id}>
-          Fight !
+          Choose
         </button>
       </div>
     </div>
