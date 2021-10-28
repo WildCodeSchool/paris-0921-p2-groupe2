@@ -25,6 +25,7 @@
   background-color: var(--dark-grey);
   border-radius: 25px;
   color: var(--yellow);
+  cursor: pointer;
   font-family: var(--second-font-family);
   font-size: large;
   font-weight: bold;
