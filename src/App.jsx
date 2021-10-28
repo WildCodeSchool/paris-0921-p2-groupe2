@@ -15,8 +15,6 @@ function App() {
   const [heroB, setHeroB] = useState('');
 
   function selectFighter(e) {
-    // console.log('Selecting fighter');
-    // console.log(e.target.value);
     if (heroA == '') {
       setHeroA(e.target.value);
     } else if (heroB == '') {
