@@ -1,0 +1,32 @@
+/*
+Charte graphique - couleurs
+#D6D6D6 GRIS CLAIRE
+#FFEE32 JAUNE CLAIR
+#FFD100 JAUNE
+#202020 NOIR
+#333533 GRIS FONCE
+*/
+body {
+  margin: 0px;
+}
+
+.height-100vh {
+  height: 100vh;
+}
+
+.center-aligned {
+  display: box;
+  display: flex;
+  box-align: center;
+  align-items: center;
+  box-pack: center;
+  justify-content: center;
+}
+
+.background-image {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+}
