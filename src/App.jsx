@@ -1,18 +1,23 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
 
-import Fight from './components/Fight';
 import CharactersChoice from './components/CharactersChoice';
+import Fight from './components/Fight';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 import styles from './App.css';
 
 function App() {
   return (
-    <main className={styles.rswContainer}>
-      <Switch>
+    <main className={styles.mainContainer}>
+      <Header />
+      <div className="bodyContainer">
+        <Switch>
         <Route path="/characterschoice" component={CharactersChoice} />
         <Route path="/fight" component={Fight} />
-      </Switch>
+        </Switch>
+      </div>
+      <Footer />
     </main>
   );
 }
