@@ -1,20 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './LaunchFightButton.css';
 
-export default function LaunchFightButton(props) {
-  const { heroA, heroB } = props;
-  // console.log(heroA);
-  // console.log(heroB);
-
+export default function LaunchFightButton() {
   return (
     <>
-      <p>{heroA}</p>
-      <p>{heroB}</p>
       <Link to="/fight">
-        <button>Launch fight</button>
+        <button className="launch-fight-button">FIGHT</button>
       </Link>
     </>
   );
 }
-
-// {secondSelectedFighter && <DisplayFight heroA={firstSelectedFighter} heroB={secondSelectedFighter} />}
