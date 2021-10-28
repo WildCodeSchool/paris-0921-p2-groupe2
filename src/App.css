@@ -1,9 +1,0 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Kumar+One&display=swap');
-
-.rswContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}

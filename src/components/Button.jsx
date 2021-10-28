@@ -5,8 +5,7 @@ import styles from './button.module.css';
 
 function Button() {
   return (
-    <Link to="/fight">
-      {/* <Link to="/characterschoice"> */}
+    <Link to="/characterschoice">
       <button className={styles.gameLaunch}>Ready to fight ?</button>
     </Link>
   );

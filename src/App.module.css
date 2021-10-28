@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Kumar+One&display=swap');
+
+.mainContainer {
+  display: grid;
+  grid-template-rows: 15vh 80vh 5vh;
+  background-color: #d6d6d6;
+  grid-template-areas: 'header' 'bodyContainer' 'footer';
+  margin: 0;
+}
+
+Footer {
+  grid-area: footer;
+}
+
+.bodyContainer {
+  grid-area: bodyContainer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+Header {
+  grid-area: header;
+}

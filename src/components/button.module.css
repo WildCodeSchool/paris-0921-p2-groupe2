@@ -1,7 +1,7 @@
 .gameLaunch {
   height: 40vh;
   width: 60vw;
-  background-image: url('../assets/Fight-Image1.jpg');
+  background-image: url('./../assets/Fight-Image1.jpg');
   background-size: cover;
   background-position: center;
   color: #202020;
