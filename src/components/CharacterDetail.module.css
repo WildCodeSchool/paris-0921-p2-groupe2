@@ -1,0 +1,60 @@
+.charactersCard {
+  color: #202020;
+  display: flex;
+  font-family: 'Chakra Petch', sans-serif;
+  justify-content: space-between;
+  height: 60%;
+  width: 90%;
+}
+.detailImage {
+  height: 100%;
+  object-fit: cover;
+  width: 55%;
+}
+.detailStats {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+.detailStats p {
+  font-size: 0.7em;
+  margin: 0;
+}
+.detailStats h2 {
+  font-family: 'Kumar One', cursive;
+  font-size: 1.2em;
+  margin: 0 0 1vh 0;
+}
+.detailStats h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.detailStats button {
+  background-color: #202020;
+  border: none;
+  color: #ffd100;
+  font-family: 'Kumar One', cursive;
+  font-size: 1em;
+  height: 5vh;
+  margin: 0;
+  width: 30vw;
+}
+
+@media screen and (min-width: 768px) {
+  .detailImage {
+    width: 20vw;
+    margin: 0 2vw;
+  }
+  .charactersCard {
+    justify-content: center;
+  }
+  .detailStats button {
+    width: 15vw;
+  }
+  .detailStats {
+    width: 20vw;
+  }
+}

@@ -1,29 +1,18 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import logo from './logo.png';
-import './App.css';
 import Fight from './components/Fight';
+import CharactersChoice from './components/CharactersChoice';
+
+import styles from './App.css';
 
 function App() {
   return (
-    <main className="rsw-container">
-      <div
-        className="rsw-item"
-        style={{
-          paddingBottom: '2rem',
-        }}
-      >
-        <img src={logo} width="20%" alt="WCS logo" />
-      </div>
-      <div className="rsw-item">
-        <p>Welcome to your fresh, lightweight, React App ! &#127752;</p>
-      </div>
-      <div className="rsw-item">
-        <p>
-          Start in the <code>App.jsx</code> component !
-        </p>
-      </div>
-      <Fight />
+    <main className={styles.rswContainer}>
+      <Switch>
+        <Route path="/characterschoice" component={CharactersChoice} />
+        <Route path="/fight" component={Fight} />
+      </Switch>
     </main>
   );
 }
