@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
 import CharactersList from './CharactersList';
-// import DisplayFight from './DisplayFight';
 
 import styles from './CharactersChoice.module.css';
-import LaunchFightButton from './LaunchFightButton';
 
 const defaultCharacter = {
   name: 'Black Widow',
@@ -31,22 +28,9 @@ const defaultCharacter = {
   },
 };
 
-function CharactersChoice() {
+function CharactersChoice({ handleChange }) {
   const [selectedCharacter, setSelectedCharacter] = useState(defaultCharacter);
   const [heroesList, setHeroesList] = useState('');
-  const [firstSelectedFighter, setFirstSelectedFighter] = useState('');
-  const [secondSelectedFighter, setSecondSelectedFighter] = useState('');
-
-  function selectFighter(e) {
-    // console.log('Selecting fighter')
-    if (firstSelectedFighter == '') {
-      setFirstSelectedFighter(e.target.value);
-    } else if (secondSelectedFighter == '') {
-      setSecondSelectedFighter(e.target.value);
-    }
-  }
-  // console.log('First fighter :', firstSelectedFighter);
-  // console.log('Second fighter :', secondSelectedFighter);
 
   useEffect(() => {
     fetch('../../fakeApi.json')
@@ -56,10 +40,8 @@ function CharactersChoice() {
 
   return (
     <div className={styles.choiceContener}>
-      {selectedCharacter && <CharacterDetail character={selectedCharacter} handleChange={selectFighter} />}
+      {selectedCharacter && <CharacterDetail character={selectedCharacter} handleChange={handleChange} />}
       {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
-      {secondSelectedFighter && <LaunchFightButton heroA={firstSelectedFighter} heroB={secondSelectedFighter} />}
-      {/* {secondSelectedFighter && <DisplayFight heroA={firstSelectedFighter} heroB={secondSelectedFighter} />} */}
     </div>
   );
 }
