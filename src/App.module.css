@@ -12,6 +12,14 @@ Footer {
   grid-area: footer;
 }
 
+.bodyContainer {
+  grid-area: bodyContainer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 Header {
   grid-area: header;
 }

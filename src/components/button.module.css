@@ -1,0 +1,11 @@
+.gameLaunch {
+  height: 40vh;
+  width: 60vw;
+  background-image: url('./../assets/Fight-Image1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #202020;
+  text-shadow: 0px 0px 6px wheat;
+  font-family: 'Kumar One', cursive;
+  font-size: 3.4vh;
+}
