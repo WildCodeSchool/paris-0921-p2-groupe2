@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CharacterDetail from './CharacterDetail';
-import CharactersList from './CharactersList';
+import CharacterDetail from '../../components/Character detail/CharacterDetail';
+import CharactersList from '../../components/Characters list/CharactersList';
 
 import styles from './CharactersChoice.module.css';
 
