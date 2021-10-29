@@ -10,27 +10,46 @@ Charte graphique - couleurs
  font-family: 'Chakra Petch', sans-serif;
 */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Kumar+One&display=swap');
-.menu-title, .inner-menu-title{
+html body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  font-family: 'Chakra petch', sans-serif;
+  color: #ffd100;
+  background-color: #333533;
+  text-align: center;
+}
+
+.menuMode-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-title,
+.inner-menu-title {
   font-family: 'Kumar one', sans-serif;
-  color:#FFD100;
+  color: #ffd100;
+  background-color: #333533;
+  text-align: center;
+}
+
+.inner-menu-title {
+  font-family: 'Kumar one', sans-serif;
+  color: #ffd100;
   background-color: #333533;
 }
 
-.inner-menu-title{
-  font-family: 'Kumar one', sans-serif;
-  color:#FFD100;
-  background-color: #333533;
-}
-
-.inner-menu-desc{
+.inner-menu-desc {
   font-family: chakra petch;
   font-weight: bold;
   font-style: italic;
-  color: #FFD100;
+  color: #ffd100;
   background-color: #333533;
   opacity: 0.7;
+  text-align: end;
 }
 
 @media screen and (min-width: 768px) {
-
 }

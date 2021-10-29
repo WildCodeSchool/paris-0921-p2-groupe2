@@ -6,9 +6,12 @@ import './MenuModes.css';
 
 function MenuModes() {
   return (
-    <div>
+    <div className="menuMode-container">
+      <button>Challenge</button>
       <Challenge />
+      <button>Survie</button>
       <Survie />
+      <button>Mode Libre</button>
       <ModeLibre />
     </div>
   );
