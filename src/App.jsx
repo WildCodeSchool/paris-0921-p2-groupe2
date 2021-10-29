@@ -3,12 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 
 import styles from './App.module.css';
 
-import Button from './components/Button';
-import CharactersChoice from './components/CharactersChoice';
-import DisplayFight from './components/DisplayFight';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import LaunchFightButton from './components/LaunchFightButton';
+import Button from './Screens/Home/Button';
+import CharactersChoice from './Screens/Character Choice/CharactersChoice';
+import DisplayFight from './Screens/Fighting results/DisplayFight';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 
 function App() {
   const [heroA, setHeroA] = useState('');
