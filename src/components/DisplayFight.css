@@ -2,6 +2,9 @@
 
 .fighting-component {
   margin-top: 19vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .fight-title {
