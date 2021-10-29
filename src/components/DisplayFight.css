@@ -1,0 +1,33 @@
+@import '../Fonts.css';
+
+.fighting-component {
+  margin-top: 19vh;
+}
+
+.fight-title {
+  text-align: center;
+}
+
+.heroes-display {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 50vw;
+}
+
+.endgame-choice {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto 20px auto;
+}
+
+.endgame-choice-button {
+  background-color: var(--dark-grey);
+  border-radius: 25px;
+  color: var(--yellow);
+  cursor: pointer;
+  font-family: var(--second-font-family);
+  font-size: large;
+  font-weight: bold;
+  padding: 20px;
+}

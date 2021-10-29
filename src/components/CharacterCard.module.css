@@ -9,21 +9,9 @@
 }
 
 .cardImage {
-  height: 77%;
   width: 100%;
   object-fit: cover;
-}
-
-.button {
-  background-color: #202020;
-  border: none;
-  color: #ffd100;
-  font-family: 'Chakra Petch', sans-serif;
-  font-size: 0.7em;
-  height: 23%;
-  margin: 0;
-  width: 100%;
-  border: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

@@ -1,10 +1,14 @@
 .footer {
   color: #ffd100;
   background-color: #202020;
-  display: flex;
   align-items: center;
   font-family: 'Chakra Petch', sans-serif;
+  position: fixed;
+  height: 20px;
+  width: 100vw;
+  bottom: 0;
 }
+
 .hfooter {
   text-align: center;
   margin: auto;
