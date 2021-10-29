@@ -11,7 +11,6 @@ function CharacterCard({ handleSelected, character }) {
     <li className={styles.charactersCard}>
       <div role="button" tabIndex={0} onClick={handleClick} onKeyDown={handleClick}>
         <img src={character.image.url} alt={character.name} className={styles.cardImage} />
-        <button className={styles.button}>{character.name}</button>
       </div>
     </li>
   );
