@@ -1,6 +1,6 @@
-import './FightingReport.css';
-
 import React from 'react';
+
+import styles from './FightingReport.module.css';
 
 export default function FigthtingReport(props) {
   const { report } = props;
@@ -9,16 +9,16 @@ export default function FigthtingReport(props) {
   const result = report.pop();
 
   return (
-    <div className="report-container">
-      <div className="fighting-announcement">{announcement}</div>
+    <div className={styles.reportContainer}>
+      <div className={styles.fightingAnnouncement}>{announcement}</div>
       {report.map((x, i) => {
         return (
-          <div className="fighting-action" key={i}>
+          <div className={styles.fightingAction} key={i}>
             {x}
           </div>
         );
       })}
-      <div className="fighting-result">{result}</div>
+      <div className={styles.fightingResult}>{result}</div>
     </div>
   );
 }

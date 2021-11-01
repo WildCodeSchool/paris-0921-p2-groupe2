@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './LaunchFightButton.css';
+import styles from './LaunchFightButton.module.css';
 
 export default function LaunchFightButton() {
   return (
     <>
       <Link to="/fight">
-        <button className="launch-fight-button">FIGHT</button>
+        <button className={styles.launchFightButton}>FIGHT</button>
       </Link>
     </>
   );

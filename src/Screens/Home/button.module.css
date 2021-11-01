@@ -2,12 +2,12 @@
   background-image: url('../../assets/Fight-Image1.jpg');
   background-position: center;
   background-size: cover;
-  color: #202020;
+  color: var(--black);
   cursor: pointer;
+  font-family: var(--main-font-family);
   font-size: 3.4vh;
-  font-family: 'Kumar One', cursive;
   height: 40vh;
+  margin-top: 17vh;
   text-shadow: 0px 0px 6px wheat;
   width: 60vw;
-  margin-top: 17vh;
 }

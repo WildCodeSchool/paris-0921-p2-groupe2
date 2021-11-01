@@ -1,17 +1,17 @@
 .charactersCard {
   align-items: center;
-  color: #ffd100;
+  color: var(--yellow);
   display: flex;
   flex-direction: column;
   height: 20vh;
-  width: 27vw;
   margin: 3vh 0;
+  width: 27vw;
 }
 
 .cardImage {
-  width: 100%;
-  object-fit: cover;
   cursor: pointer;
+  object-fit: cover;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
