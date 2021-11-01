@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import MenuModes from './components/MenuModes';
+import Menu3Modes from './Screens/Menu3Modes';
 function App() {
   return (
     <main className="Menu-menu">
-      <MenuModes />
+      <Menu3Modes />;
     </main>
   );
 }
