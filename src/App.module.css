@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Kumar+One&display=swap');
 
 .mainContainer {
+  background-color: var(--light-grey);
   display: grid;
   grid-template-rows: 15vh 80vh 5vh;
-  background-color: #d6d6d6;
   grid-template-areas: 'header' 'bodyContainer' 'footer';
   margin: 0;
 }
@@ -13,11 +13,12 @@ Footer {
 }
 
 .bodyContainer {
-  grid-area: bodyContainer;
+  align-items: center;
+  background-color: var(--light-grey);
   display: flex;
   flex-direction: column;
+  grid-area: bodyContainer;
   justify-content: flex-start;
-  align-items: center;
 }
 
 Header {

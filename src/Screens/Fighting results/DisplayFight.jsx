@@ -1,9 +1,9 @@
-import './DisplayFight.css';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import CombatAlgorithm from '../../algorithms/CombatAlgorithm';
 
+import styles from './DisplayFight.module.css';
 import FighterCard from '../../components/Fighter card/FighterCard';
 import FigthtingReport from '../../components/Figthing Report/FightingReport';
 import Fighter from '../../algorithms/CharacterClass';
@@ -34,19 +34,19 @@ export default function DisplayFight(props) {
   }
 
   return (
-    <div className="fighting-component">
-      <div className="heroes-display">
+    <div className={styles.fightingComponent}>
+      <div className={styles.heroesDisplay}>
         {FighterA && <FighterCard {...FighterA} />}
         {FighterB && <FighterCard {...FighterB} />}
       </div>
       {report && <FigthtingReport report={report} />}
 
-      <div className="endgame-choice">
+      <div className={styles.endgameChoice}>
         <Link to="/characterschoice">
-          <button className="endgame-choice-button">Another battle</button>
+          <button>Another battle</button>
         </Link>
         <Link to="/">
-          <button className="endgame-choice-button">Main menu</button>
+          <button>Main menu</button>
         </Link>
       </div>
     </div>

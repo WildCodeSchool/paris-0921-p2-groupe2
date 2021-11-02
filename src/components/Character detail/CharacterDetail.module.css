@@ -1,7 +1,7 @@
 .charactersCard {
-  color: #202020;
+  color: var(--black);
   display: flex;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: var(--second-font-family);
   justify-content: space-between;
   height: 60%;
   width: 90%;
@@ -23,7 +23,7 @@
   margin: 0;
 }
 .detailStats h2 {
-  font-family: 'Kumar One', cursive;
+  font-family: var(--main-font-family);
   font-size: 1.2em;
   margin: 0 0 1vh 0;
 }
@@ -33,11 +33,12 @@
 }
 
 .detailStats button {
-  background-color: #202020;
+  background-color: var(--black);
+  box-shadow: 2px 2px 10px var(--dark-grey);
   border: none;
-  color: #ffd100;
+  color: var(--yellow);
   cursor: pointer;
-  font-family: 'Kumar One', cursive;
+  font-family: var(--main-font-family);
   font-size: 1em;
   height: 5vh;
   margin: 0;

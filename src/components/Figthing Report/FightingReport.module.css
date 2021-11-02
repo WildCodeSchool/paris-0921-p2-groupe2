@@ -1,6 +1,6 @@
 @import '../../Fonts.css';
 
-.fight-title {
+/* .fight-title {
   text-align: center;
   font-family: var(--main-font-family);
 }
@@ -15,30 +15,32 @@
 .fighting-report {
   width: 50vw;
   margin: 10px auto;
-}
+} */
 
-.fighting-announcement {
-  text-align: center;
-  font-size: 24px;
-  padding: 20px;
-  font-family: var(--main-font-family);
+.fightingAnnouncement {
   background-color: var(--black);
   color: var(--light-yellow);
+  font-family: var(--main-font-family);
+  font-size: 24px;
+  margin: 2vh 0;
+  padding: 20px;
+  text-align: center;
 }
 
-.fighting-action {
-  padding: 10px;
-  color: var(--light-grey);
+.fightingAction {
   background-color: var(--dark-grey);
+  color: var(--light-grey);
   font-family: var(--second-font-family);
+  padding: 10px;
 }
 
-.fighting-result {
+.fightingResult {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-size: 24px;
+  font-family: var(--main-font-family);
+  margin: 2vh 0;
+  padding: 20px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 24px;
-  padding: 20px;
-  font-family: var(--main-font-family);
-  background-color: var(--black);
-  color: var(--light-yellow);
 }

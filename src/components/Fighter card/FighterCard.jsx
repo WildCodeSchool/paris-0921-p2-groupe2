@@ -1,11 +1,11 @@
-import './FighterCard.css';
-
 import React from 'react';
+
+import styles from './FighterCard.module.css';
 
 export default function FighterCard(hero) {
   return (
-    <div className="hero-card">
-      <img src={hero.picture} alt={hero.name} className="hero-picture" />
+    <div className={styles.heroCard}>
+      <img src={hero.picture} alt={hero.name} className={styles.heroPicture} />
     </div>
   );
 }

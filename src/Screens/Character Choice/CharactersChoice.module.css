@@ -1,8 +1,8 @@
 .choiceContener {
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 70vh;
-  width: 100vw;
-  align-items: center;
   margin: auto auto;
+  width: 100vw;
 }
