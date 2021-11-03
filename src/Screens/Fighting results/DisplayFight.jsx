@@ -27,9 +27,37 @@ export default function DisplayFight(props) {
   }, []);
 
   let FighterA, FighterB, report;
+  let modifA = [];
+  const objectA = {
+    intelligence: 0,
+    strength: -10,
+    speed: +20,
+    durability: 0,
+    power: 0,
+    combat: 0,
+  };
+  const objectB = {
+    intelligence: 0,
+    strength: 5,
+    speed: +30,
+    durability: 0,
+    power: 0,
+    combat: 0,
+  };
+  modifA.push(objectA);
+  modifA.push(objectB);
+
   if (characterA != '' && characterB != '') {
     FighterA = new Fighter(characterA);
     FighterB = new Fighter(characterB);
+    // console.log(FighterA);
+    // console.log('Initial strength : ' + FighterA.strength);
+    // console.log('Initial speed : ' + FighterA.speed);
+    // console.log(FighterB);
+    FighterA.updateGear(modifA);
+    // console.log('New strength : ' + FighterA.strength);
+    // console.log('New speed : ' + FighterA.speed);
+
     report = CombatAlgorithm(FighterA, FighterB);
   }
 
