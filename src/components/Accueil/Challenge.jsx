@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import styles from './modes.module.css';
-import imgMode from '../../assets/fight.jpg';
+import imgMode from '../../../assets/Fight-Image1.jpg';
 
 function Challenge() {
   const [show, setShow] = useState(true);

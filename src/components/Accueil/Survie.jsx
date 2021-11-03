@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import imgMode from '../../assets/marvelAllSuper.jpg';
+import imgMode from '../../../assets/Fight-Image2.jpg';
 import styles from './modes.module.css';
 function Survie() {
   const [show, setShow] = useState(false);

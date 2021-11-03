@@ -1,8 +1,8 @@
 import React from 'react';
-import Challenge from '../components/Accueil/Challenge';
-import Survie from '../components/Accueil/Survie';
-import ModeLibre from '../components/Accueil/ModeLibre';
-import styles from '../components/Accueil/modes.module.css';
+import Challenge from '../../components/Accueil/Challenge';
+import Survie from '../../components/Accueil/Survie';
+import ModeLibre from '../../components/Accueil/ModeLibre';
+import styles from './Menu3Modes.module.css';
 
 function Menu3Modes() {
   return (

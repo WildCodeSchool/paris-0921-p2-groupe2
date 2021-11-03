@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import styles from './App.module.css';
-
-import Button from './Screens/Home/Button';
+import Menu3Modes from './Screens/Menu/Menu3Modes';
 import CharactersChoice from './Screens/Character Choice/CharactersChoice';
 import DisplayFight from './Screens/Fighting results/DisplayFight';
 import Footer from './components/Footer/Footer';
@@ -27,7 +26,7 @@ function App() {
       <Header />
       <div className={styles.bodyContainer}>
         <Switch>
-          <Route exact path="/" component={Button} />
+          <Route exact path="/" component={Menu3Modes} />
           <Route path="/characterschoice">
             <CharactersChoice handleChange={selectFighter} />
             {heroB && <LaunchFightButton />}

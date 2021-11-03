@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import imgMode from '../../assets/ModeLibre.jpg';
+import imgMode from '../../../assets/Fight-Image3.jpg';
 import styles from './modes.module.css';
 function ModeLibre() {
   const [show, setShow] = useState(false);
