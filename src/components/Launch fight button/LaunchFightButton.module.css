@@ -1,0 +1,13 @@
+@import '../../Fonts.css';
+
+.launchFightButton {
+  background-color: var(--yellow);
+  border: solid 1px var(--dark-grey);
+  box-shadow: 5px 5px 10px var(--dark-grey);
+  color: var(--black);
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-size: large;
+  font-weight: bold;
+  padding: 10px 20px;
+}

@@ -1,0 +1,38 @@
+.charactersList {
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  left: 5vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  height: 90%;
+  margin: 2vw;
+  padding: 0;
+  width: 900%;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions button {
+  background-color: var(--black);
+  border: none;
+  color: var(--yellow);
+  font-size: 0.7em;
+  margin: 0 2vw;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    width: 400%;
+  }
+}

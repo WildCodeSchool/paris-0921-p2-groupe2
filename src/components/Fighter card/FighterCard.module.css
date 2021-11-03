@@ -1,0 +1,32 @@
+@import '../../Fonts.css';
+
+.heroCard {
+  align-items: center;
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+}
+
+/* .hero-name {
+  background-color: var(--black);
+  color: var(--light-yellow);
+  font-family: var(--main-font-family);
+  font-size: 20px;
+  max-width: 450px;
+  padding: 5px;
+  text-align: center;
+  width: 45vw;
+} */
+
+.heroPicture {
+  height: auto;
+  max-width: 50vw;
+  width: 50vw;
+}
+
+@media screen and (min-width: 768px) {
+  .heroPicture {
+    height: 40vh;
+    width: auto;
+  }
+}

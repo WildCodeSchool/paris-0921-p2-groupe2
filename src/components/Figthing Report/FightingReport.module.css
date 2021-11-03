@@ -1,0 +1,46 @@
+@import '../../Fonts.css';
+
+/* .fight-title {
+  text-align: center;
+  font-family: var(--main-font-family);
+}
+
+.heroes-display {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 50vw;
+}
+
+.fighting-report {
+  width: 50vw;
+  margin: 10px auto;
+} */
+
+.fightingAnnouncement {
+  background-color: var(--black);
+  color: var(--light-yellow);
+  font-family: var(--main-font-family);
+  font-size: 24px;
+  margin: 2vh 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.fightingAction {
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+  font-family: var(--second-font-family);
+  padding: 10px;
+}
+
+.fightingResult {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-size: 24px;
+  font-family: var(--main-font-family);
+  margin: 2vh 0;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}

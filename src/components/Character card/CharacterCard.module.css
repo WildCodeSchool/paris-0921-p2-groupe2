@@ -1,0 +1,21 @@
+.charactersCard {
+  align-items: center;
+  color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  margin: 3vh 0;
+  width: 27vw;
+}
+
+.cardImage {
+  cursor: pointer;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .charactersCard {
+    width: 10vw;
+  }
+}
