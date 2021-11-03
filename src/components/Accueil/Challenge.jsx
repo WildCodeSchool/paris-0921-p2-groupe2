@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import imgMode from '../../assets/fight.jpg';
+
 import styles from './modes.module.css';
+import imgMode from '../../assets/fight.jpg';
+
 function Challenge() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <div className={styles.menuChallenge}>
       <div className={styles.menuHeading}>
