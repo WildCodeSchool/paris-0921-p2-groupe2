@@ -19,9 +19,6 @@ export default function DisplayFight(props) {
     fetch('../../fakeApi.json')
       .then((res) => res.json())
       .then((data) => setCharacterA(data[heroA]));
-  }, []);
-
-  useEffect(() => {
     fetch('../../fakeApi.json')
       .then((res) => res.json())
       .then((data) => setCharacterB(data[heroB]));
