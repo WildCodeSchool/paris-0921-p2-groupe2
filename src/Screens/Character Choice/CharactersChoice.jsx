@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import CharacterDetail from '../../components/Character detail/CharacterDetail';
 import CharactersList from '../../components/Characters list/CharactersList';
 
