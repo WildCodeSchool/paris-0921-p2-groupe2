@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from './modes.module.css';
 import imgMode from '../../../assets/Fight-Image1.jpg';
+import styles from './modes.module.css';
 
 function Challenge() {
   const [show, setShow] = useState(true);
