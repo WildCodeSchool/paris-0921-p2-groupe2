@@ -1,26 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import logo from './logo.png';
-import './App.css';
+import Button from './Screens/Home/Button';
+import CharactersChoice from './Screens/Character Choice/CharactersChoice';
+import DisplayFight from './Screens/Fighting results/DisplayFight';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
+
+import styles from './App.module.css';
 
 function App() {
+  const [heroA, setHeroA] = useState('');
+  const [heroB, setHeroB] = useState('');
+
+  function selectFighter(e) {
+    if (heroA == '') {
+      setHeroA(e.target.value);
+    } else if (heroB == '') {
+      setHeroB(e.target.value);
+    }
+  }
+
   return (
-    <main className="rsw-container">
-      <div
-        className="rsw-item"
-        style={{
-          paddingBottom: '2rem',
-        }}>
-        <img src={logo} width="20%" alt="WCS logo" />
+    <main className={styles.mainContainer}>
+      <Header />
+      <div className={styles.bodyContainer}>
+        <Switch>
+          <Route exact path="/" component={Button} />
+          <Route path="/characterschoice">
+            <CharactersChoice handleChange={selectFighter} />
+            {heroB && <LaunchFightButton />}
+          </Route>
+          <Route path="/fight">
+            <DisplayFight heroA={heroA} heroB={heroB} />
+          </Route>
+        </Switch>
       </div>
-      <div className="rsw-item">
-        <p>Welcome to your fresh, lightweight, React App ! &#127752;</p>
-      </div>
-      <div className="rsw-item">
-        <p>
-          Start in the <code>App.jsx</code> component !
-        </p>
-      </div>
+      <Footer />
     </main>
   );
 }

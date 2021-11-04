@@ -28,6 +28,8 @@ module.exports = {
     'react/function-component-definition': [2, { namedComponents: 'function-declaration' }],
     'no-console': 1,
     'react/jsx-filename-extension': 'error',
-    'resct/prop-types': 0,
+    'react/prop-types': 0,
+    'react/no-noninteractive-element-interactions': 0,
+    'react/click-events-have-key-events': 0,
   },
 };
