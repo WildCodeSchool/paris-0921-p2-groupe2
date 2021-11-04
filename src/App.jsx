@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import styles from './App.module.css';
-
 import Button from './Screens/Home/Button';
 import CharactersChoice from './Screens/Character Choice/CharactersChoice';
 import DisplayFight from './Screens/Fighting results/DisplayFight';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
+
+import styles from './App.module.css';
 
 function App() {
   const [heroA, setHeroA] = useState('');

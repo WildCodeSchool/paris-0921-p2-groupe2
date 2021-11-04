@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import CombatAlgorithm from '../../algorithms/CombatAlgorithm';
+import Fighter from '../../algorithms/CharacterClass';
 
-import styles from './DisplayFight.module.css';
 import FighterCard from '../../components/Fighter card/FighterCard';
 import FigthtingReport from '../../components/Figthing Report/FightingReport';
-import Fighter from '../../algorithms/CharacterClass';
+
+import styles from './DisplayFight.module.css';
 
 export default function DisplayFight(props) {
   const [characterA, setCharacterA] = useState('');

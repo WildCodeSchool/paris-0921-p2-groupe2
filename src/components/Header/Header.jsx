@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../../../assets/logoBC.png';
 import styles from './Header.module.css';
+import logo from '../../../assets/logoBC.png';
 
 function Header() {
   return (
