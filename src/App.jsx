@@ -7,6 +7,7 @@ import DisplayFight from './Screens/Fighting results/DisplayFight';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
+import SelectedCharacters from './components/Selected characters/SelectedCharacters';
 
 import styles from './App.module.css';
 
@@ -29,6 +30,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Button} />
           <Route path="/characterschoice">
+            <SelectedCharacters heroA={heroA} heroB={heroB} />
             <CharactersChoice handleChange={selectFighter} />
             {heroB && <LaunchFightButton />}
           </Route>
