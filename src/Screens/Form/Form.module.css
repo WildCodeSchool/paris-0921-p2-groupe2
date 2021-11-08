@@ -19,8 +19,26 @@
 }
 .choiceForm {
   display: flex;
+  flex-direction: row;
+  background-color: var(--light-grey);
+  color: var(--black);
+  font-family: var(--second-font-family);
+  width: 80vw;
+  justify-content: space-evenly;
+  /* margin: 2vh 0 4vh 0; */
+}
+.formRadioColumn {
+  display: flex;
   flex-direction: column;
-  margin: 2vh 0 4vh 0;
+  align-items: center;
+}
+.formRadioColumn input {
+  height: 3vh;
+  padding: 0.2vh;
+}
+.formFirstColumn p {
+  height: 3vh;
+  margin: auto;
 }
 .choiceForm label {
   margin: 2vh;
