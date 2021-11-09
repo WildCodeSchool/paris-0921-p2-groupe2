@@ -4,8 +4,7 @@ import FighterContext from '../../contexts/FighterContext';
 
 import styles from './CharacterDetail.module.css';
 
-// eslint-disable-next-line no-unused-vars
-function CharacterDetail({ character, handleChange }) {
+function CharacterDetail({ character }) {
   const { updatePlayer } = useContext(FighterContext);
 
   return (
