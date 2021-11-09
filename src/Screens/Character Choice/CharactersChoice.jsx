@@ -12,10 +12,14 @@ function CharactersChoice({ handleChange }) {
 
   const searchCharacters = (e) => {
     e.preventDefault();
-    setQuery('');
-    fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/search/${query}`)
-      .then((res) => res.json())
-      .then((data) => setHeroesList(data.results));
+    if (query.length < 2) {
+      alert('Please write at least 2 characters to search');
+    } else {
+      setQuery('');
+      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/search/${query}`)
+        .then((res) => res.json())
+        .then((data) => setHeroesList(data.results));
+    }
   };
 
   useEffect(() => {
