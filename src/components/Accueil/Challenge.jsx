@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import styles from './modes.module.css';
 import imgMode from '../../../assets/Fight-Image1.jpg';
+import styles from './modes.module.css';
 
 function Challenge() {
   const [show, setShow] = useState(true);
@@ -9,10 +10,13 @@ function Challenge() {
     <div className={styles.menuChallenge}>
       <div className={styles.menuHeading}>
         <div className={styles.menuContainer}>
-          <button onClick={() => setShow(!show)}>
+          <button className={styles.menuShort} onClick={() => setShow(!show)}>
             <h1>Challenge</h1>
-            <p>Choisis ton champion pour réussir le scénario proposé</p>
+            <p>Sois victorieux dans le scénario proposé</p>
           </button>
+          <Link to="/characterschoice">
+            <button className={styles.launchButton}>Go !</button>
+          </Link>
         </div>
       </div>
       {show && (

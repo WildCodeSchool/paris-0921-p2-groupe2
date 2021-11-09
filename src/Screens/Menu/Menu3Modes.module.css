@@ -1,44 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Kumar+One&display=swap');
-html body {
+@import '../../Fonts.css';
+
+/* html body {
   padding: 0;
   margin: 0;
   background-color: #d6d6d6;
-}
-.menuModesContainer {
-  background-color: #d6d6d6;
-}
+} */
 .menuHeaderDesk {
   display: none;
+  font-family: var(--second-font-family);
+  color: var(--dark-grey);
 }
-button {
-  width: 100%;
-  font-family: 'Kumar', sans-serif;
-  color: #ffd100;
-  background-color: #333533;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
-  position: relative;
-}
-
-.innerMenuDesc {
-  position: absolute;
-  width: 90%;
-  text-align: center;
-  color: #ffd100;
-  background-color: #333533;
-  opacity: 0.8;
-  padding: 0.5em;
-  font-size: 1.2em;
-}
-
-.menuContent {
-  display: flex;
-  box-align: center;
-  align-items: flex-end;
-  justify-content: center;
+.menuModesContainer {
+  margin: 4vh 0;
+  width: 100vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -49,20 +23,10 @@ img {
     text-align: center;
   }
   .menuModesContainer {
+    width: 90vw;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .menuChallenge {
-    width: 33%;
-  }
-
-  .menuContent {
-    width: 100%;
-    height: 50vh;
-  }
-  .innerMenuDesc {
-    max-width: 30%;
   }
 }
