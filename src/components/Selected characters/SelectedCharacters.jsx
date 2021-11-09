@@ -1,38 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+
+import FighterContext from '../../contexts/FighterContext';
 
 import styles from './SelectedCharacters.module.css';
 
-export default function SelectedCharacters(props) {
-  const { heroA, heroB } = props;
+export default function SelectedCharacters() {
+  const { playerA, playerB } = useContext(FighterContext);
 
-  const [characterA, setCharacterA] = useState('');
-  const [characterB, setCharacterB] = useState('');
   const [messageA, setMessageA] = useState('?');
   const [messageB, setMessageB] = useState('?');
 
   useEffect(() => {
-    fetch('../../fakeApi.json')
-      .then((res) => res.json())
-      .then((data) => setCharacterA(data[heroA]));
-  }, [heroA]);
-
-  useEffect(() => {
-    fetch('../../fakeApi.json')
-      .then((res) => res.json())
-      .then((data) => setCharacterB(data[heroB]));
-  }, [heroB]);
-
-  useEffect(() => {
-    if (characterA) {
-      setMessageA(characterA.name);
+    if (playerA) {
+      setMessageA(playerA.name);
     }
-  }, [characterA]);
+  }, [playerA]);
 
   useEffect(() => {
-    if (characterB) {
-      setMessageB(characterB.name);
+    if (playerB) {
+      setMessageB(playerB.name);
     }
-  }, [characterB]);
+  }, [playerB]);
 
   return (
     <div className={styles.moduleDisplay}>
