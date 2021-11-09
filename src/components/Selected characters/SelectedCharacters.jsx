@@ -11,14 +11,18 @@ export default function SelectedCharacters() {
   const [messageB, setMessageB] = useState('?');
 
   useEffect(() => {
-    if (playerA) {
+    if (playerA != '') {
       setMessageA(playerA.name);
+    } else {
+      setMessageA('?');
     }
   }, [playerA]);
 
   useEffect(() => {
-    if (playerB) {
+    if (playerB != '') {
       setMessageB(playerB.name);
+    } else {
+      setMessageB('?');
     }
   }, [playerB]);
 
