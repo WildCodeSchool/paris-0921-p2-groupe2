@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
+import FighterContext from './contexts/FighterContext';
 
 import styles from './App.module.css';
 
@@ -27,17 +28,19 @@ function App() {
     <main className={styles.mainContainer}>
       <Header />
       <div className={styles.bodyContainer}>
-        <Switch>
-          <Route exact path="/" component={Button} />
-          <Route path="/characterschoice">
-            <SelectedCharacters heroA={heroA} heroB={heroB} />
-            <CharactersChoice handleChange={selectFighter} />
-            {heroB && <LaunchFightButton />}
-          </Route>
-          <Route path="/fight">
-            <DisplayFight heroA={heroA} heroB={heroB} />
-          </Route>
-        </Switch>
+        <FighterContext.Provider>
+          <Switch>
+            <Route exact path="/" component={Button} />
+            <Route path="/characterschoice">
+              <SelectedCharacters heroA={heroA} heroB={heroB} />
+              <CharactersChoice handleChange={selectFighter} />
+              {heroB && <LaunchFightButton />}
+            </Route>
+            <Route path="/fight">
+              <DisplayFight heroA={heroA} heroB={heroB} />
+            </Route>
+          </Switch>
+        </FighterContext.Provider>
       </div>
       <Footer />
     </main>
