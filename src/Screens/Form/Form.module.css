@@ -17,44 +17,41 @@
   font-size: x-large;
   color: var(--light-yellow);
 }
+.handicapChoice {
+  display: flex;
+  flex-direction: column;
+}
 .choiceForm {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: var(--light-grey);
   color: var(--black);
   font-family: var(--second-font-family);
   width: 80vw;
-  justify-content: space-evenly;
-  /* margin: 2vh 0 4vh 0; */
 }
-.formRadioColumn {
+.firstFormLine {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
 }
-.formRadioColumn input {
-  height: 3vh;
-  padding: 0.2vh;
-}
-.formFirstColumn p {
-  height: 3vh;
-  margin: auto;
-}
-.choiceForm label {
-  margin: 2vh;
+.firstFormLine p {
+  width: 13vw;
   text-align: center;
-  font-family: var(--second-font-family);
-  font-size: larger;
+  margin: 0.5vh 0;
 }
-.choiceForm select {
-  width: 250px;
+.formLine {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0.2vh 0;
 }
-.choiceForm option {
-  background-color: var(--light-grey);
-  text-align: center;
-  font-family: var(--second-font-family);
+.formFirstColumn {
+  height: 3vh;
+  margin: 0;
+  color: var(--dark-grey);
 }
-
+.formInput input {
+  margin: 0 5vw;
+}
 @media screen and (min-width: 768px) {
   .optionChoice {
     width: 60vw;

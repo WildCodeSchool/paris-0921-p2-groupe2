@@ -39,54 +39,31 @@ function Form({ handicaps, weapons, fields }) {
       <div className={styles.handicapChoice}>
         <button>Choose a handicap :</button>
         <div className={styles.choiceForm}>
-          <div className={styles.formFirstColumn}>
-            <p> ... </p>
-            {handicapList &&
-              handicapList.map((handicap, index) => {
-                return <p key={index}>{handicap.name}</p>;
-              })}
-          </div>
-          <div className={styles.formRadioColumn}>
+          <div className={styles.firstFormLine}>
+            <p></p>
             <p>Fighter A</p>
-            {handicapList &&
-              handicapList.map((handicap, index) => {
-                return <input type="radio" id={handicap.id} name="handicapA" value={handicap.id} key={index} />;
-              })}
-          </div>
-          <div className={styles.formRadioColumn}>
             <p>Fighter B</p>
-            {handicapList &&
-              handicapList.map((handicap, index) => {
-                return <input type="radio" id={handicap.id} name="handicapB" value={handicap.id} key={index} />;
-              })}
           </div>
-        </div>
-        {/* {handicapList &&
-          handicapList.map((handicap, index) => {
-            return (
-              <div className={styles.formLines} key={index}>
-                <p className={styles.formFirstColumn}>{handicap.name}</p>
-                <div>
-                  <input type="radio" id={handicap.id} name={handicap.name} value={handicap.id} />
-                  <input type="radio" id={handicap.id} name={handicap.name} value={handicap.id} />
-                </div>
-              </div>
-            );
-          })}
-        ; */}
-        {/* <label htmlFor="handicap-select">Choose a handicap :</label>
-        <select name="handicap" onChange={(e) => console.log(e.target)}>
-          <option value="">No handicap</option>
+          <div className={styles.formLine}>
+            <p className={styles.formFirstColumn}>No handicap</p>
+            <div className={styles.formInput}>
+              <input type="radio" name="handicapA" checked />
+              <input type="radio" name="handicapB" checked />
+            </div>
+          </div>
           {handicapList &&
             handicapList.map((handicap, index) => {
-              console.log(handicap);
               return (
-                <option key={index} value={handicap}>
-                  {handicap.name}
-                </option>
+                <div className={styles.formLine} key={index}>
+                  <p className={styles.formFirstColumn}>{handicap.name}</p>
+                  <div className={styles.formInput}>
+                    <input type="radio" id={handicap.id} name="handicapA" value={handicap.id} />
+                    <input type="radio" id={handicap.id} name="handicapB" value={handicap.id} />
+                  </div>
+                </div>
               );
             })}
-        </select> */}
+        </div>
       </div>
       {/* <div className={styles.choiceForm}>
         <label htmlFor="weapon-select">Choose a weapon :</label>
