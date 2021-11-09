@@ -8,6 +8,7 @@ import DisplayFight from './Screens/Fighting results/DisplayFight';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
+import SelectedCharacters from './components/Selected characters/SelectedCharacters';
 
 function App() {
   const [heroA, setHeroA] = useState('');
@@ -28,6 +29,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Menu3Modes} />
           <Route path="/characterschoice">
+            <SelectedCharacters heroA={heroA} heroB={heroB} />
             <CharactersChoice handleChange={selectFighter} />
             {heroB && <LaunchFightButton />}
           </Route>
