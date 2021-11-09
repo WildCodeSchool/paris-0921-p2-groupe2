@@ -27,10 +27,18 @@ function App() {
   const [playerA, setPlayerA] = useState('');
   const [playerB, setPlayerB] = useState('');
 
-  // eslint-disable-next-line no-unused-vars
   function updatePlayer(e) {
     // console.log('Update Player Function');
-    // console.log('Player A : ' + playerA);
+    if (playerA == '') {
+      // console.log('Creating player A...');
+      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${e.target.value}`)
+        .then((res) => res.json())
+        .then((data) => setPlayerA(data));
+    } else {
+      // console.log('Checking player A...');
+      // console.log(playerA);
+    }
+
     // console.log('Player B : ' + playerB);
     // console.log(e.target.value);
   }
