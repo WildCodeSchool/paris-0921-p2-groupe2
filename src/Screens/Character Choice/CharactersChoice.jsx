@@ -5,33 +5,20 @@ import CharactersList from '../../components/Characters list/CharactersList';
 
 import styles from './CharactersChoice.module.css';
 
-// const defaultCharacter = {
-//   name: 'Black Widow',
-//   id: '107',
-//   powerstats: {
-//     intelligence: 75,
-//     strength: 13,
-//     speed: 33,
-//     durability: 30,
-//     power: 36,
-//     combat: 100,
-//   },
-//   biography: {
-//     placeofbirth: '-',
-//     alignment: 'good',
-//   },
-//   appearance: {
-//     height: ["5'7", '170 cm'],
-//     weight: ['131 lb', '59 kg'],
-//   },
-//   image: {
-//     url: 'https://www.superherodb.com/pictures2/portraits/10/100/248.jpg',
-//   },
-// };
-
 function CharactersChoice({ handleChange }) {
   const [selectedCharacter, setSelectedCharacter] = useState('');
   const [heroesList, setHeroesList] = useState('');
+  const [query, setQuery] = useState('');
+
+  const searchCharacters = (e) => {
+    e.preventDefault();
+    // console.log('I am working !');
+    // console.log(query);
+    setQuery('');
+    fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/search/${query}`)
+      .then((res) => res.json())
+      .then((data) => setHeroesList(data.results));
+  };
 
   useEffect(() => {
     const characterIndex = Math.round(Math.random() * 731);
@@ -47,6 +34,12 @@ function CharactersChoice({ handleChange }) {
   return (
     <div className={styles.choiceContener}>
       {selectedCharacter && <CharacterDetail character={selectedCharacter} handleChange={handleChange} />}
+      <form className={styles.searchContainer} onSubmit={searchCharacters}>
+        <label>
+          <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
+          <input type="submit" value="Search" />
+        </label>
+      </form>
       {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
     </div>
   );
