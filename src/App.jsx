@@ -22,22 +22,14 @@ function App() {
   }
 
   function updatePlayer(e) {
-    // console.log('Update Player Function');
     if (playerA == '') {
-      // console.log('Creating player A...');
       fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${e.target.value}`)
         .then((res) => res.json())
         .then((data) => setPlayerA(data));
     } else if (playerB == '') {
-      // console.log('Creating player B...');
       fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${e.target.value}`)
         .then((res) => res.json())
         .then((data) => setPlayerB(data));
-    } else {
-      // console.log('Checking player A...');
-      // console.log(playerA);
-      // console.log('Checking player B...');
-      // console.log(playerB);
     }
   }
 
