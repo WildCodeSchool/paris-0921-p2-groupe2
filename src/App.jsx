@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import styles from './App.module.css';
-
 import Button from './Screens/Home/Button';
 import CharactersChoice from './Screens/Character Choice/CharactersChoice';
 import DisplayFight from './Screens/Fighting results/DisplayFight';
@@ -10,17 +8,31 @@ import Form from './Screens/Form/Form';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
+import SelectedCharacters from './components/Selected characters/SelectedCharacters';
+import FighterContext from './contexts/FighterContext';
+
 import { handicaps, weapons, fields } from './algorithms/bonusmalus/BonusMalus';
 
-function App() {
-  const [heroA, setHeroA] = useState('');
-  const [heroB, setHeroB] = useState('');
+import styles from './App.module.css';
 
-  function selectFighter(e) {
-    if (heroA == '') {
-      setHeroA(e.target.value);
-    } else if (heroB == '') {
-      setHeroB(e.target.value);
+function App() {
+  const [playerA, setPlayerA] = useState('');
+  const [playerB, setPlayerB] = useState('');
+
+  function resetPlayers() {
+    setPlayerA('');
+    setPlayerB('');
+  }
+
+  function updatePlayer(e) {
+    if (playerA == '') {
+      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${e.target.value}`)
+        .then((res) => res.json())
+        .then((data) => setPlayerA(data));
+    } else if (playerB == '') {
+      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${e.target.value}`)
+        .then((res) => res.json())
+        .then((data) => setPlayerB(data));
     }
   }
 
@@ -28,19 +40,31 @@ function App() {
     <main className={styles.mainContainer}>
       <Header />
       <div className={styles.bodyContainer}>
-        <Switch>
-          <Route exact path="/" component={Button} />
-          <Route path="/characterschoice">
-            <CharactersChoice handleChange={selectFighter} />
-            {heroB && <LaunchFightButton />}
-          </Route>
-          <Route path="/fight">
-            <DisplayFight heroA={heroA} heroB={heroB} />
-          </Route>
-          <Route path="/options">
-            <Form handicaps={handicaps} weapons={weapons} fields={fields} />
-          </Route>
-        </Switch>
+        <FighterContext.Provider
+          value={{
+            playerA: playerA,
+            playerB: playerB,
+            setPlayerA: setPlayerA,
+            setPlayerB: setPlayerB,
+            updatePlayer: updatePlayer,
+            resetPlayers: resetPlayers,
+          }}
+        >
+          <Switch>
+            <Route exact path="/" component={Button} />
+            <Route path="/characterschoice">
+              <SelectedCharacters />
+              <CharactersChoice />
+              {playerB && <LaunchFightButton />}
+            </Route>
+            <Route path="/fight">
+              <DisplayFight />
+            </Route>
+            <Route path="/options">
+              <Form handicaps={handicaps} weapons={weapons} fields={fields} />
+            </Route>
+          </Switch>
+        </FighterContext.Provider>
       </div>
       <Footer />
     </main>

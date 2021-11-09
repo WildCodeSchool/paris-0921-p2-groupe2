@@ -7,17 +7,6 @@
   flex-direction: column;
 }
 
-/* .hero-name {
-  background-color: var(--black);
-  color: var(--light-yellow);
-  font-family: var(--main-font-family);
-  font-size: 20px;
-  max-width: 450px;
-  padding: 5px;
-  text-align: center;
-  width: 45vw;
-} */
-
 .heroPicture {
   height: auto;
   max-width: 50vw;

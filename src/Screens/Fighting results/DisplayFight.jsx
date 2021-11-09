@@ -1,37 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import CombatAlgorithm from '../../algorithms/CombatAlgorithm';
-
-import styles from './DisplayFight.module.css';
-import FighterCard from '../../components/Fighter card/FighterCard';
-import FigthtingReport from '../../components/Figthing Report/FightingReport';
 import Fighter from '../../algorithms/CharacterClass';
 
-export default function DisplayFight(props) {
-  const [characterA, setCharacterA] = useState('');
-  const [characterB, setCharacterB] = useState('');
+import FighterContext from '../../contexts/FighterContext';
+import FighterCard from '../../components/Fighter card/FighterCard';
+import FigthtingReport from '../../components/Figthing Report/FightingReport';
 
-  const { heroA, heroB } = props;
+import styles from './DisplayFight.module.css';
 
-  useEffect(() => {
-    fetch('../../fakeApi.json')
-      .then((res) => res.json())
-      .then((data) => setCharacterA(data[heroA]));
-  }, []);
+export default function DisplayFight() {
+  const { playerA, playerB, resetPlayers } = useContext(FighterContext);
 
-  useEffect(() => {
-    fetch('../../fakeApi.json')
-      .then((res) => res.json())
-      .then((data) => setCharacterB(data[heroB]));
-  }, []);
-
-  let FighterA, FighterB, report;
-  if (characterA != '' && characterB != '') {
-    FighterA = new Fighter(characterA);
-    FighterB = new Fighter(characterB);
-    report = CombatAlgorithm(FighterA, FighterB);
-  }
+  const FighterA = new Fighter(playerA);
+  const FighterB = new Fighter(playerB);
+  let report = CombatAlgorithm(FighterA, FighterB);
 
   return (
     <div className={styles.fightingComponent}>
@@ -43,10 +27,10 @@ export default function DisplayFight(props) {
 
       <div className={styles.endgameChoice}>
         <Link to="/characterschoice">
-          <button>Another battle</button>
+          <button onClick={resetPlayers}>Another battle</button>
         </Link>
         <Link to="/">
-          <button>Main menu</button>
+          <button onClick={resetPlayers}>Main menu</button>
         </Link>
       </div>
     </div>

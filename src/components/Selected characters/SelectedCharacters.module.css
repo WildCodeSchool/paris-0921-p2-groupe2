@@ -1,0 +1,21 @@
+@import '../../Fonts.css';
+
+.moduleDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vs {
+  margin: 0 15px;
+  font-family: var(--second-font-family);
+  color: var(--black);
+  font-size: 24px;
+}
+
+.character {
+  font-family: var(--main-font-family);
+  background-color: var(--dark-grey);
+  padding: 5px 10px 0px 10px;
+  color: var(--light-yellow);
+}
