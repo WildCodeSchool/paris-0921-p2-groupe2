@@ -12,8 +12,6 @@ function CharactersChoice({ handleChange }) {
 
   const searchCharacters = (e) => {
     e.preventDefault();
-    // console.log('I am working !');
-    // console.log(query);
     setQuery('');
     fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/search/${query}`)
       .then((res) => res.json())
@@ -34,10 +32,10 @@ function CharactersChoice({ handleChange }) {
   return (
     <div className={styles.choiceContener}>
       {selectedCharacter && <CharacterDetail character={selectedCharacter} handleChange={handleChange} />}
-      <form className={styles.searchContainer} onSubmit={searchCharacters}>
+      <form onSubmit={searchCharacters}>
         <label>
-          <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
-          <input type="submit" value="Search" />
+          <input className={styles.searchText} type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
+          <input className={styles.searchButton} type="submit" value="Search" />
         </label>
       </form>
       {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
