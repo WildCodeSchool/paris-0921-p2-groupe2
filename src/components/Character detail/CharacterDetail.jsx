@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import FighterContext from '../../contexts/FighterContext';
 
 import styles from './CharacterDetail.module.css';
 
+// eslint-disable-next-line no-unused-vars
 function CharacterDetail({ character, handleChange }) {
+  const { updatePlayer } = useContext(FighterContext);
+
   return (
     <div className={styles.charactersCard}>
       <img className={styles.detailImage} src={character.image.url} alt={character.name} />
@@ -21,7 +26,7 @@ function CharacterDetail({ character, handleChange }) {
           <p>Height : {character.appearance.height[1]}</p>
           <p>Weight : {character.appearance.weight[1]}</p>
         </div>
-        <button onClick={handleChange} value={character.id}>
+        <button onClick={updatePlayer} value={character.id}>
           Choose
         </button>
       </div>

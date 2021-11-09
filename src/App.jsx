@@ -24,11 +24,24 @@ function App() {
     }
   }
 
+  const [playerA, setPlayerA] = useState('');
+  const [playerB, setPlayerB] = useState('');
+
+  // eslint-disable-next-line no-unused-vars
+  function updatePlayer(e) {
+    // console.log('Update Player Function');
+    // console.log('Player A : ' + playerA);
+    // console.log('Player B : ' + playerB);
+    // console.log(e.target.value);
+  }
+
   return (
     <main className={styles.mainContainer}>
       <Header />
       <div className={styles.bodyContainer}>
-        <FighterContext.Provider>
+        <FighterContext.Provider
+          value={{ playerA: playerA, setPlayerA: setPlayerA, playerB: playerB, setPlayerB: setPlayerB, updatePlayer: updatePlayer }}
+        >
           <Switch>
             <Route exact path="/" component={Button} />
             <Route path="/characterschoice">
