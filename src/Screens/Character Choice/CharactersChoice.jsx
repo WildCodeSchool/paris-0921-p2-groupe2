@@ -5,35 +5,40 @@ import CharactersList from '../../components/Characters list/CharactersList';
 
 import styles from './CharactersChoice.module.css';
 
-const defaultCharacter = {
-  name: 'Black Widow',
-  id: '107',
-  powerstats: {
-    intelligence: 75,
-    strength: 13,
-    speed: 33,
-    durability: 30,
-    power: 36,
-    combat: 100,
-  },
-  biography: {
-    placeofbirth: '-',
-    alignment: 'good',
-  },
-  appearance: {
-    height: ["5'7", '170 cm'],
-    weight: ['131 lb', '59 kg'],
-  },
-  image: {
-    url: 'https://www.superherodb.com/pictures2/portraits/10/100/248.jpg',
-  },
-};
+// const defaultCharacter = {
+//   name: 'Black Widow',
+//   id: '107',
+//   powerstats: {
+//     intelligence: 75,
+//     strength: 13,
+//     speed: 33,
+//     durability: 30,
+//     power: 36,
+//     combat: 100,
+//   },
+//   biography: {
+//     placeofbirth: '-',
+//     alignment: 'good',
+//   },
+//   appearance: {
+//     height: ["5'7", '170 cm'],
+//     weight: ['131 lb', '59 kg'],
+//   },
+//   image: {
+//     url: 'https://www.superherodb.com/pictures2/portraits/10/100/248.jpg',
+//   },
+// };
 
 function CharactersChoice({ handleChange }) {
-  const [selectedCharacter, setSelectedCharacter] = useState(defaultCharacter);
+  const [selectedCharacter, setSelectedCharacter] = useState('');
   const [heroesList, setHeroesList] = useState('');
 
   useEffect(() => {
+    const characterIndex = Math.round(Math.random() * 731);
+    fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${characterIndex}`)
+      .then((res) => res.json())
+      .then((data) => setSelectedCharacter(data));
+
     fetch('../../fakeApi.json')
       .then((res) => res.json())
       .then((data) => setHeroesList(data));
