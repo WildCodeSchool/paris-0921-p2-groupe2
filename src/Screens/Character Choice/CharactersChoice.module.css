@@ -1,3 +1,5 @@
+@import '../../Fonts.css';
+
 .choiceContener {
   align-items: center;
   display: flex;
@@ -5,4 +7,20 @@
   height: 70vh;
   margin: auto auto;
   width: 100vw;
+}
+
+.searchText {
+  font-family: var(--second-font-family);
+  margin-top: 10px;
+  background-image: url('../../../assets/search.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.searchButton {
+  background-color: var(--black);
+  font-family: var(--second-font-family);
+  color: var(--yellow);
+  border: none;
 }

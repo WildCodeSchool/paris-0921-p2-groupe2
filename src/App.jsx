@@ -35,18 +35,18 @@ function App() {
 
   return (
     <main className={styles.mainContainer}>
-      <Header />
-      <div className={styles.bodyContainer}>
-        <FighterContext.Provider
-          value={{
-            playerA: playerA,
-            playerB: playerB,
-            setPlayerA: setPlayerA,
-            setPlayerB: setPlayerB,
-            updatePlayer: updatePlayer,
-            resetPlayers: resetPlayers,
-          }}
-        >
+      <FighterContext.Provider
+        value={{
+          playerA: playerA,
+          playerB: playerB,
+          setPlayerA: setPlayerA,
+          setPlayerB: setPlayerB,
+          updatePlayer: updatePlayer,
+          resetPlayers: resetPlayers,
+        }}
+      >
+        <Header />
+        <div className={styles.bodyContainer}>
           <Switch>
             <Route exact path="/" component={Button} />
             <Route path="/characterschoice">
@@ -58,8 +58,8 @@ function App() {
               <DisplayFight />
             </Route>
           </Switch>
-        </FighterContext.Provider>
-      </div>
+        </div>
+      </FighterContext.Provider>
       <Footer />
     </main>
   );
