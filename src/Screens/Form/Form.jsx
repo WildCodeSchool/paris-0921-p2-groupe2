@@ -1,10 +1,12 @@
-/* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { handicaps, weapons, fields } from '../../algorithms/bonusmalus/BonusMalus';
 
+import FighterContext from '../../contexts/FighterContext';
 import styles from './Form.module.css';
 
-function Form({ handicaps, weapons, fields }) {
+function Form() {
+  const { playerA, playerB, setOptions } = useContext(FighterContext);
   let handicapList = [];
   for (let key in handicaps) {
     handicapList.push(handicaps[key]);
@@ -24,17 +26,13 @@ function Form({ handicaps, weapons, fields }) {
   const [selectedWeaponB, setSelectedWeaponB] = useState([]);
   const [selectedField, setSelectedField] = useState([]);
 
-  // eslint-disable-next-line
-  const [options, setOptions] = useState();
-
   function handleSelectedOptions() {
-    const option = {
+    const newOptions = {
       optionA: [selectedHandicapA, selectedWeaponA],
       optionB: [selectedHandicapB, selectedWeaponB],
       field: selectedField,
     };
-    setOptions(option);
-    // console.log(option);
+    setOptions(newOptions);
   }
 
   return (
@@ -45,8 +43,8 @@ function Form({ handicaps, weapons, fields }) {
           <h2>Choose a handicap :</h2>
           <div className={styles.firstFormLine}>
             <p></p>
-            <p>Fighter A</p>
-            <p>Fighter B</p>
+            <p>{playerA.name}</p>
+            <p>{playerB.name}</p>
           </div>
           {handicapList &&
             handicapList.map((handicap, index) => {
@@ -79,8 +77,8 @@ function Form({ handicaps, weapons, fields }) {
           <h2>Choose a weapon :</h2>
           <div className={styles.firstFormLine}>
             <p></p>
-            <p>Fighter A</p>
-            <p>Fighter B</p>
+            <p>{playerA.name}</p>
+            <p>{playerB.name}</p>
           </div>
           {weaponList &&
             weaponList.map((weapon, index) => {
