@@ -4,11 +4,14 @@ import { Switch, Route } from 'react-router-dom';
 import Button from './Screens/Home/Button';
 import CharactersChoice from './Screens/Character Choice/CharactersChoice';
 import DisplayFight from './Screens/Fighting results/DisplayFight';
+import Form from './Screens/Form/Form';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
 import FighterContext from './contexts/FighterContext';
+
+import { handicaps, weapons, fields } from './algorithms/bonusmalus/BonusMalus';
 
 import styles from './App.module.css';
 
@@ -56,6 +59,9 @@ function App() {
             </Route>
             <Route path="/fight">
               <DisplayFight />
+            </Route>
+            <Route path="/options">
+              <Form handicaps={handicaps} weapons={weapons} fields={fields} />
             </Route>
           </Switch>
         </div>
