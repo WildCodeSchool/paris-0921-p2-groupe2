@@ -11,17 +11,17 @@ import LaunchFightButton from './components/Launch fight button/LaunchFightButto
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
 import FighterContext from './contexts/FighterContext';
 
-import { handicaps, weapons, fields } from './algorithms/bonusmalus/BonusMalus';
-
 import styles from './App.module.css';
 
 function App() {
   const [playerA, setPlayerA] = useState('');
   const [playerB, setPlayerB] = useState('');
+  const [options, setOptions] = useState('');
 
-  function resetPlayers() {
+  function resetGame() {
     setPlayerA('');
     setPlayerB('');
+    setOptions('');
   }
 
   function updatePlayer(e) {
@@ -42,10 +42,12 @@ function App() {
         value={{
           playerA: playerA,
           playerB: playerB,
+          options: options,
           setPlayerA: setPlayerA,
           setPlayerB: setPlayerB,
+          setOptions: setOptions,
           updatePlayer: updatePlayer,
-          resetPlayers: resetPlayers,
+          resetGame: resetGame,
         }}
       >
         <Header />
@@ -61,7 +63,7 @@ function App() {
               <DisplayFight />
             </Route>
             <Route path="/options">
-              <Form handicaps={handicaps} weapons={weapons} fields={fields} />
+              <Form />
             </Route>
           </Switch>
         </div>
