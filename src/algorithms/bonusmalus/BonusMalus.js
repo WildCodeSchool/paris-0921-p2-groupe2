@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-const handicaps = [
-  {
+const handicaps = {
+  0: {
     id: 0,
     name: 'No handicap',
     intelligence: 0,
@@ -10,8 +10,8 @@ const handicaps = [
     power: 0,
     combat: 0,
   },
-  {
-    id: 2,
+  1: {
+    id: 1,
     name: 'Hands tied behind the back',
     intelligence: 0,
     strength: -10,
@@ -20,8 +20,8 @@ const handicaps = [
     power: 0,
     combat: 0,
   },
-  {
-    id: 3,
+  2: {
+    id: 2,
     name: 'Hangover',
     intelligence: -15,
     strength: 0,
@@ -30,8 +30,8 @@ const handicaps = [
     power: 0,
     combat: 0,
   },
-  {
-    id: 4,
+  3: {
+    id: 3,
     name: 'Leaden shoes',
     intelligence: 0,
     strength: 0,
@@ -40,8 +40,8 @@ const handicaps = [
     power: 0,
     combat: 0,
   },
-  {
-    id: 5,
+  4: {
+    id: 4,
     name: 'All by myself in your head',
     intelligence: 0,
     strength: -5,
@@ -50,8 +50,8 @@ const handicaps = [
     power: 0,
     combat: -10,
   },
-  {
-    id: 6,
+  5: {
+    id: 5,
     name: 'Jar Jar Binks by your side',
     intelligence: 0,
     strength: 0,
@@ -60,8 +60,8 @@ const handicaps = [
     power: 0,
     combat: -5,
   },
-  {
-    id: 9,
+  6: {
+    id: 6,
     name: 'Pepper in your nose',
     intelligence: -5,
     strength: 0,
@@ -70,8 +70,8 @@ const handicaps = [
     power: -5,
     combat: 0,
   },
-  {
-    id: 11,
+  7: {
+    id: 7,
     name: 'Lace-up corset',
     intelligence: 0,
     strength: -5,
@@ -80,8 +80,8 @@ const handicaps = [
     power: -5,
     combat: 0,
   },
-  {
-    id: 12,
+  8: {
+    id: 8,
     name: 'Display : float',
     intelligence: 0,
     strength: -15,
@@ -90,8 +90,8 @@ const handicaps = [
     power: 0,
     combat: -5,
   },
-  {
-    id: 13,
+  9: {
+    id: 9,
     name: 'Tartiflette',
     intelligence: 0,
     strength: -5,
@@ -100,8 +100,8 @@ const handicaps = [
     power: -5,
     combat: 0,
   },
-  {
-    id: 14,
+  10: {
+    id: 10,
     name: 'Nobody is nowhere',
     intelligence: -15,
     strength: 0,
@@ -110,8 +110,8 @@ const handicaps = [
     power: 0,
     combat: -10,
   },
-  {
-    id: 16,
+  11: {
+    id: 11,
     name: 'Internet Explorer',
     intelligence: -10,
     strength: -25,
@@ -120,8 +120,8 @@ const handicaps = [
     power: -10,
     combat: 0,
   },
-  {
-    id: 17,
+  12: {
+    id: 12,
     name: 'Banana peel',
     intelligence: 0,
     strength: -5,
@@ -130,10 +130,10 @@ const handicaps = [
     power: -10,
     combat: 0,
   },
-];
+};
 
-const weapons = [
-  {
+const weapons = {
+  0: {
     id: 0,
     name: 'No weapon',
     intelligence: 0,
@@ -143,8 +143,8 @@ const weapons = [
     power: 0,
     combat: 0,
   },
-  {
-    id: 2,
+  1: {
+    id: 1,
     name: 'Excalibur',
     intelligence: 0,
     strength: 15,
@@ -153,8 +153,8 @@ const weapons = [
     power: 10,
     combat: 10,
   },
-  {
-    id: 3,
+  2: {
+    id: 2,
     name: 'Invisibility cloak',
     intelligence: 5,
     strength: 0,
@@ -163,8 +163,8 @@ const weapons = [
     power: 0,
     combat: 0,
   },
-  {
-    id: 5,
+  3: {
+    id: 3,
     name: 'Panoramix potion',
     intelligence: 0,
     strength: 25,
@@ -173,8 +173,8 @@ const weapons = [
     power: 25,
     combat: 0,
   },
-  {
-    id: 6,
+  4: {
+    id: 4,
     name: 'Dynamite sticks',
     intelligence: 0,
     strength: 5,
@@ -183,8 +183,8 @@ const weapons = [
     power: 20,
     combat: 10,
   },
-  {
-    id: 7,
+  5: {
+    id: 5,
     name: 'Leather Sling',
     intelligence: 0,
     strength: 5,
@@ -193,8 +193,8 @@ const weapons = [
     power: 0,
     combat: 5,
   },
-  {
-    id: 8,
+  6: {
+    id: 6,
     name: 'Pink dotted mushroom',
     intelligence: 25,
     strength: 0,
@@ -203,8 +203,8 @@ const weapons = [
     power: 0,
     combat: 25,
   },
-  {
-    id: 9,
+  7: {
+    id: 7,
     name: 'Blue shell',
     intelligence: 0,
     strength: 15,
@@ -213,8 +213,8 @@ const weapons = [
     power: 10,
     combat: 0,
   },
-  {
-    id: 10,
+  8: {
+    id: 8,
     name: 'Toilet plunger',
     intelligence: 0,
     strength: 10,
@@ -223,8 +223,8 @@ const weapons = [
     power: 5,
     combat: 0,
   },
-  {
-    id: 12,
+  9: {
+    id: 9,
     name: 'Tank',
     intelligence: 0,
     strength: 25,
@@ -233,8 +233,8 @@ const weapons = [
     power: 15,
     combat: 0,
   },
-  {
-    id: 13,
+  10: {
+    id: 10,
     name: 'The Delorean',
     intelligence: 0,
     strength: 0,
@@ -243,8 +243,8 @@ const weapons = [
     power: 0,
     combat: 0,
   },
-  {
-    id: 16,
+  11: {
+    id: 11,
     name: 'Screaming hotdog',
     intelligence: 0,
     strength: 10,
@@ -253,8 +253,8 @@ const weapons = [
     power: 10,
     combat: 0,
   },
-  {
-    id: 17,
+  12: {
+    id: 12,
     name: 'Everybody is everywhere',
     intelligence: 15,
     strength: 0,
@@ -263,80 +263,80 @@ const weapons = [
     power: 0,
     combat: 10,
   },
-];
+};
 
 // ***Fields/Conditions***
-const fields = [
-  {
+const fields = {
+  0: {
     id: 0,
     name: 'Nowhere',
-    intelligence: '',
-    strength: '',
-    speed: '',
-    durability: '',
-    power: '',
-    combat: '',
+    intelligence: 0,
+    strength: 0,
+    speed: 0,
+    durability: 0,
+    power: 0,
+    combat: 0,
   },
-  {
+  1: {
     id: 1,
     name: 'In an ice arena, approaching -15°C',
     intelligence: 10,
-    strength: '',
+    strength: 0,
     speed: 80,
-    durability: '',
-    power: '',
-    combat: '',
+    durability: 0,
+    power: 0,
+    combat: 0,
   },
-  {
+  2: {
     id: 2,
     name: 'In the crater of a prehistoric volcano',
-    intelligence: '',
-    strength: '',
-    speed: '',
+    intelligence: 0,
+    strength: 0,
+    speed: 0,
     durability: 10,
-    power: '',
+    power: 0,
     combat: 90,
   },
-  {
+  3: {
     id: 3,
     name: 'On the beach, during a hurricane',
     intelligence: 20,
-    strength: '',
+    strength: 0,
     speed: 80,
-    durability: '',
+    durability: 0,
     power: 70,
-    combat: '',
+    combat: 0,
   },
-  {
+  4: {
     id: 4,
     name: 'In a sploch sploch swamp',
-    intelligence: '',
-    strength: '',
+    intelligence: 0,
+    strength: 0,
     speed: 20,
     durability: 30,
-    power: '',
-    combat: '',
+    power: 0,
+    combat: 0,
   },
-  {
+  5: {
     id: 5,
     name: 'In a trampoline full of kids',
-    intelligence: '',
-    strength: '',
+    intelligence: 0,
+    strength: 0,
     speed: 60,
     durability: 80,
-    power: '',
+    power: 0,
     combat: 70,
   },
-  {
+  6: {
     id: 6,
     name: 'In the Oceanus Borealis on Mars',
     intelligence: 100,
-    strength: '',
-    speed: '',
-    durability: '',
-    power: '',
+    strength: 0,
+    speed: 0,
+    durability: 0,
+    power: 0,
     combat: 40,
   },
-];
+};
 
 export { handicaps, weapons, fields };
