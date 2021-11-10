@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -33,6 +34,7 @@ function Form({ handicaps, weapons, fields }) {
       field: selectedField,
     };
     setOptions(option);
+    // console.log(option);
   }
 
   return (

@@ -1,5 +1,6 @@
-const handicaps = {
-  None: {
+/* eslint-disable prettier/prettier */
+const handicaps = [
+  {
     id: 0,
     name: 'No handicap',
     intelligence: 0,
@@ -9,7 +10,7 @@ const handicaps = {
     power: 0,
     combat: 0,
   },
-  HandsTied: {
+  {
     id: 2,
     name: 'Hands tied behind the back',
     intelligence: 0,
@@ -19,7 +20,7 @@ const handicaps = {
     power: 0,
     combat: 0,
   },
-  Hangover: {
+  {
     id: 3,
     name: 'Hangover',
     intelligence: -15,
@@ -29,7 +30,7 @@ const handicaps = {
     power: 0,
     combat: 0,
   },
-  LeadenShoes: {
+  {
     id: 4,
     name: 'Leaden shoes',
     intelligence: 0,
@@ -39,7 +40,7 @@ const handicaps = {
     power: 0,
     combat: 0,
   },
-  SadSong: {
+  {
     id: 5,
     name: 'All by myself in your head',
     intelligence: 0,
@@ -49,7 +50,7 @@ const handicaps = {
     power: 0,
     combat: -10,
   },
-  Jarjarbinks: {
+  {
     id: 6,
     name: 'Jar Jar Binks by your side',
     intelligence: 0,
@@ -59,27 +60,7 @@ const handicaps = {
     power: 0,
     combat: -5,
   },
-  // Flu: {
-  //   id: 7,
-  //   name: 'Flu',
-  //   intelligence: 0,
-  //   strength: -15,
-  //   speed: -10,
-  //   durability: -5,
-  //   power: 0,
-  //   combat: 0,
-  // },
-  // Weightlessness: {
-  //   id: 8,
-  //   name: 'Weightlessness',
-  //   intelligence: 0,
-  //   strength: -25,
-  //   speed: 0,
-  //   durability: 0,
-  //   power: -10,
-  //   combat: 0,
-  // },
-  Pepper: {
+  {
     id: 9,
     name: 'Pepper in your nose',
     intelligence: -5,
@@ -89,17 +70,7 @@ const handicaps = {
     power: -5,
     combat: 0,
   },
-  // Blindfolden: {
-  //   id: 10,
-  //   name: 'Blindfolden',
-  //   intelligence: 0,
-  //   strength: 0,
-  //   speed: -15,
-  //   durability: 0,
-  //   power: -10,
-  //   combat: 0,
-  // },
-  Corset: {
+  {
     id: 11,
     name: 'Lace-up corset',
     intelligence: 0,
@@ -109,7 +80,7 @@ const handicaps = {
     power: -5,
     combat: 0,
   },
-  Float: {
+  {
     id: 12,
     name: 'Display : float',
     intelligence: 0,
@@ -119,7 +90,7 @@ const handicaps = {
     power: 0,
     combat: -5,
   },
-  Tartiflette: {
+  {
     id: 13,
     name: 'Tartiflette',
     intelligence: 0,
@@ -129,7 +100,7 @@ const handicaps = {
     power: -5,
     combat: 0,
   },
-  Nobody: {
+  {
     id: 14,
     name: 'Nobody is nowhere',
     intelligence: -15,
@@ -139,17 +110,7 @@ const handicaps = {
     power: 0,
     combat: -10,
   },
-  // Agoraphobia: {
-  //   id: 15,
-  //   name: 'Agoraphobia',
-  //   intelligence: 0,
-  //   strength: -5,
-  //   speed: -15,
-  //   durability: 0,
-  //   power: -5,
-  //   combat: -10,
-  // },
-  InternetExplorer: {
+  {
     id: 16,
     name: 'Internet Explorer',
     intelligence: -10,
@@ -159,7 +120,7 @@ const handicaps = {
     power: -10,
     combat: 0,
   },
-  Banana: {
+  {
     id: 17,
     name: 'Banana peel',
     intelligence: 0,
@@ -169,9 +130,10 @@ const handicaps = {
     power: -10,
     combat: 0,
   },
-};
-const weapons = {
-  None: {
+];
+
+const weapons = [
+  {
     id: 0,
     name: 'No weapon',
     intelligence: 0,
@@ -181,7 +143,7 @@ const weapons = {
     power: 0,
     combat: 0,
   },
-  Excalibur: {
+  {
     id: 2,
     name: 'Excalibur',
     intelligence: 0,
@@ -191,7 +153,7 @@ const weapons = {
     power: 10,
     combat: 10,
   },
-  Cloak: {
+  {
     id: 3,
     name: 'Invisibility cloak',
     intelligence: 5,
@@ -201,17 +163,7 @@ const weapons = {
     power: 0,
     combat: 0,
   },
-  // RedPill: {
-  //   id: 4,
-  //   name: 'The red pill',
-  //   intelligence: 25,
-  //   strength: 0,
-  //   speed: 0,
-  //   durability: 0,
-  //   power: 0,
-  //   combat: 10,
-  // },
-  Potion: {
+  {
     id: 5,
     name: 'Panoramix potion',
     intelligence: 0,
@@ -221,7 +173,7 @@ const weapons = {
     power: 25,
     combat: 0,
   },
-  Dynamite: {
+  {
     id: 6,
     name: 'Dynamite sticks',
     intelligence: 0,
@@ -231,7 +183,7 @@ const weapons = {
     power: 20,
     combat: 10,
   },
-  Sling: {
+  {
     id: 7,
     name: 'Leather Sling',
     intelligence: 0,
@@ -241,7 +193,7 @@ const weapons = {
     power: 0,
     combat: 5,
   },
-  Mushroom: {
+  {
     id: 8,
     name: 'Pink dotted mushroom',
     intelligence: 25,
@@ -251,7 +203,7 @@ const weapons = {
     power: 0,
     combat: 25,
   },
-  BlueShell: {
+  {
     id: 9,
     name: 'Blue shell',
     intelligence: 0,
@@ -261,7 +213,7 @@ const weapons = {
     power: 10,
     combat: 0,
   },
-  Plunger: {
+  {
     id: 10,
     name: 'Toilet plunger',
     intelligence: 0,
@@ -271,17 +223,7 @@ const weapons = {
     power: 5,
     combat: 0,
   },
-  // VoodooDoll: {
-  //   id: 11,
-  //   name: 'Voodoo doll',
-  //   intelligence: 5,
-  //   strength: 10,
-  //   speed: 5,
-  //   durability: 0,
-  //   power: 10,
-  //   combat: 0,
-  // },
-  Tank: {
+  {
     id: 12,
     name: 'Tank',
     intelligence: 0,
@@ -291,7 +233,7 @@ const weapons = {
     power: 15,
     combat: 0,
   },
-  Delorean: {
+  {
     id: 13,
     name: 'The Delorean',
     intelligence: 0,
@@ -301,27 +243,7 @@ const weapons = {
     power: 0,
     combat: 0,
   },
-  // Aegis: {
-  //   id: 14,
-  //   name: 'Aegis',
-  //   intelligence: 0,
-  //   strength: 0,
-  //   speed: 0,
-  //   durability: 25,
-  //   power: 0,
-  //   combat: 5,
-  // },
-  // Tornado: {
-  //   id: 15,
-  //   name: 'Tornado',
-  //   intelligence: 0,
-  //   strength: 0,
-  //   speed: 25,
-  //   durability: 20,
-  //   power: 0,
-  //   combat: 10,
-  // },
-  Hotdog: {
+  {
     id: 16,
     name: 'Screaming hotdog',
     intelligence: 0,
@@ -331,7 +253,7 @@ const weapons = {
     power: 10,
     combat: 0,
   },
-  Everybody: {
+  {
     id: 17,
     name: 'Everybody is everywhere',
     intelligence: 15,
@@ -341,11 +263,11 @@ const weapons = {
     power: 0,
     combat: 10,
   },
-};
+];
 
 // ***Fields/Conditions***
-const fields = {
-  Nowhere: {
+const fields = [
+  {
     id: 0,
     name: 'Nowhere',
     intelligence: '',
@@ -355,7 +277,7 @@ const fields = {
     power: '',
     combat: '',
   },
-  IceArena: {
+  {
     id: 1,
     name: 'In an ice arena, approaching -15°C',
     intelligence: 10,
@@ -365,7 +287,7 @@ const fields = {
     power: '',
     combat: '',
   },
-  Volcano: {
+  {
     id: 2,
     name: 'In the crater of a prehistoric volcano',
     intelligence: '',
@@ -375,7 +297,7 @@ const fields = {
     power: '',
     combat: 90,
   },
-  Beach: {
+  {
     id: 3,
     name: 'On the beach, during a hurricane',
     intelligence: 20,
@@ -385,7 +307,7 @@ const fields = {
     power: 70,
     combat: '',
   },
-  Swamp: {
+  {
     id: 4,
     name: 'In a sploch sploch swamp',
     intelligence: '',
@@ -395,7 +317,7 @@ const fields = {
     power: '',
     combat: '',
   },
-  Trampoline: {
+  {
     id: 5,
     name: 'In a trampoline full of kids',
     intelligence: '',
@@ -405,7 +327,7 @@ const fields = {
     power: '',
     combat: 70,
   },
-  Mars: {
+  {
     id: 6,
     name: 'In the Oceanus Borealis on Mars',
     intelligence: 100,
@@ -415,6 +337,6 @@ const fields = {
     power: '',
     combat: 40,
   },
-};
+];
 
 export { handicaps, weapons, fields };
