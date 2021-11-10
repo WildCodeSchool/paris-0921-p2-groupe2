@@ -1,0 +1,56 @@
+@import '../../Fonts.css';
+
+.challengeTitle {
+  color: var(--yellow);
+  margin: 0 auto;
+  background-color: var(--black);
+  text-align: center;
+  padding: 0 0;
+  font-family: var(--main-font-family);
+}
+
+.characterIntro {
+  margin: 0;
+  font-family: var(--second-font-family);
+  text-align: center;
+}
+
+.choiceIntro {
+  margin: 0;
+}
+
+.challengeContainer {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  margin: auto auto;
+  width: 100vw;
+}
+
+.challengeCharacter {
+  width: 50vw;
+}
+
+.charactersContainer {
+  display: flex;
+}
+
+.searchItem {
+  text-align: center;
+}
+
+.searchText {
+  font-family: var(--second-font-family);
+  margin-top: 10px;
+  background-image: url('../../../assets/search.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.searchButton {
+  background-color: var(--black);
+  font-family: var(--second-font-family);
+  color: var(--yellow);
+  border: none;
+}
