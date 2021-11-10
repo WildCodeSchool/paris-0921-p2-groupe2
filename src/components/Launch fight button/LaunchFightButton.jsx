@@ -13,6 +13,9 @@ export default function LaunchFightButton() {
       <Link to="/fight">
         <button className={styles.launchFightButton}>FIGHT</button>
       </Link>
+      <Link to="/options">
+        <button className={styles.launchFightButton}>OPTIONS</button>
+      </Link>
       <button className={styles.launchFightButton} onClick={resetPlayers}>
         RESET
       </button>
