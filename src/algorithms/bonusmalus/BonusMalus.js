@@ -326,7 +326,7 @@ const weapons = {
 // ***Fields/Conditions***
 const fields = {
   IceArena: {
-    name: 'In an ice arena, in -15°C',
+    name: 'In an ice arena, approaching -15°C',
     intelligence: 10,
     strength: '',
     speed: 80,
@@ -371,7 +371,7 @@ const fields = {
     combat: '',
   },
   Mars: {
-    name: 'In the middle of the Oceanus Borealis on Mars',
+    name: 'In the Oceanus Borealis on Mars',
     intelligence: '',
     strength: '',
     speed: '',
