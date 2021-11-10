@@ -1,4 +1,14 @@
 const handicaps = {
+  None: {
+    id: 0,
+    name: 'No handicap',
+    intelligence: 0,
+    strength: 0,
+    speed: 0,
+    durability: 0,
+    power: 0,
+    combat: 0,
+  },
   HandsTied: {
     id: 2,
     name: 'Hands tied behind the back',
@@ -161,6 +171,16 @@ const handicaps = {
   },
 };
 const weapons = {
+  None: {
+    id: 0,
+    name: 'No weapon',
+    intelligence: 0,
+    strength: 0,
+    speed: 0,
+    durability: 0,
+    power: 0,
+    combat: 0,
+  },
   Excalibur: {
     id: 2,
     name: 'Excalibur',
@@ -325,7 +345,18 @@ const weapons = {
 
 // ***Fields/Conditions***
 const fields = {
+  Nowhere: {
+    id: 0,
+    name: 'Nowhere',
+    intelligence: '',
+    strength: '',
+    speed: '',
+    durability: '',
+    power: '',
+    combat: '',
+  },
   IceArena: {
+    id: 1,
     name: 'In an ice arena, approaching -15°C',
     intelligence: 10,
     strength: '',
@@ -335,49 +366,54 @@ const fields = {
     combat: '',
   },
   Volcano: {
+    id: 2,
     name: 'In the crater of a prehistoric volcano',
     intelligence: '',
     strength: '',
     speed: '',
-    durability: '',
+    durability: 10,
     power: '',
-    combat: '',
+    combat: 90,
   },
   Beach: {
+    id: 3,
     name: 'On the beach, during a hurricane',
-    intelligence: '',
+    intelligence: 20,
     strength: '',
-    speed: '',
+    speed: 80,
     durability: '',
-    power: '',
+    power: 70,
     combat: '',
   },
   Swamp: {
+    id: 4,
     name: 'In a sploch sploch swamp',
     intelligence: '',
     strength: '',
-    speed: '',
-    durability: '',
+    speed: 20,
+    durability: 30,
     power: '',
     combat: '',
   },
   Trampoline: {
+    id: 5,
     name: 'In a trampoline full of kids',
     intelligence: '',
     strength: '',
-    speed: '',
-    durability: '',
+    speed: 60,
+    durability: 80,
     power: '',
-    combat: '',
+    combat: 70,
   },
   Mars: {
+    id: 6,
     name: 'In the Oceanus Borealis on Mars',
-    intelligence: '',
+    intelligence: 100,
     strength: '',
     speed: '',
     durability: '',
     power: '',
-    combat: '',
+    combat: 40,
   },
 };
 

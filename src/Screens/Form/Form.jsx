@@ -23,22 +23,16 @@ function Form({ handicaps, weapons, fields }) {
   const [selectedWeaponB, setSelectedWeaponB] = useState([]);
   const [selectedField, setSelectedField] = useState([]);
 
-  let selectedOptionsA = [];
-  // eslint-disable-next-line no-unused-vars
-  function handleSelectedOptionsA() {
-    selectedHandicapA && selectedOptionsA.push(selectedHandicapA);
-    selectedOptionsA.push(selectedWeaponA);
-    selectedOptionsA.push(selectedField);
-    // console.log(selectedHandicap);
-  }
+  // eslint-disable-next-line
+  const [options, setOptions] = useState();
 
-  let selectedOptionsB = [];
-  // eslint-disable-next-line no-unused-vars
-  function handleSelectedOptionsB() {
-    selectedHandicapB && selectedOptionsB.push(selectedHandicapB);
-    selectedOptionsB.push(selectedWeaponB);
-    selectedOptionsB.push(selectedField);
-    // console.log(selectedHandicap);
+  function handleSelectedOptions() {
+    const option = {
+      optionA: [selectedHandicapA, selectedWeaponA],
+      optionB: [selectedHandicapB, selectedWeaponB],
+      field: selectedField,
+    };
+    setOptions(option);
   }
 
   return (
@@ -52,13 +46,6 @@ function Form({ handicaps, weapons, fields }) {
             <p>Fighter A</p>
             <p>Fighter B</p>
           </div>
-          <div className={styles.formLine}>
-            <p className={styles.formFirstColumn}>No handicap</p>
-            <div className={styles.formInput}>
-              <input type="radio" name="handicapA" checked />
-              <input type="radio" name="handicapB" checked />
-            </div>
-          </div>
           {handicapList &&
             handicapList.map((handicap, index) => {
               return (
@@ -70,14 +57,16 @@ function Form({ handicaps, weapons, fields }) {
                       id={handicap.id}
                       name="handicapA"
                       value={handicap.id}
-                      onChange={(e) => setSelectedHandicapA(e.target.value)}
+                      onClick={(e) => setSelectedHandicapA(e.target.value)}
+                      defaultChecked={handicap.id === 0 ? true : false}
                     />
                     <input
                       type="radio"
                       id={handicap.id}
                       name="handicapB"
                       value={handicap.id}
-                      onChange={(e) => setSelectedHandicapB(e.target.value)}
+                      onClick={(e) => setSelectedHandicapB(e.target.value)}
+                      defaultChecked={handicap.id === 0 ? true : false}
                     />
                   </div>
                 </div>
@@ -91,21 +80,28 @@ function Form({ handicaps, weapons, fields }) {
             <p>Fighter A</p>
             <p>Fighter B</p>
           </div>
-          <div className={styles.formLine}>
-            <p className={styles.formFirstColumn}>No weapon</p>
-            <div className={styles.formInput}>
-              <input type="radio" name="weaponA" checked />
-              <input type="radio" name="weaponB" checked />
-            </div>
-          </div>
           {weaponList &&
             weaponList.map((weapon, index) => {
               return (
                 <div className={styles.formLine} key={index}>
                   <p className={styles.formFirstColumn}>{weapon.name}</p>
                   <div className={styles.formInput}>
-                    <input type="radio" id={weapon.id} name="weaponA" value={weapon.id} onSelect={(e) => setSelectedWeaponA(e.target.value)} />
-                    <input type="radio" id={weapon.id} name="weaponB" value={weapon.id} onSelect={(e) => setSelectedWeaponB(e.target.value)} />
+                    <input
+                      type="radio"
+                      id={weapon.id}
+                      name="weaponA"
+                      value={weapon.id}
+                      onClick={(e) => setSelectedWeaponA(e.target.value)}
+                      defaultChecked={weapon.id === 0 ? true : false}
+                    />
+                    <input
+                      type="radio"
+                      id={weapon.id}
+                      name="weaponB"
+                      value={weapon.id}
+                      onClick={(e) => setSelectedWeaponB(e.target.value)}
+                      defaultChecked={weapon.id === 0 ? true : false}
+                    />
                   </div>
                 </div>
               );
@@ -113,19 +109,20 @@ function Form({ handicaps, weapons, fields }) {
         </div>
         <div className={styles.choiceForm}>
           <h2>Where do you want to fight ?</h2>
-          <div className={styles.formLine}>
-            <p className={styles.formFirstColumn}>Nowhere</p>
-            <div className={styles.formInput}>
-              <input type="radio" name="field" checked />
-            </div>
-          </div>
           {fieldList &&
             fieldList.map((field, index) => {
               return (
                 <div className={styles.formLine} key={index}>
                   <p className={styles.formFirstColumn}>{field.name}</p>
                   <div className={styles.formInput}>
-                    <input type="radio" id={field.id} name="field" value={field.id} onSelect={(e) => setSelectedField(e.target.value)} />
+                    <input
+                      type="radio"
+                      id={field.id}
+                      name="field"
+                      value={field.id}
+                      onClick={(e) => setSelectedField(e.target.value)}
+                      defaultChecked={field.id === 0 ? true : false}
+                    />
                   </div>
                 </div>
               );
@@ -133,7 +130,7 @@ function Form({ handicaps, weapons, fields }) {
         </div>
       </div>
       <Link to="/fight">
-        <button className={styles.launchFightButton} onClick={(handleSelectedOptionsA, handleSelectedOptionsB)}>
+        <button className={styles.launchFightButton} onClick={handleSelectedOptions}>
           FIGHT
         </button>
       </Link>
