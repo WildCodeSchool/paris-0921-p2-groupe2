@@ -29,4 +29,12 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .browser {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

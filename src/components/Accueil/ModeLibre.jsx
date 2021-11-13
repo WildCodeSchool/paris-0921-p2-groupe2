@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import imgMode from '../../../assets/Fight-Image3.jpg';
 import styles from './modes.module.css';
 
-function ModeLibre() {
-  const [show, setShow] = useState(false);
+function ModeLibre({ status }) {
+  const [show, setShow] = useState(status);
   return (
     <div className={styles.menuChallenge}>
       <div className={styles.menuHeading}>
