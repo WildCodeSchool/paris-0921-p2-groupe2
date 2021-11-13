@@ -19,7 +19,7 @@ function ModeLibre() {
       {show && (
         <div className={styles.menuContent}>
           <img src={imgMode} alt="" />
-          <p className={styles.innerMenuDesc}>Choisis tous les paramètres pour un combat sur mesure</p>
+          <p className={styles.innerMenuDesc}>Select all the parameters for a customized fight</p>
         </div>
       )}
     </div>

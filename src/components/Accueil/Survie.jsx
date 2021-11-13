@@ -18,7 +18,7 @@ function Survie() {
       {show && (
         <div className={styles.menuContent}>
           <img src={imgMode} alt="" />
-          <p className={styles.innerMenuDesc}>Résiste au plus grand nombre d’adversaires possible</p>
+          <p className={styles.innerMenuDesc}>try to resist as many enemies as possible</p>
         </div>
       )}
     </div>
