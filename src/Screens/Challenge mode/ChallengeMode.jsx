@@ -1,14 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
 
 import ChallengeDetail from '../../components/Challenge Selected Detail/ChallengeDetail';
+import ChallengeParams from '../../components/Challenge params/ChallengeParams';
 import CharactersList from '../../components/Characters list/CharactersList';
 import LaunchChallengeButton from '../../components/Launch Challenge Button/LaunchChallengeButton';
 import FighterContext from '../../contexts/FighterContext';
 
+import { handicaps, weapons, fields } from '../../algorithms/bonusmalus/BonusMalus';
+
 import styles from './ChallengeMode.module.css';
 
 export default function ChallengeMode() {
-  const { playerA, setPlayerA, setPlayerB } = useContext(FighterContext);
+  const { playerA, setPlayerA, setPlayerB, options, setOptions } = useContext(FighterContext);
 
   const preCharacterSelection = {
     image: {
@@ -21,8 +24,22 @@ export default function ChallengeMode() {
   const [heroesList, setHeroesList] = useState('');
   const [query, setQuery] = useState('');
 
+  let handicapA, handicapB, weaponA, weaponB, area;
+
   useEffect(() => {
     const characterIndex = Math.round(Math.random() * 731);
+    handicapA = handicaps[Math.floor(Math.random() * 13)];
+    handicapB = handicaps[Math.floor(Math.random() * 13)];
+    weaponA = weapons[Math.floor(Math.random() * 13)];
+    weaponB = weapons[Math.floor(Math.random() * 13)];
+    area = fields[Math.floor(Math.random() * 7)];
+    const newOptions = {
+      optionA: [handicapA.id, weaponA.id],
+      optionB: [handicapB.id, weaponB.id],
+      field: area.id,
+    };
+    setOptions(newOptions);
+
     fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${characterIndex}`)
       .then((res) => res.json())
       .then((data) => setPlayerA(data));
@@ -51,10 +68,12 @@ export default function ChallengeMode() {
         <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your opponent</h3>
           {playerA && <ChallengeDetail character={playerA} />}
+          {options && <ChallengeParams options={options.optionA} />}
         </div>
         <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your choice</h3>
           {playerA && <ChallengeDetail character={selectedCharacter} />}
+          {options && <ChallengeParams options={options.optionB} />}
         </div>
       </div>
       {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
