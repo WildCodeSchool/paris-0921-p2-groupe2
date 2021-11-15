@@ -22,7 +22,7 @@
 .challengeContainer {
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: auto;
   margin: auto auto;
   width: 100vw;
 }
