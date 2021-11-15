@@ -1,0 +1,40 @@
+@import '../../Fonts.css';
+
+/* html body {
+  padding: 0;
+  margin: 0;
+  background-color: #d6d6d6;
+} */
+.menuHeaderDesk {
+  display: none;
+  font-family: var(--second-font-family);
+  color: var(--dark-grey);
+}
+.menuModesContainer {
+  margin: 4vh 0;
+  width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  .menuHeaderDesk {
+    display: block;
+    font-style: italic;
+    font-size: x-large;
+    text-align: center;
+  }
+  .menuModesContainer {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .browser {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
