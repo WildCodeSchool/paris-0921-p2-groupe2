@@ -1,11 +1,42 @@
 @import '../../Fonts.css';
 
-.choiceContener {
-  align-items: center;
+.challengeTitle {
+  color: var(--yellow);
+  margin: 0 auto;
+  background-color: var(--black);
+  text-align: center;
+  padding: 0 0;
+  font-family: var(--main-font-family);
+}
+
+.characterIntro {
+  margin: 0;
+  font-family: var(--second-font-family);
+  text-align: center;
+}
+
+.choiceIntro {
+  margin: 0;
+}
+
+.challengeContainer {
   display: flex;
   flex-direction: column;
+  height: auto;
   margin: auto auto;
   width: 100vw;
+}
+
+.challengeCharacter {
+  width: 50vw;
+}
+
+.charactersContainer {
+  display: flex;
+}
+
+.searchItem {
+  text-align: center;
 }
 
 .searchText {

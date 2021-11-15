@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import imgMode from '../../../assets/Fight-Image3.jpg';
 import styles from './modes.module.css';
@@ -13,7 +14,9 @@ function ModeLibre({ status }) {
             <h1>Mode Libre</h1>
             <p>Select all the parameters for a customized fight</p>
           </button>
-          <button className={styles.launchButton}>Go !</button>
+          <Link to="/freemode">
+            <button className={styles.launchButton}>Go !</button>
+          </Link>
         </div>
       </div>
       {show && (

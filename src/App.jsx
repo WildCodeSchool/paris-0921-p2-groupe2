@@ -5,11 +5,13 @@ import FighterContext from './contexts/FighterContext';
 import Menu3Modes from './Screens/Menu/Menu3Modes';
 import CharactersChoice from './Screens/Character Choice/CharactersChoice';
 import DisplayFight from './Screens/Fighting results/DisplayFight';
-import Form from './Screens/Form/Form';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
+import ChallengeMode from './Screens/Challenge mode/ChallengeMode';
+import Form from './Screens/Form/Form';
+
 import styles from './App.module.css';
 function App() {
   const [playerA, setPlayerA] = useState('');
@@ -52,13 +54,16 @@ function App() {
         <div className={styles.bodyContainer}>
           <Switch>
             <Route exact path="/" component={Menu3Modes} />
-            <Route path="/characterschoice">
+            <Route path="/freemode">
               <SelectedCharacters />
               <CharactersChoice />
               {playerB && <LaunchFightButton />}
             </Route>
             <Route path="/fight">
               <DisplayFight />
+            </Route>
+            <Route path="/challenge">
+              <ChallengeMode />
             </Route>
             <Route path="/options">
               <Form />

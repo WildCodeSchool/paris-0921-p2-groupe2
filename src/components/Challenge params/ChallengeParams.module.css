@@ -1,0 +1,14 @@
+@import '../../Fonts.css';
+
+.challengeOptions {
+  font-family: var(--second-font-family);
+  font-size: x-small;
+  display: flex;
+}
+
+.fieldOptions {
+  text-align: center;
+  font-size: smaller;
+  padding: 0;
+  margin: -15px auto;
+}
