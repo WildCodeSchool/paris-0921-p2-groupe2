@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import ChallengeDetail from '../../components/Challenge Selected Detail/ChallengeDetail';
 import CharactersList from '../../components/Characters list/CharactersList';
 import LaunchChallengeButton from '../../components/Launch Challenge Button/LaunchChallengeButton';
+import FighterContext from '../../contexts/FighterContext';
 
 import styles from './ChallengeMode.module.css';
 
 export default function ChallengeMode() {
+  const { playerA, setPlayerA, setPlayerB } = useContext(FighterContext);
+
   const preCharacterSelection = {
     image: {
       url: '../../../assets/question.png',
@@ -14,7 +17,6 @@ export default function ChallengeMode() {
     name: 'Choose a fighter',
   };
 
-  const [opponent, setOpponent] = useState('');
   const [selectedCharacter, setSelectedCharacter] = useState(preCharacterSelection);
   const [heroesList, setHeroesList] = useState('');
   const [query, setQuery] = useState('');
@@ -23,8 +25,12 @@ export default function ChallengeMode() {
     const characterIndex = Math.round(Math.random() * 731);
     fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${characterIndex}`)
       .then((res) => res.json())
-      .then((data) => setOpponent(data));
+      .then((data) => setPlayerA(data));
   }, []);
+
+  useEffect(() => {
+    setPlayerB(selectedCharacter);
+  }, [selectedCharacter]);
 
   const searchCharacters = (e) => {
     e.preventDefault();
@@ -44,11 +50,11 @@ export default function ChallengeMode() {
       <div className={styles.charactersContainer}>
         <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your opponent</h3>
-          {opponent && <ChallengeDetail character={opponent} />}
+          {playerA && <ChallengeDetail character={playerA} />}
         </div>
         <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your choice</h3>
-          {opponent && <ChallengeDetail character={selectedCharacter} />}
+          {playerA && <ChallengeDetail character={selectedCharacter} />}
         </div>
       </div>
       {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
