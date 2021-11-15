@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 import ChallengeDetail from '../../components/Challenge Selected Detail/ChallengeDetail';
-import styles from './ChallengeMode.module.css';
 import CharactersList from '../../components/Characters list/CharactersList';
+import LaunchChallengeButton from '../../components/Launch Challenge Button/LaunchChallengeButton';
+
+import styles from './ChallengeMode.module.css';
 
 export default function ChallengeMode() {
   const preCharacterSelection = {
@@ -49,6 +51,7 @@ export default function ChallengeMode() {
           {opponent && <ChallengeDetail character={selectedCharacter} />}
         </div>
       </div>
+      {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
       <form className={styles.searchItem} onSubmit={searchCharacters}>
         <label>
           <input className={styles.searchText} type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
