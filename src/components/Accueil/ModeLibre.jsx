@@ -11,7 +11,7 @@ function ModeLibre({ status }) {
         <div className={styles.menuContainer}>
           <button className={styles.menuShort} onClick={() => setShow(!show)}>
             <h1>Mode Libre</h1>
-            <p>Le combat sur mesure</p>
+            <p>Select all the parameters for a customized fight</p>
           </button>
           <button className={styles.launchButton}>Go !</button>
         </div>

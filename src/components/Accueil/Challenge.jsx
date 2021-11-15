@@ -22,7 +22,7 @@ function Challenge() {
       {show && (
         <div className={styles.menuContent}>
           <img src={imgMode} alt="" />
-          <p className={styles.innerMenuDesc}>try to resist as many enemies as possible</p>
+          <p className={styles.innerMenuDesc}>Be the winner in the proposed scenario</p>
         </div>
       )}
     </div>

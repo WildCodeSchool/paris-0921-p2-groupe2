@@ -10,7 +10,7 @@ function Survie({ status }) {
         <div className={styles.menuContainer}>
           <button className={styles.menuShort} onClick={() => setShow(!show)}>
             <h1>Survie</h1>
-            <p>Survis le plus longtemps possible</p>
+            <p>Survive as long as possible</p>
           </button>
           <button className={styles.launchButton}>Go !</button>
         </div>
