@@ -37,7 +37,7 @@
 }
 .firstFormLine {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 0.2vh 2vh;
 }
 .firstFormLine p {
@@ -47,15 +47,22 @@
 }
 .formLine {
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   margin: 0.2vh 2vh;
 }
 .formFirstColumn {
-  height: 3vh;
+  height: auto;
   margin: 0;
   color: var(--dark-grey);
 }
+
+.formInput {
+  display: flex;
+  justify-content: space-between;
+}
+
 .formInput input {
   margin: 0 4.5vw;
   -webkit-appearance: none;
@@ -85,6 +92,12 @@
   margin-top: 10px;
   margin-bottom: 40px;
 }
+
+#weather {
+  flex-direction: row;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
   .optionChoice {
     width: 95vw;
@@ -105,17 +118,6 @@
     width: 4.5vw;
   }
   .launchFightButton {
-    /* background-color: var(--yellow);
-    border: solid 1px var(--dark-grey);
-    box-shadow: 5px 5px 10px var(--dark-grey);
-    color: var(--black);
-    cursor: pointer;
-    font-family: var(--main-font-family);
-    font-size: large;
-    font-weight: bold;
-    padding: 10px 20px;
-    width: 150px;
-    text-align: center; */
     margin-top: 0;
     margin-bottom: 10px;
   }

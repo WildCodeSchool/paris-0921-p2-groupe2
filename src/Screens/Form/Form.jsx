@@ -42,15 +42,14 @@ function Form() {
         <div className={styles.choiceForm}>
           <h2>Choose a handicap :</h2>
           <div className={styles.firstFormLine}>
-            <p></p>
             <p>{playerA.name}</p>
+            <p></p>
             <p>{playerB.name}</p>
           </div>
           {handicapList &&
             handicapList.map((handicap, index) => {
               return (
                 <div className={styles.formLine} key={index}>
-                  <p className={styles.formFirstColumn}>{handicap.name}</p>
                   <div className={styles.formInput}>
                     <input
                       type="radio"
@@ -60,6 +59,7 @@ function Form() {
                       onClick={(e) => setSelectedHandicapA(e.target.value)}
                       defaultChecked={handicap.id === 0 ? true : false}
                     />
+                    <p className={styles.formFirstColumn}>{handicap.name}</p>
                     <input
                       type="radio"
                       id={handicap.id}
@@ -76,15 +76,14 @@ function Form() {
         <div className={styles.choiceForm}>
           <h2>Choose a weapon :</h2>
           <div className={styles.firstFormLine}>
-            <p></p>
             <p>{playerA.name}</p>
+            <p></p>
             <p>{playerB.name}</p>
           </div>
           {weaponList &&
             weaponList.map((weapon, index) => {
               return (
                 <div className={styles.formLine} key={index}>
-                  <p className={styles.formFirstColumn}>{weapon.name}</p>
                   <div className={styles.formInput}>
                     <input
                       type="radio"
@@ -94,6 +93,7 @@ function Form() {
                       onClick={(e) => setSelectedWeaponA(e.target.value)}
                       defaultChecked={weapon.id === 0 ? true : false}
                     />
+                    <p className={styles.formFirstColumn}>{weapon.name}</p>
                     <input
                       type="radio"
                       id={weapon.id}
@@ -112,7 +112,7 @@ function Form() {
           {fieldList &&
             fieldList.map((field, index) => {
               return (
-                <div className={styles.formLine} key={index}>
+                <div className={styles.formLine} id={styles.weather} key={index}>
                   <p className={styles.formFirstColumn}>{field.name}</p>
                   <div className={styles.formInput}>
                     <input
