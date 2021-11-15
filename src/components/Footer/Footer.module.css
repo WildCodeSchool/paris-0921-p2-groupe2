@@ -1,6 +1,6 @@
 .footer {
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--dark-grey);
   bottom: 0;
   color: var(--yellow);
   font-family: (var(--second-font-family));

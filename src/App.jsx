@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Button from './Screens/Home/Button';
+import FighterContext from './contexts/FighterContext';
+import Menu3Modes from './Screens/Menu/Menu3Modes';
 import CharactersChoice from './Screens/Character Choice/CharactersChoice';
 import DisplayFight from './Screens/Fighting results/DisplayFight';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
-import FighterContext from './contexts/FighterContext';
-
 import styles from './App.module.css';
-
 function App() {
   const [playerA, setPlayerA] = useState('');
   const [playerB, setPlayerB] = useState('');
@@ -48,7 +46,7 @@ function App() {
         <Header />
         <div className={styles.bodyContainer}>
           <Switch>
-            <Route exact path="/" component={Button} />
+            <Route exact path="/" component={Menu3Modes} />
             <Route path="/characterschoice">
               <SelectedCharacters />
               <CharactersChoice />
