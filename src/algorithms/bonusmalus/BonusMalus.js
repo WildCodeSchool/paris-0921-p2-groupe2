@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 const handicaps = {
   0: {
     id: 0,
@@ -12,7 +11,7 @@ const handicaps = {
   },
   1: {
     id: 1,
-    name: 'Hands tied behind the back',
+    name: 'Hands behind back',
     intelligence: 0,
     strength: -10,
     speed: -20,
@@ -265,7 +264,6 @@ const weapons = {
   },
 };
 
-// ***Fields/Conditions***
 const fields = {
   0: {
     id: 0,
