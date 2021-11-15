@@ -10,8 +10,12 @@ export default function ChallengeParams({ options }) {
 
   return (
     <div className={styles.challengeOptions}>
-      <p>Handicap : {handicap}</p>
-      <p>Weapon : {weapon}</p>
+      <p>
+        <b>Handicap</b> {handicap}
+      </p>
+      <p>
+        <b>Weapon</b> {weapon}
+      </p>
     </div>
   );
 }
