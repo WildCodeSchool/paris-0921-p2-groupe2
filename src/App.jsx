@@ -10,6 +10,7 @@ import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
 import ChallengeMode from './Screens/Challenge mode/ChallengeMode';
+import Form from './Screens/Form/Form';
 
 import styles from './App.module.css';
 function App() {
@@ -63,6 +64,9 @@ function App() {
             </Route>
             <Route path="/challenge">
               <ChallengeMode />
+            </Route>
+            <Route path="/options">
+              <Form />
             </Route>
           </Switch>
         </div>
