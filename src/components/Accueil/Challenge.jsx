@@ -12,7 +12,7 @@ function Challenge() {
         <div className={styles.menuContainer}>
           <button className={styles.menuShort} onClick={() => setShow(!show)}>
             <h1>Challenge</h1>
-            <p>Be the winner in the proposed scenario</p>
+            <p>Be the winner in the suggested scenario</p>
           </button>
           <Link to="/characterschoice">
             <button className={styles.launchButton}>Go !</button>
@@ -22,7 +22,7 @@ function Challenge() {
       {show && (
         <div className={styles.menuContent}>
           <img src={imgMode} alt="" />
-          <p className={styles.innerMenuDesc}>Be the winner in the proposed scenario</p>
+          <p className={styles.innerMenuDesc}>Be the winner in the suggested scenario</p>
         </div>
       )}
     </div>
