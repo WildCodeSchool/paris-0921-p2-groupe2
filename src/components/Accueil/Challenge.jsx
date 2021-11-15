@@ -14,7 +14,7 @@ function Challenge() {
             <h1>Challenge</h1>
             <p>Be the winner in the suggested scenario</p>
           </button>
-          <Link to="/characterschoice">
+          <Link to="/challenge">
             <button className={styles.launchButton}>Go !</button>
           </Link>
         </div>

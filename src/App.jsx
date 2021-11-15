@@ -53,7 +53,7 @@ function App() {
         <div className={styles.bodyContainer}>
           <Switch>
             <Route exact path="/" component={Menu3Modes} />
-            <Route path="/characterschoice">
+            <Route path="/freemode">
               <SelectedCharacters />
               <CharactersChoice />
               {playerB && <LaunchFightButton />}
