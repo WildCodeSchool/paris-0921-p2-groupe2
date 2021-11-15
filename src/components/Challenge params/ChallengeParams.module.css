@@ -5,3 +5,10 @@
   font-size: x-small;
   display: flex;
 }
+
+.fieldOptions {
+  text-align: center;
+  font-size: smaller;
+  padding: 0;
+  margin: -15px auto;
+}

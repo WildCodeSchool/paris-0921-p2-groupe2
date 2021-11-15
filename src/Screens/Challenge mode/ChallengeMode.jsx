@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 
 import ChallengeDetail from '../../components/Challenge Selected Detail/ChallengeDetail';
+import ChallengeField from '../../components/Challenge params/ChallengeField';
 import ChallengeParams from '../../components/Challenge params/ChallengeParams';
 import CharactersList from '../../components/Characters list/CharactersList';
 import LaunchChallengeButton from '../../components/Launch Challenge Button/LaunchChallengeButton';
@@ -77,6 +78,7 @@ export default function ChallengeMode() {
         </div>
       </div>
       {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
+      {options && <ChallengeField options={options.field} />}
       <form className={styles.searchItem} onSubmit={searchCharacters}>
         <label>
           <input className={styles.searchText} type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
