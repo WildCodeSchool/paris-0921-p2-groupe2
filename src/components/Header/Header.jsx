@@ -8,12 +8,12 @@ import styles from './Header.module.css';
 import logo from '../../../assets/logoBC.png';
 
 function Header() {
-  const { resetPlayers } = useContext(FighterContext);
+  const { resetGame } = useContext(FighterContext);
 
   return (
     <div className={styles.header}>
       <Link to="/">
-        <img onClick={resetPlayers} className={styles.logo} src={logo} alt="logo" />
+        <img onClick={resetGame} className={styles.logo} src={logo} alt="logo" />
       </Link>
     </div>
   );

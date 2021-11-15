@@ -5,6 +5,7 @@ import FighterContext from './contexts/FighterContext';
 import Menu3Modes from './Screens/Menu/Menu3Modes';
 import CharactersChoice from './Screens/Character Choice/CharactersChoice';
 import DisplayFight from './Screens/Fighting results/DisplayFight';
+import Form from './Screens/Form/Form';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
@@ -13,10 +14,12 @@ import styles from './App.module.css';
 function App() {
   const [playerA, setPlayerA] = useState('');
   const [playerB, setPlayerB] = useState('');
+  const [options, setOptions] = useState('');
 
-  function resetPlayers() {
+  function resetGame() {
     setPlayerA('');
     setPlayerB('');
+    setOptions('');
   }
 
   function updatePlayer(e) {
@@ -37,10 +40,12 @@ function App() {
         value={{
           playerA: playerA,
           playerB: playerB,
+          options: options,
           setPlayerA: setPlayerA,
           setPlayerB: setPlayerB,
+          setOptions: setOptions,
           updatePlayer: updatePlayer,
-          resetPlayers: resetPlayers,
+          resetGame: resetGame,
         }}
       >
         <Header />
@@ -54,6 +59,9 @@ function App() {
             </Route>
             <Route path="/fight">
               <DisplayFight />
+            </Route>
+            <Route path="/options">
+              <Form />
             </Route>
           </Switch>
         </div>

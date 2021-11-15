@@ -7,10 +7,9 @@
   color: var(--black);
   cursor: pointer;
   font-family: var(--main-font-family);
-  font-size: large;
+  font-size: 14px;
   font-weight: bold;
   padding: 10px 20px;
-  width: 150px;
   text-align: center;
   margin-bottom: 25px;
 }
