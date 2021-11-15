@@ -1,0 +1,6 @@
+@import '../../Fonts.css';
+
+.challengeOptions {
+  font-family: var(--second-font-family);
+  font-size: smaller;
+}
