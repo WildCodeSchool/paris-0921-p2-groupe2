@@ -4,10 +4,11 @@
   background-color: var(--black);
   color: var(--light-yellow);
   font-family: var(--main-font-family);
-  font-size: 24px;
-  margin: 2vh 0;
+  font-size: 18px;
+  margin: 1vh 0;
   padding: 20px;
   text-align: center;
+  width: 100vw;
 }
 
 .fightingAction {
@@ -19,11 +20,15 @@
   vertical-align: middle;
   height: 0;
   animation: appearance 2s;
+  width: 100vw;
+  margin: 0;
+  font-size: 0px;
 }
 
 @keyframes appearance {
   0% {
     height: 7vh;
+    margin: 0;
     font-size: large;
   }
   30% {
@@ -38,7 +43,6 @@
     height: 7vh;
     z-index: -1;
     color: var(--dark-grey);
-    opacity: 0;
   }
 }
 
@@ -60,17 +64,45 @@
 .fightingAction:nth-child(6) {
   animation-delay: 10s;
 }
+.fightingAction:nth-child(7) {
+  animation-delay: 12s;
+}
+.fightingAction:nth-child(8) {
+  animation-delay: 14s;
+}
+.fightingAction:nth-child(9) {
+  animation-delay: 16s;
+}
+.fightingAction:nth-child(10) {
+  animation-delay: 18s;
+}
+.fightingAction:nth-child(11) {
+  animation-delay: 20s;
+}
+.fightingAction:nth-child(12) {
+  animation-delay: 22s;
+}
+.fightingAction:nth-child(13) {
+  animation-delay: 24s;
+}
+.fightingAction:nth-child(14) {
+  animation-delay: 26s;
+}
+.fightingAction:nth-child(15) {
+  animation-delay: 28s;
+}
 
 .fightingResult {
   background-color: var(--yellow);
   color: var(--black);
-  font-size: 24px;
+  font-size: 20px;
   font-family: var(--main-font-family);
   margin: 2vh 0;
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
   animation: flash 0.9s linear infinite;
+  width: 100vw;
 }
 
 @keyframes flash {
@@ -88,5 +120,17 @@
   }
   100% {
     text-shadow: 0 0 5px var(--black);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fightingAnnouncement {
+    width: 50vw;
+  }
+  .fightingAction {
+    width: 50vw;
+  }
+  .fightingResult {
+    width: 50vw;
   }
 }

@@ -2,15 +2,16 @@
 
 .heroCard {
   align-items: center;
-  background-color: var(--dark-grey);
+  /* background-color: var(--dark-grey); */
   display: flex;
   flex-direction: column;
 }
 
 .heroPicture {
   height: auto;
-  max-width: 50vw;
-  width: 50vw;
+  /* max-width: 50vw; */
+  width: 40vw;
+  margin: 1vh 4vw;
 }
 
 @media screen and (min-width: 768px) {
