@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import imgMode from '../../../assets/Fight-Image3.jpg';
-import styles from './modes.module.css';
+import styles from './Modes.module.css';
 
-function ModeLibre({ status }) {
+export default function FreeMode({ status }) {
   const [show, setShow] = useState(status);
   return (
     <div className={styles.menuChallenge}>
       <div className={styles.menuHeading}>
         <div className={styles.menuContainer}>
           <button className={styles.menuShort} onClick={() => setShow(!show)}>
-            <h1>Mode Libre</h1>
+            <h1>Free Mode</h1>
             <p>Select all the parameters for a customized fight</p>
           </button>
           <Link to="/freemode">
@@ -28,5 +28,3 @@ function ModeLibre({ status }) {
     </div>
   );
 }
-
-export default ModeLibre;

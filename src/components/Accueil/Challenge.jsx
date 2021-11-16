@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import imgMode from '../../../assets/Fight-Image1.jpg';
-import styles from './modes.module.css';
+import styles from './Modes.module.css';
 
-function Challenge() {
+export default function Challenge() {
   const [show, setShow] = useState(true);
   return (
     <div className={styles.menuChallenge}>
@@ -28,5 +28,3 @@ function Challenge() {
     </div>
   );
 }
-
-export default Challenge;
