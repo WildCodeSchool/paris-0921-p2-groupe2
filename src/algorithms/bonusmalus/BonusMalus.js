@@ -1,7 +1,7 @@
 const handicaps = {
   0: {
     id: 0,
-    name: 'No handicap',
+    name: 'None',
     intelligence: 0,
     strength: 0,
     speed: 0,
@@ -134,7 +134,7 @@ const handicaps = {
 const weapons = {
   0: {
     id: 0,
-    name: 'No weapon',
+    name: 'None',
     intelligence: 0,
     strength: 0,
     speed: 0,
@@ -267,7 +267,7 @@ const weapons = {
 const fields = {
   0: {
     id: 0,
-    name: 'Nowhere',
+    name: 'Classic Arena',
     intelligence: 0,
     strength: 0,
     speed: 0,

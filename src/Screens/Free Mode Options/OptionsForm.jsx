@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { handicaps, weapons, fields } from '../../algorithms/bonusmalus/BonusMalus';
 
 import FighterContext from '../../contexts/FighterContext';
-import styles from './Form.module.css';
+import styles from './OptionsForm.module.css';
 
-function Form() {
+export default function OptionsForm() {
   const { playerA, playerB, setOptions } = useContext(FighterContext);
   let handicapList = [];
   for (let key in handicaps) {
@@ -137,5 +137,3 @@ function Form() {
     </div>
   );
 }
-
-export default Form;

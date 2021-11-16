@@ -48,7 +48,7 @@ export default function DisplayFight() {
       {report && <FigthtingReport report={report} />}
 
       <div className={styles.endgameChoice}>
-        <Link to="/characterschoice">
+        <Link to="/freemode">
           <button onClick={resetGame}>Another battle</button>
         </Link>
         <Link to="/">

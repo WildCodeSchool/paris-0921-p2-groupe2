@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import imgMode from '../../../assets/Fight-Image2.jpg';
-import styles from './modes.module.css';
+import styles from './Modes.module.css';
 
 function Survie({ status }) {
   const [show, setShow] = useState(status);
