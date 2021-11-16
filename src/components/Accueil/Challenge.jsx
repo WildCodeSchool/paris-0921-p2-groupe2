@@ -12,7 +12,7 @@ export default function Challenge() {
         <div className={styles.menuContainer}>
           <button className={styles.menuShort} onClick={() => setShow(!show)}>
             <h1>Challenge</h1>
-            <p>Be the winner in the suggested scenario</p>
+            <p>Win the battle against a suggested fighter</p>
           </button>
           <Link to="/challenge">
             <button className={styles.launchButton}>Go !</button>
@@ -22,7 +22,7 @@ export default function Challenge() {
       {show && (
         <div className={styles.menuContent}>
           <img src={imgMode} alt="" />
-          <p className={styles.innerMenuDesc}>Be the winner in the suggested scenario</p>
+          <p className={styles.innerMenuDesc}>Choose your champion to be the winner in the suggested scenario</p>
         </div>
       )}
     </div>

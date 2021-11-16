@@ -10,7 +10,7 @@
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: 90%;
   margin: 2vw;
   padding: 0;
