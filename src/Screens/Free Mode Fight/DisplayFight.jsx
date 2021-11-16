@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+import { handicaps, weapons, fields } from '../../algorithms/bonusmalus/BonusMalus';
 import CombatAlgorithm from '../../algorithms/CombatAlgorithm';
 import Fighter from '../../algorithms/CharacterClass';
 
@@ -11,10 +12,31 @@ import FigthtingReport from '../../components/Figthing Report/FightingReport';
 import styles from './DisplayFight.module.css';
 
 export default function DisplayFight() {
-  const { playerA, playerB, resetPlayers } = useContext(FighterContext);
+  const { playerA, playerB, resetGame, options } = useContext(FighterContext);
 
   const FighterA = new Fighter(playerA);
   const FighterB = new Fighter(playerB);
+
+  if (options != '') {
+    let modifA = [];
+    let modifB = [];
+    let handicapA = handicaps[Number(options.optionA[0])];
+    let handicapB = handicaps[Number(options.optionB[0])];
+    let weaponA = weapons[Number(options.optionA[1])];
+    let weaponB = weapons[Number(options.optionB[1])];
+    let field = fields[Number(options.field)];
+
+    modifA.push(handicapA);
+    modifA.push(weaponA);
+    modifA.push(field);
+    modifB.push(handicapB);
+    modifB.push(weaponB);
+    modifB.push(field);
+
+    FighterA.updateGear(modifA);
+    FighterB.updateGear(modifB);
+  }
+
   let report = CombatAlgorithm(FighterA, FighterB);
 
   return (
@@ -26,11 +48,11 @@ export default function DisplayFight() {
       {report && <FigthtingReport report={report} />}
 
       <div className={styles.endgameChoice}>
-        <Link to="/characterschoice">
-          <button onClick={resetPlayers}>Another battle</button>
+        <Link to="/freemode">
+          <button onClick={resetGame}>Another battle</button>
         </Link>
         <Link to="/">
-          <button onClick={resetPlayers}>Main menu</button>
+          <button onClick={resetGame}>Main menu</button>
         </Link>
       </div>
     </div>
