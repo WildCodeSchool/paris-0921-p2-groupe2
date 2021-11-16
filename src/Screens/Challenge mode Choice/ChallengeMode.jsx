@@ -22,11 +22,12 @@ export default function ChallengeMode() {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
-    const characterIndex = Math.round(Math.random() * 731);
-
-    fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${characterIndex}`)
-      .then((res) => res.json())
-      .then((data) => setPlayerA(data));
+    if (playerA == '') {
+      const characterIndex = Math.round(Math.random() * 731);
+      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${characterIndex}`)
+        .then((res) => res.json())
+        .then((data) => setPlayerA(data));
+    }
   }, []);
 
   useEffect(() => {
