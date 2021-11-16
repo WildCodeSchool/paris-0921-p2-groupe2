@@ -6,7 +6,7 @@ export default function FigthtingReport(props) {
   const { report } = props;
 
   const announcement = report.shift();
-  const result = report.pop();
+  const result = report.pop()[0];
 
   return (
     <div className={styles.reportContainer}>
