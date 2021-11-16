@@ -3,14 +3,14 @@ import { Switch, Route } from 'react-router-dom';
 
 import FighterContext from './contexts/FighterContext';
 import Menu3Modes from './Screens/Menu/Menu3Modes';
-import CharactersChoice from './Screens/Character Choice/CharactersChoice';
-import DisplayFight from './Screens/Fighting results/DisplayFight';
+import CharactersChoice from './Screens/Free Mode Choice/CharactersChoice';
+import DisplayFight from './Screens/Free Mode Fight/DisplayFight';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
-import ChallengeMode from './Screens/Challenge mode/ChallengeMode';
-import Form from './Screens/Form/Form';
+import ChallengeMode from './Screens/Challenge mode Choice/ChallengeMode';
+import Form from './Screens/Free Mode Options/OptionsForm';
 
 import styles from './App.module.css';
 function App() {
