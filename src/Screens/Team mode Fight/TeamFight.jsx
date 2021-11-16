@@ -6,40 +6,26 @@ import generateTeams from '../../algorithms/GenerateTeams';
 import teamAlgorithm from '../../algorithms/TeamAlgorithm';
 
 import FighterContext from '../../contexts/FighterContext';
+import TeamFightReport from '../../components/Team Fight Report/TeamFightReport';
 
 import styles from './TeamFight.module.css';
 
 export default function TeamFight() {
   const { resetGame, teamA, teamB } = useContext(FighterContext);
-  let groupA, groupB;
-  let report = [];
 
-  useEffect(() => {
-    // console.log(teamA);
-    // console.log(teamB);
-    let groups = generateTeams(teamA, teamB);
-    groupA = groups[0];
-    groupB = groups[1];
-  }, []);
-
-  //   useEffect(() => {
-  //     console.log(groupA);
-  //   }, [groupA]);
-
-  useEffect(() => {
-    if (groupA.length == 3 && groupB.length == 3) {
-      report = teamAlgorithm(groupA, groupB);
-    }
-  }, [groupA, groupB]);
-
-  // useEffect(() => {
-  //   if (report.length) {
-  //     console.log(report);
-  //   }
-  // }, [report]);
+  // console.log(teamA);
+  // console.log(teamB);
+  let groups = generateTeams(teamA, teamB);
+  let groupA = groups[0];
+  let groupB = groups[1];
+  // console.log(groupA);
+  // console.log(groupB);
+  let report = teamAlgorithm(groupA, groupB);
+  // console.log(report);
 
   return (
     <div className={styles.fightingComponent}>
+      {report && <TeamFightReport report={report} />}
       <div className={styles.endgameChoice}>
         <Link to="/team">
           <button onClick={resetGame}>Another battle</button>

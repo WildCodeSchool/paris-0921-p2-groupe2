@@ -1,38 +1,20 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import FighterContext from '../../contexts/FighterContext';
 
-import CharacterDetail from '../../components/Character detail/CharacterDetail';
+import SelectedTeam from '../../components/Selected team/SelectedTeam';
+import TeamMemberDetail from '../../components/Team member detail/TeamMemberDetail';
 import CharactersList from '../../components/Characters list/CharactersList';
 
 import styles from './TeamChoice.module.css';
 
-export default function TeamChoice({ handleChange }) {
+export default function TeamChoice() {
   const [selectedCharacter, setSelectedCharacter] = useState('');
   const [heroesList, setHeroesList] = useState('');
   const [query, setQuery] = useState('');
-  // eslint-disable-next-line no-unused-vars
   const { teamA, teamB, setTeamA, setTeamB } = useContext(FighterContext);
-  let defaultA = [70, 106, 107];
-  let defaultB = [127, 228, 236];
-  let tempA = [];
-  let tempB = [];
-
-  useEffect(() => {
-    for (let index of defaultA) {
-      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${index}`)
-        .then((res) => res.json())
-        .then((data) => tempA.push(data));
-    }
-    setTeamA(tempA);
-    for (let index of defaultB) {
-      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${index}`)
-        .then((res) => res.json())
-        .then((data) => tempB.push(data));
-    }
-    setTeamB(tempB);
-  }, []);
 
   const searchCharacters = (e) => {
     e.preventDefault();
@@ -47,23 +29,29 @@ export default function TeamChoice({ handleChange }) {
   };
 
   useEffect(() => {
-    const characterIndex = Math.round(Math.random() * 731);
-    fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${characterIndex}`)
-      .then((res) => res.json())
-      .then((data) => setSelectedCharacter(data));
-
     fetch('../../fakeApi.json')
       .then((res) => res.json())
       .then((data) => setHeroesList(data));
   }, []);
 
+  function assignTeamA() {
+    let temp = teamA;
+    temp.push(selectedCharacter);
+    setTeamA(temp);
+    // console.log(selectedCharacter);
+    // console.log(teamA);
+  }
+
   return (
     <div>
       <h2 className={styles.teamTitle}>TEAM FIGHT</h2>
-      <div className={styles.teamsContainer}></div>
+      <div className={styles.teamsContainer}>
+        {teamA && <SelectedTeam team={teamA} title={'Team A'} />}
+        {teamB && <SelectedTeam team={teamB} title={'Team B'} />}
+      </div>
+      {selectedCharacter && <TeamMemberDetail character={selectedCharacter} assignTeamA={assignTeamA} />}
       <div className={styles.container}>
         <div className={styles.choiceContener}>
-          {selectedCharacter && <CharacterDetail character={selectedCharacter} handleChange={handleChange} />}
           <form onSubmit={searchCharacters}>
             <label>
               <input className={styles.searchText} type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
@@ -73,7 +61,7 @@ export default function TeamChoice({ handleChange }) {
           {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
         </div>
         <Link to="/teamfight">
-          <button className={styles.bigbutton}>LESSGO</button>
+          <button className={styles.bigbutton}>FIGHT</button>
         </Link>
       </div>
     </div>

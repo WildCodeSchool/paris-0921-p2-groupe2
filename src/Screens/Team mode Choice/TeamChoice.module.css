@@ -40,3 +40,9 @@
   color: var(--yellow);
   border: none;
 }
+
+.teamsContainer {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
