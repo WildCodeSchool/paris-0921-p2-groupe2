@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 
 import ChallengeDetail from '../../components/Challenge Selected Detail/ChallengeDetail';
-import ChallengeField from '../../components/Challenge params/ChallengeField';
-import ChallengeParams from '../../components/Challenge params/ChallengeParams';
 import CharactersList from '../../components/Characters list/CharactersList';
 import LaunchChallengeButton from '../../components/Launch Challenge Button/LaunchChallengeButton';
 import FighterContext from '../../contexts/FighterContext';
@@ -12,7 +10,7 @@ import { handicaps, weapons, fields } from '../../algorithms/bonusmalus/BonusMal
 import styles from './ChallengeMode.module.css';
 
 export default function ChallengeMode() {
-  const { playerA, setPlayerA, setPlayerB, options, setOptions } = useContext(FighterContext);
+  const { playerA, setPlayerA, setPlayerB, setOptions } = useContext(FighterContext);
 
   const preCharacterSelection = {
     image: {
@@ -64,20 +62,17 @@ export default function ChallengeMode() {
 
   return (
     <div>
-      <h2 className={styles.challengeTitle}>CHALLENGE</h2>
+      <h2 className={styles.challengeTitle}>Challenge</h2>
       <div className={styles.charactersContainer}>
         <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your opponent</h3>
           {playerA && <ChallengeDetail character={playerA} />}
-          {options && <ChallengeParams options={options.optionA} />}
         </div>
         <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your choice</h3>
           {playerA && <ChallengeDetail character={selectedCharacter} />}
-          {options && <ChallengeParams options={options.optionB} />}
         </div>
       </div>
-      {options && <ChallengeField options={options.field} />}
       {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
       <form className={styles.searchItem} onSubmit={searchCharacters}>
         <label>
