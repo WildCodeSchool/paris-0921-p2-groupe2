@@ -92,7 +92,7 @@ export default function fight(fighterA, fighterB) {
   }
   if (lifeA <= 0) {
     rapport.push(`${fighterA.name} falls on the ground...`);
-    rapport.push([`${fighterB.name} wins !`, 'Your win']);
+    rapport.push([`${fighterB.name} wins !`, 'You win']);
     return rapport;
   } else {
     rapport.push(`${fighterB.name} falls on the ground...`);
