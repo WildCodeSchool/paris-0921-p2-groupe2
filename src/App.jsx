@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import ChallengeFight from './Screens/Challenge mode Fight/ChallengeFight';
 import TeamChoice from './Screens/Team mode Choice/TeamChoice';
 import TeamFight from './Screens/Team mode Fight/TeamFight';
 import FighterContext from './contexts/FighterContext';
@@ -70,6 +71,9 @@ function App() {
             </Route>
             <Route path="/challenge">
               <ChallengeMode />
+            </Route>
+            <Route path="/challengefight">
+              <ChallengeFight />
             </Route>
             <Route path="/team">
               <TeamChoice />
