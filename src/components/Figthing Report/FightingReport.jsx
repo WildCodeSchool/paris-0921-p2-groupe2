@@ -8,13 +8,15 @@ export default function FigthtingReport(props) {
   const announcement = report.shift();
   const result = report.pop();
 
+  // console.log(report);
+
   return (
     <div className={styles.reportContainer}>
       <div className={styles.fightingAnnouncement}>{announcement}</div>
       {report.map((x, i) => {
         return (
           <div className={styles.fightingAction} key={i}>
-            {x}
+            {x[0]}
           </div>
         );
       })}
