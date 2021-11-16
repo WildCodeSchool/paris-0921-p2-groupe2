@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import TeamChoice from './Screens/Team mode Choice/TeamChoice';
+import TeamFight from './Screens/Team mode Fight/TeamFight';
 import FighterContext from './contexts/FighterContext';
 import Menu3Modes from './Screens/Menu/Menu3Modes';
 import CharactersChoice from './Screens/Free Mode Choice/CharactersChoice';
@@ -68,6 +69,9 @@ function App() {
             </Route>
             <Route path="/team">
               <TeamChoice />
+            </Route>
+            <Route path="/teamfight">
+              <TeamFight />
             </Route>
             <Route path="/options">
               <Form />
