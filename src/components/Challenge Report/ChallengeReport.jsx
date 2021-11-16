@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from './FightingReport.module.css';
+import styles from './ChallengeReport.module.css';
 
-export default function FigthtingReport(props) {
+export default function ChallengeReport(props) {
   const { report } = props;
 
   const announcement = report.shift();
-  const result = report.pop()[0];
+  const result = report.pop()[1];
 
   return (
     <div className={styles.reportContainer}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import ChallengeFight from './Screens/Challenge mode Fight/ChallengeFight';
 import TeamChoice from './Screens/Team mode Choice/TeamChoice';
 import TeamFight from './Screens/Team mode Fight/TeamFight';
 import FighterContext from './contexts/FighterContext';
@@ -11,6 +12,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
 import SelectedCharacters from './components/Selected characters/SelectedCharacters';
+import Team from './Screens/Team/Team';
 import ChallengeMode from './Screens/Challenge mode Choice/ChallengeMode';
 import Form from './Screens/Free Mode Options/OptionsForm';
 
@@ -72,8 +74,14 @@ function App() {
             <Route path="/fight">
               <DisplayFight />
             </Route>
+            <Route path="/about">
+              <Team />
+            </Route>
             <Route path="/challenge">
               <ChallengeMode />
+            </Route>
+            <Route path="/challengefight">
+              <ChallengeFight />
             </Route>
             <Route path="/team">
               <TeamChoice />

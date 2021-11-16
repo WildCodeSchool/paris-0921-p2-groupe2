@@ -6,7 +6,7 @@ import styles from './LaunchChallengeButton.module.css';
 export default function LaunchChallengeButton() {
   return (
     <div className={styles.container}>
-      <Link to="/fight">
+      <Link to="/challengefight">
         <button className={styles.launchFightButton}>FIGHT</button>
       </Link>
     </div>
