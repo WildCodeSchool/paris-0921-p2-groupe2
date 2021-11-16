@@ -12,7 +12,7 @@ export default function FreeMode({ status }) {
         <div className={styles.menuContainer}>
           <button className={styles.menuShort} onClick={() => setShow(!show)}>
             <h1>Free Mode</h1>
-            <p>Select all the parameters for a customized fight</p>
+            <p>Your customized fight</p>
           </button>
           <Link to="/freemode">
             <button className={styles.launchButton}>Go !</button>

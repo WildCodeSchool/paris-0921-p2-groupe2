@@ -3,7 +3,7 @@
   background-color: var(--dark-grey);
   bottom: 0;
   color: var(--yellow);
-  font-family: (var(--second-font-family));
+  font-family: var(--second-font-family);
   height: 20px;
   position: fixed;
   width: 100vw;
