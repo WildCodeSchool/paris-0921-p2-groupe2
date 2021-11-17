@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+.reportContainer {
+  width: 100vw;
+}
+
 .fightingAction {
   background-color: var(--dark-grey);
   color: var(--light-grey);
