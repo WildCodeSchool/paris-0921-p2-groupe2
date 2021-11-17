@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import generateTeams from '../../algorithms/GenerateTeams';
@@ -12,11 +12,21 @@ import styles from './TeamFight.module.css';
 
 export default function TeamFight() {
   const { resetGame, teamA, teamB } = useContext(FighterContext);
+  const [groups, setGroups] = useState();
+  const [report, setReport] = useState([]);
 
-  let groups = generateTeams(teamA, teamB);
-  let groupA = groups[0];
-  let groupB = groups[1];
-  let report = teamAlgorithm(groupA, groupB);
+  useEffect(() => {
+    if (teamA && teamB) {
+      const [groupA, groupB] = generateTeams(teamA, teamB);
+      setGroups({ groupA, groupB });
+    }
+  }, [teamA, teamB]);
+
+  useEffect(() => {
+    if (groups) {
+      setReport(teamAlgorithm(groups.groupA, groups.groupB));
+    }
+  }, [groups]);
 
   return (
     <div className={styles.fightingComponent}>
