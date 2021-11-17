@@ -33,7 +33,7 @@ export default function FigthtingReport(props) {
       </div>
       {report.map((x, i) => {
         return (
-          <div key={i} className={styles.lifeContainer}>
+          <div key={i} className={styles.lifeContainer} style={{ zIndex: `${i}`, animationDelay: `${2 * i + 2}s` }}>
             <p
               className={styles.fightLife}
               style={{ background: `linear-gradient(90deg, var(--yellow) 0% ${x[1]}%, var(--light-grey) ${x[1]}% 100%)` }}
@@ -54,12 +54,14 @@ export default function FigthtingReport(props) {
       </div>
       {report.map((x, i) => {
         return (
-          <div className={styles.fightingAction} key={i}>
+          <div className={styles.fightingAction} key={i} style={{ zIndex: `${i}`, animationDelay: `${2 * i + 2}s` }}>
             <p>{x[0]}</p>
           </div>
         );
       })}
-      <div className={styles.fightingResult}>{result}</div>
+      <div className={styles.fightingResult} style={{ animationDelay: `${report.length * 2}s` }}>
+        {result}
+      </div>
     </div>
   );
 }

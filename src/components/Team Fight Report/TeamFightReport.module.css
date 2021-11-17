@@ -15,19 +15,62 @@
 }
 
 .fightingAction {
+  align-items: center;
   background-color: var(--dark-grey);
-  color: var(--light-grey);
+  color: var(--light-yellow);
   font-family: var(--second-font-family);
-  padding: 10px;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .fightingResult {
+  animation: flash 0.9s linear infinite;
   background-color: var(--yellow);
   color: var(--black);
   font-size: 20px;
   font-family: var(--main-font-family);
-  margin: 2vh 0;
-  padding: 20px;
+  margin: 2vh auto;
+  padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+@keyframes flash {
+  0% {
+    background-color: var(--light-yellow);
+    opacity: 1;
+    text-shadow: 0 0 5px var(--black);
+  }
+  60% {
+    background-color: var(--yellow);
+    opacity: 1;
+    text-shadow: none;
+  }
+  75% {
+    background-color: var(--light-yellow);
+    opacity: 1;
+    text-shadow: 0 0 5px var(--black);
+  }
+  90% {
+    background-color: var(--yellow);
+    opacity: 1;
+    text-shadow: none;
+  }
+  100% {
+    background-color: var(--light-yellow);
+    opacity: 1;
+    text-shadow: 0 0 5px var(--black);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fightingAction {
+    left: 25vw;
+    width: 50vw;
+  }
+  .fightingResult {
+    left: 25vw;
+    width: 50vw;
+  }
 }
