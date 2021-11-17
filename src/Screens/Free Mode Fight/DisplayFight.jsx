@@ -6,7 +6,6 @@ import CombatAlgorithm from '../../algorithms/CombatAlgorithm';
 import Fighter from '../../algorithms/CharacterClass';
 
 import FighterContext from '../../contexts/FighterContext';
-import FighterCard from '../../components/Fighter card/FighterCard';
 import FigthtingReport from '../../components/Figthing Report/FightingReport';
 
 import styles from './DisplayFight.module.css';
@@ -41,12 +40,7 @@ export default function DisplayFight() {
 
   return (
     <div className={styles.fightingComponent}>
-      <div className={styles.heroesDisplay}>
-        {FighterA && <FighterCard {...FighterA} />}
-        {FighterB && <FighterCard {...FighterB} />}
-      </div>
       {report && <FigthtingReport report={report} />}
-
       <div className={styles.endgameChoice}>
         <Link to="/freemode">
           <button onClick={resetGame}>Another battle</button>

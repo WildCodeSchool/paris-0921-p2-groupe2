@@ -1,29 +1,202 @@
 @import '../../Fonts.css';
 
 .fightingAnnouncement {
-  background-color: var(--black);
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  font-size: x-large;
+  font-style: italic;
+  margin: 1vh 0;
+  padding: 10px;
+  text-align: center;
+  width: 100vw;
+}
+
+.heroesDisplay {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.firstLifeContainer {
+  align-items: stretch;
+  display: flex;
+  justify-content: space-around;
+  left: 0px;
+  margin: auto;
+  position: absolute;
+  width: 100vw;
+}
+
+.firstFightLife {
+  border: var(--dark-grey) solid 1px;
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  margin: 1vh 3vh;
+  padding: 1vh 0;
+  text-align: center;
+  width: 40vw;
+}
+.lifeContainer {
+  align-items: stretch;
+  animation: pop 1s infinite;
+  display: flex;
+  justify-content: space-around;
+  left: 0px;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+.fightLife {
+  border: var(--dark-grey) solid 1px;
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  margin: 1vh 3vh;
+  padding: 1vh 0;
+  text-align: center;
+  width: 40vw;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.firstFightingAction {
+  align-items: center;
+  background-color: var(--dark-grey);
   color: var(--light-yellow);
-  font-family: var(--main-font-family);
-  font-size: 24px;
-  margin: 2vh 0;
-  padding: 20px;
+  display: flex;
+  font-family: var(--second-font-family);
+  font-size: large;
+  justify-content: center;
+  height: 7vh;
+  left: 0px;
+  margin: 0;
+  position: absolute;
+  top: 63vh;
+  width: 100vw;
+}
+
+.firstFightingAction p {
+  margin: 0;
   text-align: center;
 }
 
 .fightingAction {
+  align-items: center;
+  animation: appearance 1s infinite;
   background-color: var(--dark-grey);
-  color: var(--light-grey);
+  color: var(--light-yellow);
+  display: flex;
   font-family: var(--second-font-family);
-  padding: 10px;
+  font-size: large;
+  justify-content: center;
+  height: 7vh;
+  left: 0px;
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+  top: 63vh;
+  width: 100vw;
+}
+
+.fightingAction p {
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .fightingResult {
+  animation: flash 0.9s linear infinite;
   background-color: var(--yellow);
   color: var(--black);
-  font-size: 24px;
+  font-size: 20px;
   font-family: var(--main-font-family);
-  margin: 2vh 0;
-  padding: 20px;
+  left: 0px;
+  margin: 10vh 0 2vh 0;
+  opacity: 0;
+  padding: 10px 0;
+  position: absolute;
   text-align: center;
   text-transform: uppercase;
+  top: 62vh;
+  width: 100vw;
+}
+
+@keyframes flash {
+  0% {
+    background-color: var(--light-yellow);
+    opacity: 1;
+    text-shadow: 0 0 5px var(--black);
+  }
+  60% {
+    background-color: var(--yellow);
+    opacity: 1;
+    text-shadow: none;
+  }
+  75% {
+    background-color: var(--light-yellow);
+    opacity: 1;
+    text-shadow: 0 0 5px var(--black);
+  }
+  90% {
+    background-color: var(--yellow);
+    opacity: 1;
+    text-shadow: none;
+  }
+  100% {
+    background-color: var(--light-yellow);
+    opacity: 1;
+    text-shadow: 0 0 5px var(--black);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fightingAnnouncement {
+    width: 50vw;
+  }
+  .heroesDisplay {
+    width: 50vw;
+  }
+  .firstLifeContainer {
+    left: 25vw;
+    width: 50vw;
+  }
+  .firstFightLife {
+    width: 30vh;
+  }
+  .lifeContainer {
+    left: 25vw;
+    width: 50vw;
+  }
+  .fightLife {
+    width: 30vh;
+  }
+  .firstFightingAction {
+    left: 25vw;
+    width: 50vw;
+  }
+  .fightingAction {
+    left: 25vw;
+    width: 50vw;
+  }
+  .fightingResult {
+    left: 25vw;
+    width: 50vw;
+  }
 }

@@ -6,7 +6,6 @@ import CombatAlgorithm from '../../algorithms/CombatAlgorithm';
 import Fighter from '../../algorithms/CharacterClass';
 
 import FighterContext from '../../contexts/FighterContext';
-import FighterCard from '../../components/Fighter card/FighterCard';
 import ChallengeReport from '../../components/Challenge Report/ChallengeReport';
 
 import styles from './ChallengeFight.module.css';
@@ -41,10 +40,6 @@ export default function ChallengeFight() {
 
   return (
     <div className={styles.fightingComponent}>
-      <div className={styles.heroesDisplay}>
-        {FighterA && <FighterCard {...FighterA} />}
-        {FighterB && <FighterCard {...FighterB} />}
-      </div>
       {report && <ChallengeReport report={report} />}
 
       <div className={styles.endgameChoice}>
