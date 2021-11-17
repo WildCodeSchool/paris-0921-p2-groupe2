@@ -5,7 +5,7 @@ import CharactersList from '../../components/Characters list/CharactersList';
 
 import styles from './CharactersChoice.module.css';
 
-function CharactersChoice({ handleChange }) {
+export default function CharactersChoice({ handleChange }) {
   const [selectedCharacter, setSelectedCharacter] = useState('');
   const [heroesList, setHeroesList] = useState('');
   const [query, setQuery] = useState('');
@@ -13,7 +13,7 @@ function CharactersChoice({ handleChange }) {
   const searchCharacters = (e) => {
     e.preventDefault();
     if (query.length < 2) {
-      alert('Please write at least 2 characters to search');
+      alert('Please write at least 2 letters to search');
     } else {
       setQuery('');
       fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/search/${query}`)
@@ -46,5 +46,3 @@ function CharactersChoice({ handleChange }) {
     </div>
   );
 }
-
-export default CharactersChoice;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import ChallengeFight from './Screens/Challenge mode Fight/ChallengeFight';
 import TeamChoice from './Screens/Team mode Choice/TeamChoice';
 import TeamFight from './Screens/Team mode Fight/TeamFight';
 import FighterContext from './contexts/FighterContext';
@@ -19,11 +20,15 @@ import styles from './App.module.css';
 function App() {
   const [playerA, setPlayerA] = useState('');
   const [playerB, setPlayerB] = useState('');
+  const [teamA, setTeamA] = useState([]);
+  const [teamB, setTeamB] = useState([]);
   const [options, setOptions] = useState('');
 
   function resetGame() {
     setPlayerA('');
     setPlayerB('');
+    setTeamA([]);
+    setTeamB([]);
     setOptions('');
   }
 
@@ -45,9 +50,13 @@ function App() {
         value={{
           playerA: playerA,
           playerB: playerB,
+          teamA: teamA,
+          teamB: teamB,
           options: options,
           setPlayerA: setPlayerA,
           setPlayerB: setPlayerB,
+          setTeamA: setTeamA,
+          setTeamB: setTeamB,
           setOptions: setOptions,
           updatePlayer: updatePlayer,
           resetGame: resetGame,
@@ -70,6 +79,9 @@ function App() {
             </Route>
             <Route path="/challenge">
               <ChallengeMode />
+            </Route>
+            <Route path="/challengefight">
+              <ChallengeFight />
             </Route>
             <Route path="/team">
               <TeamChoice />

@@ -7,7 +7,7 @@ import FighterContext from '../../contexts/FighterContext';
 import styles from './Header.module.css';
 import logo from '../../../assets/logoBC.png';
 
-function Header() {
+export default function Header() {
   const { resetGame } = useContext(FighterContext);
 
   return (
@@ -18,5 +18,3 @@ function Header() {
     </div>
   );
 }
-
-export default Header;

@@ -16,11 +16,13 @@ export default function fight(fighterA, fighterB) {
 
   let initiative;
   let first;
+  let turns = 0;
 
   rapport.push(`${fighterA.name} VS ${fighterB.name}`);
 
-  while (lifeB > 0 && lifeA > 0) {
+  while (lifeB > 0 && lifeA > 0 && turns <= 15) {
     initiative = initiativeCheck(initiativeA, initiativeB);
+    turns++;
 
     if (initiative == 'A') {
       first = initiativeA == fighterA.speed;
@@ -115,10 +117,23 @@ export default function fight(fighterA, fighterB) {
     }
   }
   if (lifeA <= 0) {
-    rapport.push(`${fighterB.name} wins !`);
+    rapport.push(`${fighterA.name} falls on the ground...`);
+    rapport.push([`${fighterB.name} wins !`, 'You win']);
+    return rapport;
+  } else if (lifeB <= 0) {
+    rapport.push(`${fighterB.name} falls on the ground...`);
+    rapport.push([`${fighterA.name} wins !`, 'You lose']);
+    return rapport;
+  } else if (lifeA / initialLifeA > lifeB / initialLifeB) {
+    rapport.push(`Time out : ${fighterB.name} has less health.`);
+    rapport.push([`${fighterA.name} wins !`, 'You lose']);
+    return rapport;
+  } else if (lifeA / initialLifeA < lifeB / initialLifeB) {
+    rapport.push(`Time out : ${fighterA.name} has less health.`);
+    rapport.push([`${fighterB.name} wins !`, 'You lose']);
     return rapport;
   } else {
-    rapport.push(`${fighterA.name} wins !`);
+    rapport.push(['Draw', 'Draw']);
     return rapport;
   }
 }

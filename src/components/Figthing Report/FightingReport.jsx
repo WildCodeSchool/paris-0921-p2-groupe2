@@ -14,7 +14,7 @@ export default function FigthtingReport(props) {
   const FighterB = new Fighter(playerB);
 
   const announcement = report.shift();
-  const result = report.pop();
+  const result = report.pop()[0];
 
   return (
     <div className={styles.reportContainer}>
