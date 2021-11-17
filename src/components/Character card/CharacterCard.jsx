@@ -8,8 +8,8 @@ export default function CharacterCard({ handleSelected, character }) {
   };
 
   return (
-    <li className={styles.charactersCard}>
-      <div role="button" tabIndex={0} onClick={handleClick} onKeyDown={handleClick}>
+    <li>
+      <div className={styles.charactersCard} role="button" tabIndex={0} onClick={handleClick} onKeyDown={handleClick}>
         <img src={character.image.url} alt={character.name} className={styles.cardImage} />
       </div>
     </li>

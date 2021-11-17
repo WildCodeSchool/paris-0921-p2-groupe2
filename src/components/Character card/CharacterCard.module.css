@@ -1,3 +1,5 @@
+@import '../../Fonts.css';
+
 .charactersCard {
   align-items: center;
   color: var(--yellow);
@@ -6,6 +8,10 @@
   height: 20vh;
   margin: 4px;
   width: 27vw;
+  background-color: var(--dark-grey);
+  font-size: larger;
+  font-weight: bold;
+  font-family: var(--second-font-family);
 }
 
 .cardImage {
