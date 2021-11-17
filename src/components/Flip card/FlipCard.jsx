@@ -10,7 +10,9 @@ export default function FlipCard(props) {
         </div>
         <div className={styles.flipCardBack}>
           <h2>{props.name}</h2>
-          <p>{props.content}</p>
+          <p>{props.contentSpec}</p>
+          <p>{props.contentHero}</p>
+          <p>{props.contentWeapon}</p>
         </div>
       </div>
     </div>
