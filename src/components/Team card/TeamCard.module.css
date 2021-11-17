@@ -1,0 +1,16 @@
+@import '../../Fonts.css';
+
+.teamContainer {
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: row;
+  width: 49vw;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heroPicture {
+  height: 12vh;
+  width: auto;
+}

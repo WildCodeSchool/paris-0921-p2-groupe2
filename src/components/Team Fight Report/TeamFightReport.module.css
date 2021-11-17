@@ -20,7 +20,7 @@
 .fightingResult {
   background-color: var(--yellow);
   color: var(--black);
-  font-size: 24px;
+  font-size: 20px;
   font-family: var(--main-font-family);
   margin: 2vh 0;
   padding: 20px;
