@@ -8,6 +8,7 @@
   height: auto;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 5px 0;
 }
 
 .heroPicture {
