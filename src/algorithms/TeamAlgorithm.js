@@ -5,28 +5,25 @@ export default function teamAlgorithm(groupA, groupB) {
   let report = [];
   const hasGroupAInitiative = groupA.reduce((x, y) => x + y.speed, 0) >= groupB.reduce((x, y) => x + y.speed, 0);
 
+  let namesA = groupA.map((x) => x.name);
+  const lastNameA = namesA.pop();
+  const displayNamesA = namesA.join(', ') + ' & ' + lastNameA;
+  let namesB = groupB.map((x) => x.name);
+  const lastNameB = namesB.pop();
+  const displayNamesB = namesB.join(', ') + ' & ' + lastNameB;
+  report.push(displayNamesA + ' VS ' + displayNamesB + ' : FIGHT !');
+
   if (hasGroupAInitiative) {
     teamA = groupA;
     teamB = groupB;
-    report.push('The first team has the initiative !');
+    report.push('Team A has the initiative !');
   } else {
     teamA = groupB;
     teamB = groupA;
-    report.push('The second team has the initiative !');
+    report.push('Team B has the initiative !');
   }
   teamA = teamA.sort((x, y) => y.speed - x.speed);
   teamB = teamB.sort((x, y) => y.speed - x.speed);
-
-  let orderA = teamA.map((x) => x.name);
-  let orderB = teamB.map((x) => x.name);
-  report.push('Attacking order of first team : ');
-  for (let i of orderA) {
-    report.push(i);
-  }
-  report.push('Attacking order of second team : ');
-  for (let i of orderB) {
-    report.push(i);
-  }
 
   while (teamA.length && teamB.length) {
     for (let i = 0; i < Math.max(teamA.length, teamB.length); i++) {
@@ -36,12 +33,12 @@ export default function teamAlgorithm(groupA, groupB) {
         teamB[targetIndex].durability -= attack[0];
         report.push(`${teamA[i].name} ${attack[1]} ${teamB[targetIndex].name} (HP :${teamB[targetIndex].durability})`);
         if (teamB[targetIndex].durability <= 0) {
-          report.push(`${teamB[targetIndex].name} falls !`);
+          report.push(`${teamB[targetIndex].name} falls...`);
           if (teamB.length == 1) {
-            report.push('And nobody is left standing !');
+            report.push('And nobody is left !');
             if (hasGroupAInitiative) {
-              report.push('The first team won !');
-            } else report.push('The second team won !');
+              report.push('Team A wins');
+            } else report.push('Team B wins');
             return report;
           } else teamB.splice(targetIndex, 1);
         }
@@ -54,12 +51,12 @@ export default function teamAlgorithm(groupA, groupB) {
         teamA[targetIndex].durability -= attack[0];
         report.push(`${teamB[i].name} ${attack[1]} ${teamA[targetIndex].name} (HP :${teamA[targetIndex].durability})`);
         if (teamA[targetIndex].durability <= 0) {
-          report.push(`${teamA[targetIndex].name} falls !`);
+          report.push(`${teamA[targetIndex].name} falls...`);
           if (teamA.length == 1) {
-            report.push('And nobody is left standing !');
+            report.push('And nobody is left !');
             if (hasGroupAInitiative) {
-              report.push('The second team won !');
-            } else report.push('The first team won !');
+              report.push('Team B wins');
+            } else report.push('Team A wins');
             return report;
           } else teamA.splice(targetIndex, 1);
         }
