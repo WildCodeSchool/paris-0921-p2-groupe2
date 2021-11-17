@@ -12,4 +12,5 @@
 .hfooter {
   margin: auto;
   text-align: center;
+  color: var(--yellow);
 }
