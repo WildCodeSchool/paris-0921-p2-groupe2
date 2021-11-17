@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +13,7 @@ export default function TeamChoice() {
   const [selectedCharacter, setSelectedCharacter] = useState('');
   const [heroesList, setHeroesList] = useState('');
   const [query, setQuery] = useState('');
-  const { teamA, teamB, setTeamA, setTeamB } = useContext(FighterContext);
+  const { teamA, teamB } = useContext(FighterContext);
 
   const searchCharacters = (e) => {
     e.preventDefault();
@@ -34,14 +33,6 @@ export default function TeamChoice() {
       .then((data) => setHeroesList(data));
   }, []);
 
-  function assignTeamA() {
-    let temp = teamA;
-    temp.push(selectedCharacter);
-    setTeamA(temp);
-    // console.log(selectedCharacter);
-    // console.log(teamA);
-  }
-
   return (
     <div>
       <h2 className={styles.teamTitle}>TEAM FIGHT</h2>
@@ -49,7 +40,8 @@ export default function TeamChoice() {
         {teamA && <SelectedTeam team={teamA} title={'Team A'} />}
         {teamB && <SelectedTeam team={teamB} title={'Team B'} />}
       </div>
-      {selectedCharacter && <TeamMemberDetail character={selectedCharacter} assignTeamA={assignTeamA} />}
+
+      {selectedCharacter && <TeamMemberDetail character={selectedCharacter} />}
       <div className={styles.container}>
         <div className={styles.choiceContener}>
           <form onSubmit={searchCharacters}>
