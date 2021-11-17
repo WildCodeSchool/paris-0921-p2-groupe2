@@ -1,0 +1,35 @@
+@import '../../Fonts.css';
+
+.charactersCard {
+  display: flex;
+  justify-content: space-between;
+  height: 20vh;
+  margin: 0 auto;
+  width: 65vw;
+  padding: 10px;
+  background-color: var(--dark-grey);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.name {
+  font-family: var(--second-font-family);
+  color: var(--light-yellow);
+  text-align: center;
+  padding: 0;
+  margin: auto;
+}
+
+.button {
+  font-family: var(--second-font-family);
+  background-color: var(--light-grey);
+  color: var(--black);
+  font-weight: bold;
+  margin: auto;
+}

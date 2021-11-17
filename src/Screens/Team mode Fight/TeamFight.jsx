@@ -1,29 +1,31 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { handicaps, weapons, fields } from '../../algorithms/bonusmalus/BonusMalus';
-import CombatAlgorithm from '../../algorithms/CombatAlgorithm';
-import Fighter from '../../algorithms/CharacterClass';
+import generateTeams from '../../algorithms/GenerateTeams';
+import teamAlgorithm from '../../algorithms/TeamAlgorithm';
 
+import TeamCard from '../../components/Team card/TeamCard';
 import FighterContext from '../../contexts/FighterContext';
-import FighterCard from '../../components/Fighter card/FighterCard';
-import FigthtingReport from '../../components/Figthing Report/FightingReport';
+import TeamFightReport from '../../components/Team Fight Report/TeamFightReport';
 
 import styles from './TeamFight.module.css';
 
 export default function TeamFight() {
-  const { playerA, playerB, resetGame, options } = useContext(FighterContext);
+  const { resetGame, teamA, teamB } = useContext(FighterContext);
 
-  //   const FighterA = new Fighter(playerA);
-  //   const FighterB = new Fighter(playerB);
-
-  // let report = CombatAlgorithm(FighterA, FighterB);
+  let groups = generateTeams(teamA, teamB);
+  let groupA = groups[0];
+  let groupB = groups[1];
+  let report = teamAlgorithm(groupA, groupB);
 
   return (
     <div className={styles.fightingComponent}>
-      {/* {report && <FigthtingReport report={report} />} */}
-
+      <div className={styles.teamsDisplay}>
+        <TeamCard team={teamA} />
+        <TeamCard team={teamB} />
+      </div>
+      {report && <TeamFightReport report={report} />}
       <div className={styles.endgameChoice}>
         <Link to="/team">
           <button onClick={resetGame}>Another battle</button>
