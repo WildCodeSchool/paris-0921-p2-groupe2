@@ -5,14 +5,6 @@ export default function teamAlgorithm(groupA, groupB) {
   let report = [];
   const hasGroupAInitiative = groupA.reduce((x, y) => x + y.speed, 0) >= groupB.reduce((x, y) => x + y.speed, 0);
 
-  let namesA = groupA.map((x) => x.name);
-  const lastNameA = namesA.pop();
-  const displayNamesA = namesA.join(', ') + ' & ' + lastNameA;
-  let namesB = groupB.map((x) => x.name);
-  const lastNameB = namesB.pop();
-  const displayNamesB = namesB.join(', ') + ' & ' + lastNameB;
-  report.push(displayNamesA + ' VS ' + displayNamesB + ' : FIGHT !');
-
   if (hasGroupAInitiative) {
     teamA = groupA;
     teamB = groupB;
