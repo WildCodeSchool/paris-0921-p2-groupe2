@@ -61,7 +61,7 @@ export default function TeamChoice() {
           {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
         </div>
         <Link to="/teamfight">
-          <button className={styles.bigbutton}>FIGHT</button>
+          <button className={styles.launchfightbutton}>FIGHT</button>
         </Link>
       </div>
     </div>

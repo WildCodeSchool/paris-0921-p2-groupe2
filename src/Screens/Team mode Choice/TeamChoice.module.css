@@ -9,10 +9,10 @@
   font-family: var(--main-font-family);
 }
 
-.bigbutton {
-  width: 100vw;
+.launchfightbutton {
+  width: 50vw;
   height: 5vh;
-  margin: 40px auto;
+  margin: 10px 25vw;
   font-size: large;
   color: var(--yellow);
 }

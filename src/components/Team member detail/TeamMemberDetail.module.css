@@ -30,5 +30,6 @@
   font-family: var(--second-font-family);
   background-color: var(--light-grey);
   color: var(--black);
+  font-weight: bold;
   margin: auto;
 }
