@@ -1,19 +1,18 @@
-/* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 
 import FighterContext from '../../contexts/FighterContext';
 
 import styles from './TeamMemberDetail.module.css';
 
-export default function TeamMemberDetail({ character, assignTeamA }) {
+export default function TeamMemberDetail({ character }) {
   const { teamA, teamB, setTeamA, setTeamB } = useContext(FighterContext);
 
+  function assignTeamA() {
+    setTeamA([...teamA, character]);
+  }
+
   function assignTeamB() {
-    let temp = teamB;
-    temp.push(character);
-    setTeamB(temp);
-    // console.log(character);
-    // console.log(teamB);
+    setTeamB([...teamB, character]);
   }
 
   return (
