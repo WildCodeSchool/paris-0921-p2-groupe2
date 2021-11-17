@@ -37,8 +37,7 @@ export default function teamAlgorithm(groupA, groupB) {
       }
 
       if (i < teamB.length) {
-        let targetIndex = Math.floor(Math.random() * teamB.length);
-        teamAlgorithmAttack(teamA[i], teamB[targetIndex]);
+        let targetIndex = Math.floor(Math.random() * teamA.length);
         let attack = teamAlgorithmAttack(teamB[i], teamA[targetIndex]);
         teamA[targetIndex].durability -= attack[0];
         report.push(`${teamB[i].name} ${attack[1]} ${teamA[targetIndex].name} (HP :${teamA[targetIndex].durability})`);
