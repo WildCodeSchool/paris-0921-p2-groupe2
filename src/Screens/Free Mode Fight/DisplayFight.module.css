@@ -9,12 +9,12 @@
   width: 100vw;
 }
 
-.heroesDisplay {
+/* .heroesDisplay {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   width: 50vw;
-}
+} */
 
 .endgameChoice {
   background-color: var(--light-grey);
@@ -22,6 +22,9 @@
   justify-content: space-around;
   margin: 0 0 20px 0;
   width: 100vw;
+  position: absolute;
+  top: 85vh;
+  left: 0px;
 }
 
 .endgameChoice button {

@@ -1,95 +1,219 @@
 @import '../../Fonts.css';
 
 .fightingAnnouncement {
-  background-color: var(--black);
-  color: var(--light-yellow);
-  font-family: var(--main-font-family);
-  font-size: 18px;
   margin: 1vh 0;
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
   width: 100vw;
+  font-family: var(--second-font-family);
+  text-align: center;
+  font-size: x-large;
+  color: var(--dark-grey);
+  font-style: italic;
+}
+
+.heroesDisplay {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 100vw;
+}
+.firstLifeContainer {
+  width: 100vw;
+  justify-content: space-around;
+  display: flex;
+  align-items: stretch;
+  margin: auto;
+  position: absolute;
+  left: 0px;
+}
+.firstFightLife {
+  width: 40vw;
+  text-align: center;
+  margin: 1vh 3vh;
+  border: var(--dark-grey) solid 1px;
+  font-family: var(--second-font-family);
+  color: var(--dark-grey);
+  padding: 1vh;
+}
+.lifeContainer {
+  width: 100vw;
+  justify-content: space-around;
+  display: flex;
+  align-items: stretch;
+  margin: auto;
+  animation: pop 1s infinite;
+  position: absolute;
+  left: 0px;
+  opacity: 0;
+}
+.fightLife {
+  width: 40vw;
+  text-align: center;
+  margin: 1vh 3vh;
+  border: var(--dark-grey) solid 1px;
+  font-family: var(--second-font-family);
+  color: var(--dark-grey);
+  padding: 1vh;
+}
+@keyframes pop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.lifeContainer:nth-child(1) {
+  animation-delay: 2s;
+}
+.lifeContainer:nth-child(2) {
+  animation-delay: 3s;
+}
+.lifeContainer:nth-child(3) {
+  animation-delay: 4s;
+}
+.lifeContainer:nth-child(4) {
+  animation-delay: 5s;
+}
+.lifeContainer:nth-child(5) {
+  animation-delay: 6s;
+}
+.lifeContainer:nth-child(6) {
+  animation-delay: 7s;
+}
+.lifeContainer:nth-child(7) {
+  animation-delay: 8s;
+}
+.lifeContainer:nth-child(8) {
+  animation-delay: 9s;
+}
+.lifeContainer:nth-child(9) {
+  animation-delay: 10s;
+}
+.lifeContainer:nth-child(10) {
+  animation-delay: 11s;
+}
+.lifeContainer:nth-child(11) {
+  animation-delay: 12s;
+}
+.lifeContainer:nth-child(12) {
+  animation-delay: 13s;
+}
+.lifeContainer:nth-child(13) {
+  animation-delay: 14s;
+}
+.lifeContainer:nth-child(14) {
+  animation-delay: 15s;
+}
+.lifeContainer:nth-child(15) {
+  animation-delay: 16s;
+}
+.lifeContainer:nth-child(16) {
+  animation-delay: 17s;
+}
+.firstFightingAction {
+  background-color: var(--dark-grey);
+  color: var(--light-yellow);
+  font-family: var(--second-font-family);
+  font-size: large;
+  height: 7vh;
+  left: 0px;
+  margin: 0;
+  position: absolute;
+  top: 65vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstFightingAction p {
+  margin: 0;
+  text-align: center;
 }
 
 .fightingAction {
+  animation: appearance 1s infinite;
   background-color: var(--dark-grey);
-  color: var(--light-grey);
+  color: var(--light-yellow);
   font-family: var(--second-font-family);
-  padding: auto;
-  text-align: center;
-  vertical-align: middle;
-  height: 0;
-  animation: appearance 2s;
-  width: 100vw;
+  font-size: large;
+  height: 7vh;
+  left: 0px;
   margin: 0;
-  font-size: 0px;
+  position: absolute;
+  opacity: 0;
+  top: 65vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fightingAction p {
+  margin: 0;
+  text-align: center;
 }
 
 @keyframes appearance {
   0% {
-    height: 7vh;
-    margin: 0;
-    font-size: large;
-  }
-  30% {
-    font-size: x-large;
-    opacity: 1;
-  }
-  99% {
-    font-size: x-large;
     opacity: 1;
   }
   100% {
-    height: 7vh;
-    z-index: -1;
-    color: var(--dark-grey);
+    opacity: 1;
   }
 }
 
 .fightingAction:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 2s;
+  z-index: 1;
 }
 .fightingAction:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 3s;
+  z-index: 2;
 }
 .fightingAction:nth-child(3) {
   animation-delay: 4s;
+  z-index: 3;
 }
 .fightingAction:nth-child(4) {
-  animation-delay: 6s;
+  animation-delay: 5s;
+  z-index: 4;
 }
 .fightingAction:nth-child(5) {
-  animation-delay: 8s;
+  animation-delay: 6s;
+  z-index: 5;
 }
 .fightingAction:nth-child(6) {
-  animation-delay: 10s;
+  animation-delay: 7s;
 }
 .fightingAction:nth-child(7) {
-  animation-delay: 12s;
+  animation-delay: 8s;
 }
 .fightingAction:nth-child(8) {
-  animation-delay: 14s;
+  animation-delay: 9s;
 }
 .fightingAction:nth-child(9) {
-  animation-delay: 16s;
+  animation-delay: 10s;
 }
 .fightingAction:nth-child(10) {
-  animation-delay: 18s;
+  animation-delay: 11s;
 }
 .fightingAction:nth-child(11) {
-  animation-delay: 20s;
+  animation-delay: 12s;
 }
 .fightingAction:nth-child(12) {
-  animation-delay: 22s;
+  animation-delay: 13s;
 }
 .fightingAction:nth-child(13) {
-  animation-delay: 24s;
+  animation-delay: 14s;
 }
 .fightingAction:nth-child(14) {
-  animation-delay: 26s;
+  animation-delay: 15s;
 }
 .fightingAction:nth-child(15) {
-  animation-delay: 28s;
+  animation-delay: 16s;
+}
+.fightingAction:nth-child(16) {
+  animation-delay: 17s;
 }
 
 .fightingResult {
@@ -97,29 +221,37 @@
   color: var(--black);
   font-size: 20px;
   font-family: var(--main-font-family);
-  margin: 2vh 0;
+  margin: 10vh 0 2vh 0;
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
   animation: flash 0.9s linear infinite;
   width: 100vw;
+  position: absolute;
+  top: 65vh;
+  left: 0px;
 }
 
 @keyframes flash {
   0% {
     text-shadow: 0 0 5px var(--black);
+    background-color: var(--light-yellow);
   }
   60% {
     text-shadow: none;
+    background-color: var(--yellow);
   }
   75% {
     text-shadow: 0 0 5px var(--black);
+    background-color: var(--light-yellow);
   }
   90% {
     text-shadow: none;
+    background-color: var(--yellow);
   }
   100% {
     text-shadow: 0 0 5px var(--black);
+    background-color: var(--light-yellow);
   }
 }
 

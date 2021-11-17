@@ -2,15 +2,16 @@
 
 .heroCard {
   align-items: center;
-  /* background-color: var(--dark-grey); */
   display: flex;
   flex-direction: column;
+  width: 40vw;
+  height: 30vh;
 }
 
 .heroPicture {
-  height: auto;
-  /* max-width: 50vw; */
-  width: 40vw;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
   margin: 1vh 4vw;
 }
 
