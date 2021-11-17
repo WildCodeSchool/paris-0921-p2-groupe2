@@ -1,9 +1,11 @@
 import React from 'react';
-import Challenge from '../../components/Accueil/Challenge';
-import Team from '../../components/Accueil/Team';
-import FreeMode from '../../components/Accueil/FreeMode';
-import styles from './Menu3Modes.module.css';
 import { BrowserView, MobileView } from 'react-device-detect';
+
+import Challenge from '../../components/Accueil/Challenge';
+import FreeMode from '../../components/Accueil/FreeMode';
+import Team from '../../components/Accueil/Team';
+
+import styles from './Menu3Modes.module.css';
 
 export default function Menu3Modes() {
   return (

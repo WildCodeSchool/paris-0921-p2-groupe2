@@ -4,7 +4,7 @@ import FighterContext from '../../contexts/FighterContext';
 
 import styles from './CharacterDetail.module.css';
 
-function CharacterDetail({ character }) {
+export default function CharacterDetail({ character }) {
   const { updatePlayer } = useContext(FighterContext);
 
   return (
@@ -32,5 +32,3 @@ function CharacterDetail({ character }) {
     </div>
   );
 }
-
-export default CharacterDetail;

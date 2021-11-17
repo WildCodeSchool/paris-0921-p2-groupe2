@@ -37,7 +37,7 @@ export default function ChallengeMode() {
   const searchCharacters = (e) => {
     e.preventDefault();
     if (query.length < 2) {
-      alert('Please write at least 2 characters to search');
+      alert('Please write at least 2 letters to search');
     } else {
       setQuery('');
       fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/search/${query}`)
