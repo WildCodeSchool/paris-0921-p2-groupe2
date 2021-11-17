@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FlipCard.module.css';
 
-function FlipCard(props) {
+export default function FlipCard(props) {
   return (
     <div className={styles.flipCard}>
       <div className={styles.flipCardInner}>
@@ -18,5 +18,3 @@ function FlipCard(props) {
     </div>
   );
 }
-
-export default FlipCard;

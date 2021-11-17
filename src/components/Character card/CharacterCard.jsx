@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './CharacterCard.module.css';
 
-function CharacterCard({ handleSelected, character }) {
+export default function CharacterCard({ handleSelected, character }) {
   const handleClick = () => {
     handleSelected(character);
   };
@@ -15,5 +15,3 @@ function CharacterCard({ handleSelected, character }) {
     </li>
   );
 }
-
-export default CharacterCard;

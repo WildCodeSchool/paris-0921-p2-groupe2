@@ -2,15 +2,16 @@
   align-items: center;
   background-color: var(--dark-grey);
   bottom: 0;
-  color: var(--yellow);
-  font-family: (var(--second-font-family));
+  font-family: var(--second-font-family);
   height: 20px;
   position: fixed;
   width: 100vw;
 }
 
 .hfooter {
+  color: var(--yellow);
   margin: auto;
   text-align: center;
   color: var(--yellow);
+  text-decoration: none;
 }
