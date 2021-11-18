@@ -1,22 +1,24 @@
+@import '../../Fonts.css';
+
 .flipCard {
   background-color: transparent;
-  width: 40vw;
+  display: flex;
   height: 60vw;
+  margin: 2vw;
   perspective: 1000px;
+  position: relative;
   transition: 1s ease-in-out;
   transform-style: preserve-3d;
-  position: relative;
-  display: flex;
-  margin: 2vw;
+  width: 40vw;
 }
 
 .flipCardInner {
-  position: relative;
-  width: 100%;
   height: 100%;
+  position: relative;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  width: 100%;
 }
 
 .flipCard:hover .flipCardInner {
@@ -25,40 +27,55 @@
 
 .flipCardFront,
 .flipCardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 20px;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
 }
 
 .flipCardBack {
+  align-items: center;
   background-color: var(--dark-grey);
   color: var(--light-yellow);
-
-  transform: rotateY(180deg);
-  unicode-bidi: bidi-override;
   direction: rtl;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  unicode-bidi: bidi-override;
+  transform: rotateY(180deg);
 }
 .flipCardBack h2 {
   font-family: var(--main-font-family);
+  font-size: 20px;
+  margin: 0 20px;
 }
 .flipCardBack p {
   font-family: var(--second-font-family);
+  font-size: 12px;
+  margin: 0 20px;
 }
 .flipCardImage {
-  width: 100%;
-  height: auto;
   border-radius: 20px;
+  height: auto;
+  width: 100%;
 }
-@media screen and (min-width: 700px) {
+
+.flipCardLogo {
+  height: auto;
+  width: 20px;
+}
+
+@media screen and (min-width: 768px) {
   .flipCard {
-    width: 20vw;
-    height: 30vw;
+    height: 27vw;
+    width: 18vw;
+  }
+  .flipCardBack h2 {
+    font-size: 24px;
+  }
+  .flipCardBack p {
+    font-size: 16px;
   }
 }
