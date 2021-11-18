@@ -19,10 +19,6 @@ export default function CharactersList({ heroesList, selected }) {
             return <CharacterCard key={index} character={character} handleSelected={selected} />;
           })}
       </ul>
-      <div className={styles.actions}>
-        <button className={styles.prev}>Prev</button>
-        <button className={styles.next}>Next</button>
-      </div>
     </div>
   );
 }

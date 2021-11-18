@@ -41,7 +41,7 @@ export default function OptionsForm() {
         <h1>Things can get trickier</h1>
         <div className={styles.optionsContainer}>
           <div className={styles.choiceForm}>
-            <h2>Choose a handicap :</h2>
+            <h2 className={styles.choiceFormTitle}>Choose a handicap :</h2>
             <div className={styles.firstFormLine}>
               <p>{playerA.name}</p>
               <p></p>
@@ -109,7 +109,7 @@ export default function OptionsForm() {
               })}
           </div>
           <div className={styles.choiceForm}>
-            <h2>Where do you want to fight ?</h2>
+            <h2 className={styles.choiceFormArena}>Choose an arena :</h2>
             {fieldList &&
               fieldList.map((field, index) => {
                 return (
