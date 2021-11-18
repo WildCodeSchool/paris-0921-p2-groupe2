@@ -64,11 +64,13 @@
   }
   .characterIntro {
     margin: 0;
+    width: 100%;
   }
   .searchItem {
     margin-top: 1vh;
   }
   .charactersContainer {
     height: 41vh;
+    margin: 2vh 0;
   }
 }

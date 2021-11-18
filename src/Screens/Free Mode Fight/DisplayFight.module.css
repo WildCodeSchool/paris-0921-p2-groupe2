@@ -11,7 +11,7 @@
 
 .endgameChoice {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   position: absolute;
   top: 80vh;
   width: 100vw;
