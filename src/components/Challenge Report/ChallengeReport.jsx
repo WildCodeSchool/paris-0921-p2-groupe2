@@ -50,7 +50,7 @@ export default function ChallengeReport(props) {
         );
       })}
       <div className={styles.firstFightingAction}>
-        <p>FIGHT !</p>
+        <p>And the battle begins !</p>
       </div>
       {report.map((x, i) => {
         return (

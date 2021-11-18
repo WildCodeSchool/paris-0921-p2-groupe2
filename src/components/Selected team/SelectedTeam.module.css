@@ -21,3 +21,9 @@
   font-family: var(--second-font-family);
   color: var(--light-yellow);
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 30vw;
+  }
+}

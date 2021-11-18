@@ -20,11 +20,17 @@
   display: flex;
   flex-direction: column;
 }
-.optionChoice h2 {
+.choiceFormTitle {
   color: var(--dark-grey);
   font-family: var(--second-font-family);
   text-align: center;
   margin: 1vh 0;
+}
+.choiceFormArena {
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  text-align: center;
+  margin: 1vh 0 7vh 0;
 }
 .choiceForm {
   display: flex;
@@ -38,6 +44,7 @@
 .firstFormLine {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin: 0.2vh 2vh;
 }
 .firstFormLine p {
@@ -77,8 +84,6 @@
 .formInput input:checked {
   border: 6px solid var(--dark-grey);
 }
-
-
 
 .launchFightButton {
   border: solid 1px var(--dark-grey);
