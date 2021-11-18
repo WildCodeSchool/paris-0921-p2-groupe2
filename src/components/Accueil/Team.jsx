@@ -12,7 +12,7 @@ export default function Team({ status }) {
         <div className={styles.menuContainer}>
           <button className={styles.menuShort} onClick={() => setShow(!show)}>
             <h1>Team Fight</h1>
-            <p>Choose two fighters teams</p>
+            <p>Make up your own team</p>
           </button>
           <Link to="/team">
             <button className={styles.launchButton}>Go !</button>
@@ -22,7 +22,7 @@ export default function Team({ status }) {
       {show && (
         <div className={styles.menuContent}>
           <img src={imgMode} alt="" />
-          <p className={styles.innerMenuDesc}>Make a squad with up to 5 heroes to face another team</p>
+          <p className={styles.innerMenuDesc}>Make a squad to face another team</p>
         </div>
       )}
     </div>
