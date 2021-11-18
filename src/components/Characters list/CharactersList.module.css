@@ -1,7 +1,7 @@
 .charactersList {
   display: flex;
   flex-direction: column;
-  height: 30vh;
+  height: 20vh;
   left: 5vw;
   overflow-x: scroll;
   overflow-y: hidden;
