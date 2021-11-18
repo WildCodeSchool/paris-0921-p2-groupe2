@@ -32,7 +32,7 @@ export default function CharacterDetail({ character }) {
           <p>Combat : {character.powerstats.combat != 'null' ? character.powerstats.combat : 15}</p>
           <h3>Other facts</h3>
           {character.appearance.race != 'null' && <p>{character.appearance.race}</p>}
-          <p>Alignement : {character.biography.alignment}</p>
+          {character.biography.alignment != '-' && <p>Alignement : {character.biography.alignment}</p>}
           {character.appearance.height[1][0] != 0 && <p>Height : {character.appearance.height[1]}</p>}
           {character.appearance.weight[1][0] != 0 && <p>Weight : {character.appearance.weight[1]}</p>}
         </div>
