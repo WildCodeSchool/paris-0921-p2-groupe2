@@ -88,8 +88,8 @@
 
 @media screen and (min-width: 768px) {
   .teamsContainer {
-    width: 60vw;
+    width: 40vw;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 2vh auto;
   }
 }
