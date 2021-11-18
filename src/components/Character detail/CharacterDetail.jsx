@@ -36,7 +36,7 @@ export default function CharacterDetail({ character }) {
           {character.appearance.height[1][0] != 0 && <p>Height : {character.appearance.height[1]}</p>}
           {character.appearance.weight[1][0] != 0 && <p>Weight : {character.appearance.weight[1]}</p>}
         </div>
-        <button onClick={updatePlayer} value={character.id}>
+        <button className={styles.chooseButton} onClick={updatePlayer} value={character.id}>
           Choose
         </button>
       </div>
