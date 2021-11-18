@@ -51,12 +51,12 @@ export default function ChallengeMode() {
       <h2 className={styles.challengeTitle}>Challenge</h2>
       <div className={styles.charactersContainer}>
         <div className={styles.challengeCharacter}>
-          <h3 className={styles.characterIntro}>Your opponent</h3>
-          {playerA && <ChallengeDetail character={playerA} />}
-        </div>
-        <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your choice</h3>
           {playerA && <ChallengeDetail character={selectedCharacter} />}
+        </div>
+        <div className={styles.challengeCharacter}>
+          <h3 className={styles.characterIntro}>Your opponent</h3>
+          {playerA && <ChallengeDetail character={playerA} />}
         </div>
       </div>
       {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
