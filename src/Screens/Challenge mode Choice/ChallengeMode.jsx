@@ -28,6 +28,10 @@ export default function ChallengeMode() {
         .then((res) => res.json())
         .then((data) => setPlayerA(data));
     }
+
+    fetch('../../fakeApi.json')
+      .then((res) => res.json())
+      .then((data) => setHeroesList(data));
   }, []);
 
   useEffect(() => {
