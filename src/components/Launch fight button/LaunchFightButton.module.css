@@ -12,7 +12,10 @@
   padding: 10px 20px;
   text-align: center;
   margin-bottom: 25px;
+  border-radius: 10rem;
+  letter-spacing: .17rem;
 }
+
 
 .buttonsContainer {
   width: 100vw;
