@@ -9,6 +9,7 @@
   font-family: var(--main-font-family);
   font-size: 14px;
   font-weight: bold;
+  margin-top: 5px;
   padding: 10px 20px;
   text-align: center;
 }
