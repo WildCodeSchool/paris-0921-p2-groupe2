@@ -13,7 +13,7 @@ export default function CharactersList({ heroesList, selected }) {
 
   return (
     <div className={styles.charactersList}>
-      <ul className={styles.cards}>
+      <ul className={styles.cards} style={{ width: `${basicRoster.length * 112}px` }}>
         {basicRoster &&
           basicRoster.map((character, index) => {
             return <CharacterCard key={index} character={character} handleSelected={selected} />;
