@@ -63,7 +63,6 @@ export default function ChallengeMode() {
           {playerA && <ChallengeDetail character={playerA} />}
         </div>
       </div>
-      {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
       <form className={styles.searchItem} onSubmit={searchCharacters}>
         <label>
           <input className={styles.searchText} type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
@@ -71,6 +70,7 @@ export default function ChallengeMode() {
         </label>
       </form>
       <div className={styles.challengeContainer}>{heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}</div>
+      {selectedCharacter.name != 'Choose a fighter' && <LaunchChallengeButton />}
     </div>
   );
 }

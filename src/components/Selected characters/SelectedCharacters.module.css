@@ -14,9 +14,9 @@
 }
 
 .character {
-  font-family: var(--main-font-family);
+  padding: 5px 10px;
+  font-family: var(--second-font-family);
   background-color: var(--dark-grey);
-  padding: 5px 10px 0px 10px;
-  color: var(--light-yellow);
+  color: var(--yellow);
   text-align: center;
 }
