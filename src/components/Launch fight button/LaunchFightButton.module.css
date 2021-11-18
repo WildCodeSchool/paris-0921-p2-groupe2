@@ -7,7 +7,6 @@
 }
 
 .launchFightButton {
-  background-color: var(--yellow);
   border: solid 1px var(--dark-grey);
   box-shadow: 5px 5px 10px var(--dark-grey);
   color: var(--black);
@@ -18,10 +17,7 @@
   text-align: center;
   margin-bottom: 25px;
   border-radius: 10rem;
-  letter-spacing: 0.17rem;
-
   display: inline-block;
-  text-transform: uppercase;
   transition: all 0.3s;
   font-size: 1rem;
   position: relative;
@@ -58,7 +54,6 @@
 }
 
 .launchFightButtonDark {
-  background-color: var(--yellow);
   border: solid 1px var(--dark-grey);
   box-shadow: 5px 5px 10px var(--dark-grey);
   color: var(--yellow);
@@ -69,10 +64,7 @@
   text-align: center;
   margin-bottom: 25px;
   border-radius: 10rem;
-  letter-spacing: 0.17rem;
-
   display: inline-block;
-  text-transform: uppercase;
   transition: all 0.3s;
   font-size: 1rem;
   position: relative;
