@@ -1,5 +1,11 @@
 @import '../../Fonts.css';
 
+.buttonsContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
 .launchFightButton {
   background-color: var(--yellow);
   border: solid 1px var(--dark-grey);
@@ -7,18 +13,98 @@
   color: var(--black);
   cursor: pointer;
   font-family: var(--main-font-family);
-  font-size: 14px;
   font-weight: bold;
   padding: 10px 20px;
   text-align: center;
   margin-bottom: 25px;
   border-radius: 10rem;
-  letter-spacing: .17rem;
+  letter-spacing: 0.17rem;
+
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.launchFightButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellow);
+  border-radius: 10rem;
+  z-index: -2;
 }
 
+.launchFightButton::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--light-yellow);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
 
-.buttonsContainer {
-  width: 100vw;
-  display: flex;
-  justify-content: space-around;
+.launchFightButton:hover::before {
+  width: 100%;
+}
+
+.launchFightButtonDark {
+  background-color: var(--yellow);
+  border: solid 1px var(--dark-grey);
+  box-shadow: 5px 5px 10px var(--dark-grey);
+  color: var(--black);
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  border-radius: 10rem;
+  letter-spacing: 0.17rem;
+
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.launchFightButtonDark::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-grey);
+  color: var(--light-yellow);
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.launchFightButtonDark::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--light-yellow);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+:hover::before {
+  width: 100%;
 }

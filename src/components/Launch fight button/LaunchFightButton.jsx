@@ -11,7 +11,7 @@ export default function LaunchFightButton() {
   return (
     <div className={styles.buttonsContainer}>
       <Link to="/fight">
-        <button className={styles.launchFightButton}>FIGHT</button>
+        <button className={styles.launchFightButtonDark}>FIGHT</button>
       </Link>
       <Link to="/options">
         <button className={styles.launchFightButton}>OPTIONS</button>
