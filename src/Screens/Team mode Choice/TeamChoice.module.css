@@ -1,12 +1,12 @@
 @import '../../Fonts.css';
 
-.teamTitle {
-  color: var(--yellow);
-  margin: 0 auto;
-  background-color: var(--black);
+.challengeTitle {
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  font-size: x-large;
+  font-style: italic;
+  margin-bottom: 1vw;
   text-align: center;
-  padding: 0 0;
-  font-family: var(--main-font-family);
 }
 
 .choiceContener {
