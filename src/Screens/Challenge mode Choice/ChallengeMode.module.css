@@ -10,8 +10,12 @@
 }
 
 .characterIntro {
-  margin: 2vh 0;
+  padding: 2vh 0;
+  margin: 0;
+  width: 49vw;
   font-family: var(--second-font-family);
+  background-color: var(--dark-grey);
+  color: var(--yellow);
   text-align: center;
 }
 
