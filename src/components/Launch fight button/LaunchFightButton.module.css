@@ -61,7 +61,7 @@
   background-color: var(--yellow);
   border: solid 1px var(--dark-grey);
   box-shadow: 5px 5px 10px var(--dark-grey);
-  color: var(--black);
+  color: var(--yellow);
   cursor: pointer;
   font-family: var(--main-font-family);
   font-weight: bold;
@@ -73,7 +73,7 @@
 
   display: inline-block;
   text-transform: uppercase;
-  transition: all 0.3s;
+  transition: all 3s;
   font-size: 1rem;
   position: relative;
   overflow: hidden;
@@ -86,8 +86,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--dark-grey);
-  color: var(--light-yellow);
+  background-color: var(--black);
   border-radius: 10rem;
   z-index: -2;
 }
@@ -99,7 +98,7 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: var(--light-yellow);
+  background-color: var(--middle-grey);
   transition: all 0.3s;
   border-radius: 10rem;
   z-index: -1;
