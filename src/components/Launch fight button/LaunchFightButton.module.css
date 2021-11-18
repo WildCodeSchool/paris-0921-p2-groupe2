@@ -73,7 +73,7 @@
 
   display: inline-block;
   text-transform: uppercase;
-  transition: all 3s;
+  transition: all 0.3s;
   font-size: 1rem;
   position: relative;
   overflow: hidden;
@@ -108,7 +108,7 @@
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .launchFightButton {
+  .buttonsContainer {
     margin: 2vh;
   }
 }
