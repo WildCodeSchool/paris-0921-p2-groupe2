@@ -52,7 +52,6 @@ export default function ChallengeMode() {
 
   return (
     <div>
-      <h2 className={styles.challengeTitle}>Challenge</h2>
       <div className={styles.charactersContainer}>
         <div className={styles.challengeCharacter}>
           <h3 className={styles.characterIntro}>Your choice</h3>

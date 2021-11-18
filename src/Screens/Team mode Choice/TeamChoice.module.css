@@ -1,14 +1,5 @@
 @import '../../Fonts.css';
 
-.challengeTitle {
-  color: var(--dark-grey);
-  font-family: var(--second-font-family);
-  font-size: x-large;
-  font-style: italic;
-  margin-bottom: 1vw;
-  text-align: center;
-}
-
 .choiceContener {
   align-items: center;
   display: flex;

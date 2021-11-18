@@ -1,17 +1,8 @@
 @import '../../Fonts.css';
 
-.challengeTitle {
-  color: var(--dark-grey);
-  font-family: var(--second-font-family);
-  font-size: x-large;
-  font-style: italic;
-  margin-bottom: 1vw;
-  text-align: center;
-}
-
 .characterIntro {
   padding: 2vh 0;
-  margin: 0;
+  margin: 0.1em auto 0 auto;
   width: 49vw;
   font-family: var(--second-font-family);
   background-color: var(--dark-grey);

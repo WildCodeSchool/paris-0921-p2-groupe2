@@ -40,7 +40,6 @@ export default function TeamChoice() {
 
   return (
     <div>
-      <h2 className={styles.challengeTitle}>Team Fight</h2>
       <div className={styles.teamsContainer}>
         {teamA && <SelectedTeam team={teamA} title={'Team A'} />}
         {teamB && <SelectedTeam team={teamB} title={'Team B'} />}
