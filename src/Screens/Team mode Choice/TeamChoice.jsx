@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import FighterContext from '../../contexts/FighterContext';
 
+import LaunchTeamFightButton from '../../components/Launch team fight button/LaunchTeamFightButton';
 import SelectedTeam from '../../components/Selected team/SelectedTeam';
 import TeamMemberDetail from '../../components/Team member detail/TeamMemberDetail';
 import CharactersList from '../../components/Characters list/CharactersList';
@@ -52,11 +52,7 @@ export default function TeamChoice() {
           </form>
           {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
         </div>
-        <div className={styles.buttonContainer}>
-          <Link to="/teamfight">
-            <button className={styles.launchFightButton}>FIGHT</button>
-          </Link>
-        </div>
+        <div className={styles.buttonContainer}>{teamA.length != 0 && teamB.length != 0 && <LaunchTeamFightButton />}</div>
       </div>
     </div>
   );
