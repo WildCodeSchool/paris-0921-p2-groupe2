@@ -19,3 +19,8 @@
   display: flex;
   justify-content: space-around;
 }
+@media screen and (min-width: 768px) {
+  .launchFightButton {
+    margin: 2vh;
+  }
+}
