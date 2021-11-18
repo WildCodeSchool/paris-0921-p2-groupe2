@@ -7,7 +7,7 @@ import styles from './Team.module.css';
 export default function Team() {
   return (
     <div>
-      <p className={styles.teamTitle}>Who is behin this wonderderful app ?</p>
+      <p className={styles.teamTitle}>Who is behind this wonderful app ?</p>
       <div className={styles.Team}>
         <FlipCard
           name="Vincent"
@@ -15,6 +15,7 @@ export default function Team() {
           contentSpec="Algorithm master"
           contentHero="Favorite Fighter:Batman"
           contentWeapon="Favorite Weapon:Tank"
+          gitHubLink="https://github.com/VincentCMLejeune"
         />
         <FlipCard
           name="Charlotte"
@@ -22,6 +23,7 @@ export default function Team() {
           contentSpec="Style Tammer"
           contentHero="Favorite Fighter:Harley Queen"
           contentWeapon="Favorite Weapon:Everybody is everywhere"
+          gitHubLink="https://github.com/Charlotte-Men"
         />
         <FlipCard
           name="Philippe"
@@ -29,6 +31,7 @@ export default function Team() {
           contentSpec="Welcoming chief"
           contentHero="Favorite Fighter: Sauron"
           contentWeapon="Favorite Weapon: The Delorean"
+          gitHubLink="https://github.com/110111-1"
         />
         <FlipCard
           name="Isabelle"
@@ -36,6 +39,7 @@ export default function Team() {
           contentSpec="Personnal brander"
           contentHero="Favorite Fighter:Black widow"
           contentWeapon="Favorite Weapon:Panoramix potion"
+          gitHubLink="https://github.com/isamj27950"
         />
       </div>
     </div>
