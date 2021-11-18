@@ -2,28 +2,39 @@ import React, { useContext } from 'react';
 
 import FighterContext from '../../contexts/FighterContext';
 
+import defaultPicture from '../../../assets/HeroPic-default.png';
+
 import styles from './CharacterDetail.module.css';
 
-function CharacterDetail({ character }) {
+export default function CharacterDetail({ character }) {
   const { updatePlayer } = useContext(FighterContext);
 
   return (
     <div className={styles.charactersCard}>
-      <img className={styles.detailImage} src={character.image.url} alt={character.name} />
+      <img
+        className={styles.detailImage}
+        src={character.image.url}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = defaultPicture;
+        }}
+        alt={character.name}
+      />
       <div className={styles.detailStats}>
         <div>
           <h2>{character.name}</h2>
           <h3>Power stats</h3>
-          <p>intelligence : {character.powerstats.intelligence}</p>
-          <p>strength : {character.powerstats.strength}</p>
-          <p>speed : {character.powerstats.speed}</p>
-          <p>durability : {character.powerstats.durability}</p>
-          <p>power : {character.powerstats.power}</p>
-          <p>combat : {character.powerstats.combat}</p>
+          <p>Intelligence : {character.powerstats.intelligence != 'null' ? character.powerstats.intelligence : 15}</p>
+          <p>Strength : {character.powerstats.strength != 'null' ? character.powerstats.strength : 15}</p>
+          <p>Speed : {character.powerstats.speed != 'null' ? character.powerstats.speed : 15}</p>
+          <p>Durability : {character.powerstats.durability != 'null' ? character.powerstats.durability : 15}</p>
+          <p>Power : {character.powerstats.power != 'null' ? character.powerstats.power : 15}</p>
+          <p>Combat : {character.powerstats.combat != 'null' ? character.powerstats.combat : 15}</p>
           <h3>Other facts</h3>
+          {character.appearance.race != 'null' && <p>{character.appearance.race}</p>}
           <p>Alignement : {character.biography.alignment}</p>
-          <p>Height : {character.appearance.height[1]}</p>
-          <p>Weight : {character.appearance.weight[1]}</p>
+          {character.appearance.height[1][0] != 0 && <p>Height : {character.appearance.height[1]}</p>}
+          {character.appearance.weight[1][0] != 0 && <p>Weight : {character.appearance.weight[1]}</p>}
         </div>
         <button onClick={updatePlayer} value={character.id}>
           Choose
@@ -32,5 +43,3 @@ function CharacterDetail({ character }) {
     </div>
   );
 }
-
-export default CharacterDetail;

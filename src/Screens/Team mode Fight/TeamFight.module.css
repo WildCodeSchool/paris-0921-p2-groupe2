@@ -37,8 +37,22 @@
   padding: 20px;
 }
 
+.teamsDisplay {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
 @media screen and (min-width: 768px) {
-  .fightingComponent {
+  .teamsDisplay {
     width: 50vw;
+  }
+  .endgameChoice {
+    justify-content: space-between;
+    left: 25vw;
+    width: 50vw;
+  }
+  .endgameChoice button {
+    margin: 2vw 0;
   }
 }

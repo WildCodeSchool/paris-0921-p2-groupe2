@@ -20,11 +20,15 @@ import styles from './App.module.css';
 function App() {
   const [playerA, setPlayerA] = useState('');
   const [playerB, setPlayerB] = useState('');
+  const [teamA, setTeamA] = useState([]);
+  const [teamB, setTeamB] = useState([]);
   const [options, setOptions] = useState('');
 
   function resetGame() {
     setPlayerA('');
     setPlayerB('');
+    setTeamA([]);
+    setTeamB([]);
     setOptions('');
   }
 
@@ -46,9 +50,13 @@ function App() {
         value={{
           playerA: playerA,
           playerB: playerB,
+          teamA: teamA,
+          teamB: teamB,
           options: options,
           setPlayerA: setPlayerA,
           setPlayerB: setPlayerB,
+          setTeamA: setTeamA,
+          setTeamB: setTeamB,
           setOptions: setOptions,
           updatePlayer: updatePlayer,
           resetGame: resetGame,

@@ -4,7 +4,7 @@ import CharacterCard from '../Character card/CharacterCard';
 
 import styles from './CharactersList.module.css';
 
-function CharactersList({ heroesList, selected }) {
+export default function CharactersList({ heroesList, selected }) {
   let basicRoster = [];
 
   for (let key in heroesList) {
@@ -26,5 +26,3 @@ function CharactersList({ heroesList, selected }) {
     </div>
   );
 }
-
-export default CharactersList;

@@ -2,8 +2,8 @@
   background-color: transparent;
   width: 40vw;
   height: 60vw;
-
   perspective: 1000px;
+  transition: 1s ease-in-out;
   transform-style: preserve-3d;
   position: relative;
   display: flex;

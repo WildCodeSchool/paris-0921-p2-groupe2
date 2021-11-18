@@ -107,3 +107,8 @@
 :hover::before {
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .launchFightButton {
+    margin: 2vh;
+  }
+}
