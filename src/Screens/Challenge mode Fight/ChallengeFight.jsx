@@ -44,13 +44,17 @@ export default function ChallengeFight() {
 
       <div className={styles.endgameChoice}>
         <Link to="/challenge">
-          <button>Try again</button>
+          <button className={styles.choiceButton}>Try again</button>
         </Link>
         <Link to="/challenge">
-          <button onClick={resetGame}>New challenge</button>
+          <button className={styles.choiceButtonLight} onClick={resetGame}>
+            New challenge
+          </button>
         </Link>
         <Link to="/">
-          <button onClick={resetGame}>Main menu</button>
+          <button className={styles.choiceButton} onClick={resetGame}>
+            Main menu
+          </button>
         </Link>
       </div>
     </div>

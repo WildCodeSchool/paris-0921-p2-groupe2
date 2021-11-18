@@ -37,10 +37,14 @@ export default function TeamFight() {
       {report && <TeamFightReport report={report} />}
       <div className={styles.endgameChoice}>
         <Link to="/team">
-          <button onClick={resetGame}>Another battle</button>
+          <button className={styles.choiceButtonLight} onClick={resetGame}>
+            Another battle
+          </button>
         </Link>
         <Link to="/">
-          <button onClick={resetGame}>Main menu</button>
+          <button className={styles.choiceButton} onClick={resetGame}>
+            Main menu
+          </button>
         </Link>
       </div>
     </div>

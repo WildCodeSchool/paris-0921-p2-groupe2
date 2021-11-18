@@ -52,9 +52,11 @@ export default function TeamChoice() {
           </form>
           {heroesList && <CharactersList heroesList={heroesList} selected={setSelectedCharacter} />}
         </div>
-        <Link to="/teamfight">
-          <button className={styles.launchfightbutton}>FIGHT</button>
-        </Link>
+        <div className={styles.buttonContainer}>
+          <Link to="/teamfight">
+            <button className={styles.launchFightButton}>FIGHT</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -18,4 +18,5 @@
   background-color: var(--dark-grey);
   padding: 5px 10px 0px 10px;
   color: var(--light-yellow);
+  text-align: center;
 }

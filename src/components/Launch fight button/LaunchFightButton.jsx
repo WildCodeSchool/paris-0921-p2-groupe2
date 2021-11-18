@@ -10,13 +10,13 @@ export default function LaunchFightButton() {
 
   return (
     <div className={styles.buttonsContainer}>
+      <Link to="/options">
+        <button className={styles.launchFightButtonDark}>OPTIONS</button>
+      </Link>
       <Link to="/fight">
         <button className={styles.launchFightButton}>FIGHT</button>
       </Link>
-      <Link to="/options">
-        <button className={styles.launchFightButton}>OPTIONS</button>
-      </Link>
-      <button className={styles.launchFightButton} onClick={resetGame}>
+      <button className={styles.launchFightButtonDark} onClick={resetGame}>
         RESET
       </button>
     </div>
