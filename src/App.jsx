@@ -17,7 +17,7 @@ import ChallengeMode from './Screens/Challenge mode Choice/ChallengeMode';
 import Form from './Screens/Free Mode Options/OptionsForm';
 
 import styles from './App.module.css';
-function App() {
+export default function App() {
   const [playerA, setPlayerA] = useState('');
   const [playerB, setPlayerB] = useState('');
   const [teamA, setTeamA] = useState([]);
@@ -99,5 +99,3 @@ function App() {
     </main>
   );
 }
-
-export default App;

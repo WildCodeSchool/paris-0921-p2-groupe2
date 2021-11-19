@@ -13,7 +13,7 @@ export default function ChallengeReport(props) {
   const FighterA = new Fighter(playerA);
   const FighterB = new Fighter(playerB);
 
-  const announcement = report.shift().split(' ').reverse().join(' ');
+  const announcement = report.shift().split(' VS ').reverse().join(' VS ');
   const result = report.pop()[1];
 
   return (
