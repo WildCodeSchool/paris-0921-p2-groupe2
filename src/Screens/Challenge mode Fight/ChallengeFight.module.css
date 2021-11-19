@@ -1,0 +1,128 @@
+@import '../../Fonts.css';
+
+.fightingComponent {
+  align-items: center;
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100vw;
+}
+
+.endgameChoice {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 80vh;
+  width: 100vw;
+  margin-top: 0.5em;
+}
+
+.choiceButton {
+  font-size: large;
+  font-weight: bold;
+  padding: 5px;
+  height: 5em !important;
+  font-size: 1em;
+  height: 3.5em;
+  width: 100%;
+  border: solid 1px var(--dark-grey);
+  box-shadow: 5px 5px 10px var(--dark-grey);
+  color: var(--yellow);
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10rem;
+  display: inline-block;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.choiceButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.choiceButton::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--middle-grey);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+:hover::before {
+  width: 100%;
+}
+
+.choiceButtonLight {
+  border: solid 1px var(--dark-grey);
+  box-shadow: 5px 5px 10px var(--dark-grey);
+  color: var(--black);
+  cursor: pointer;
+  height: 5em !important;
+  font-family: var(--main-font-family);
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10rem;
+  display: inline-block;
+  transition: all 0.3s;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.choiceButtonLight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellow);
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.choiceButtonLight::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--light-yellow);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+
+@media screen and (min-width: 768px) {
+  .fightingComponent {
+    width: 50vw;
+  }
+  .endgameChoice {
+    justify-content: space-between;
+    left: 25vw;
+    width: 50vw;
+  }
+  .endgameChoice button {
+    margin: 2vw 0;
+  }
+}

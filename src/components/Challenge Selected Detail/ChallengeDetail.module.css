@@ -1,0 +1,23 @@
+.charactersCard {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--second-font-family);
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
+.detailImage {
+  height: 31vh;
+  object-fit: cover;
+}
+
+.characterName {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .detailImage {
+    height: 33vh;
+  }
+}

@@ -1,45 +1,101 @@
 import React, { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Button from './Screens/Home/Button';
-import CharactersChoice from './Screens/Character Choice/CharactersChoice';
-import DisplayFight from './Screens/Fighting results/DisplayFight';
+import ChallengeFight from './Screens/Challenge mode Fight/ChallengeFight';
+import TeamChoice from './Screens/Team mode Choice/TeamChoice';
+import TeamFight from './Screens/Team mode Fight/TeamFight';
+import FighterContext from './contexts/FighterContext';
+import Menu3Modes from './Screens/Menu/Menu3Modes';
+import CharactersChoice from './Screens/Free Mode Choice/CharactersChoice';
+import DisplayFight from './Screens/Free Mode Fight/DisplayFight';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import LaunchFightButton from './components/Launch fight button/LaunchFightButton';
+import SelectedCharacters from './components/Selected characters/SelectedCharacters';
+import Team from './Screens/Team/Team';
+import ChallengeMode from './Screens/Challenge mode Choice/ChallengeMode';
+import Form from './Screens/Free Mode Options/OptionsForm';
 
 import styles from './App.module.css';
+export default function App() {
+  const [playerA, setPlayerA] = useState('');
+  const [playerB, setPlayerB] = useState('');
+  const [teamA, setTeamA] = useState([]);
+  const [teamB, setTeamB] = useState([]);
+  const [options, setOptions] = useState('');
 
-function App() {
-  const [heroA, setHeroA] = useState('');
-  const [heroB, setHeroB] = useState('');
+  function resetGame() {
+    setPlayerA('');
+    setPlayerB('');
+    setTeamA([]);
+    setTeamB([]);
+    setOptions('');
+  }
 
-  function selectFighter(e) {
-    if (heroA == '') {
-      setHeroA(e.target.value);
-    } else if (heroB == '') {
-      setHeroB(e.target.value);
+  function updatePlayer(e) {
+    if (playerA == '') {
+      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${e.target.value}`)
+        .then((res) => res.json())
+        .then((data) => setPlayerA(data));
+    } else if (playerB == '') {
+      fetch(`https://cors-bypass.tkzprod.dev/superheroapi.com/api/408055134055673/${e.target.value}`)
+        .then((res) => res.json())
+        .then((data) => setPlayerB(data));
     }
   }
 
   return (
     <main className={styles.mainContainer}>
-      <Header />
-      <div className={styles.bodyContainer}>
-        <Switch>
-          <Route exact path="/" component={Button} />
-          <Route path="/characterschoice">
-            <CharactersChoice handleChange={selectFighter} />
-            {heroB && <LaunchFightButton />}
-          </Route>
-          <Route path="/fight">
-            <DisplayFight heroA={heroA} heroB={heroB} />
-          </Route>
-        </Switch>
-      </div>
+      <FighterContext.Provider
+        value={{
+          playerA: playerA,
+          playerB: playerB,
+          teamA: teamA,
+          teamB: teamB,
+          options: options,
+          setPlayerA: setPlayerA,
+          setPlayerB: setPlayerB,
+          setTeamA: setTeamA,
+          setTeamB: setTeamB,
+          setOptions: setOptions,
+          updatePlayer: updatePlayer,
+          resetGame: resetGame,
+        }}
+      >
+        <Header />
+        <div className={styles.bodyContainer}>
+          <Switch>
+            <Route exact path="/" component={Menu3Modes} />
+            <Route path="/freemode">
+              <SelectedCharacters />
+              <CharactersChoice />
+              {playerB && <LaunchFightButton />}
+            </Route>
+            <Route path="/fight">
+              <DisplayFight />
+            </Route>
+            <Route path="/about">
+              <Team />
+            </Route>
+            <Route path="/challenge">
+              <ChallengeMode />
+            </Route>
+            <Route path="/challengefight">
+              <ChallengeFight />
+            </Route>
+            <Route path="/team">
+              <TeamChoice />
+            </Route>
+            <Route path="/teamfight">
+              <TeamFight />
+            </Route>
+            <Route path="/options">
+              <Form />
+            </Route>
+          </Switch>
+        </div>
+      </FighterContext.Provider>
       <Footer />
     </main>
   );
 }
-
-export default App;

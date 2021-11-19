@@ -1,0 +1,23 @@
+@import '../../Fonts.css';
+
+.Team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.teamTitle {
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  font-size: x-large;
+  font-style: italic;
+  margin-bottom: 2vw;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .Team {
+    height: 70vh;
+    width: 95vw;
+  }
+}

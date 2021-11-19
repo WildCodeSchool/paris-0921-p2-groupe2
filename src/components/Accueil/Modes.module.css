@@ -1,0 +1,108 @@
+@import '../../Fonts.css';
+
+.menuHeading {
+  color: var(--yellow);
+  background-color: var(--dark-grey);
+  border: none;
+}
+.menuContainer {
+  display: flex;
+  align-items: center;
+}
+button {
+  border: none;
+  background-color: var(--dark-grey);
+}
+.menuShort {
+  width: 84vw;
+}
+.menuContainer h1 {
+  font-family: var(--main-font-family);
+  font-size: 3.2vh;
+  color: var(--light-yellow);
+  margin: 1.5vh 0;
+}
+.menuContainer p {
+  font-family: var(--second-font-family);
+  font-size: 2vh;
+  color: var(--yellow);
+  margin: 1vh 0;
+}
+.launchButton {
+  background-image: url('../../../assets/BlasonJ.png');
+  background-position: center;
+  background-size: cover;
+  color: var(--black);
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-size: 0.9em;
+  width: 14vw;
+  height: 14vw;
+  margin: 1vh;
+}
+.menuContent {
+  display: flex;
+  box-align: center;
+  align-items: flex-end;
+  justify-content: center;
+}
+.menuContent img {
+  width: 100vw;
+  max-height: 32vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.innerMenuDesc {
+  position: absolute;
+  width: 90%;
+  text-align: center;
+  color: var(--yellow);
+  background-color: var(--dark-grey);
+  opacity: 0.8;
+  padding: 0.5em;
+  font-size: 1.2em;
+  font-family: var(--second-font-family);
+}
+
+@media screen and (min-width: 768px) {
+  .menuChallenge {
+    width: 28vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .menuHeading {
+    height: 12vh;
+  }
+  .menuContainer {
+    display: flex;
+    align-items: center;
+  }
+  .menuShort {
+    width: 21vw;
+    padding: 0;
+  }
+  .menuContainer p {
+    display: none;
+  }
+  .launchButton {
+    height: 9vh;
+    width: 9vh;
+    margin: 1.5vh;
+  }
+  .menuContent {
+    width: 28vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  .menuContent img {
+    width: 28vw;
+    max-height: 50vh;
+  }
+  .innerMenuDesc {
+    width: 28vw;
+    font-size: 1em;
+    padding: 0;
+  }
+}

@@ -1,0 +1,76 @@
+@import '../../Fonts.css';
+
+.characterIntro {
+  padding: 2vh 0;
+  margin: 0.1em auto 0 auto;
+  width: 49vw;
+  font-family: var(--second-font-family);
+  background-color: var(--dark-grey);
+  color: var(--yellow);
+  text-align: center;
+}
+
+.choiceIntro {
+  margin: 0;
+}
+
+.challengeContainer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: auto auto;
+  width: 100vw;
+}
+
+.challengeCharacter {
+  width: 50vw;
+}
+
+.charactersContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.searchItem {
+  text-align: center;
+}
+
+.searchText {
+  background-image: url('../../../assets/search.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: var(--second-font-family);
+  margin-top: 10px;
+}
+
+.searchButton {
+  background-color: var(--dark-grey);
+  border: none;
+  color: var(--light-yellow);
+  font-family: var(--second-font-family);
+  margin: 0 2vh;
+}
+
+@media screen and (min-width: 768px) {
+  .challengeTitle {
+    margin-bottom: 1vh;
+  }
+  .challengeCharacter {
+    height: 35vh;
+    margin: 0 2vw;
+    width: 18vw;
+  }
+  .characterIntro {
+    margin: 0;
+    width: 100%;
+  }
+  .searchItem {
+    margin-top: 1vh;
+  }
+  .charactersContainer {
+    height: 41vh;
+    margin: 2vh 0;
+  }
+}

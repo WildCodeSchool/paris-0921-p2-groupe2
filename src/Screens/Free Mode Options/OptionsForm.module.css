@@ -1,0 +1,174 @@
+@import '../../Fonts.css';
+
+.optionChoice {
+  width: 100vw;
+  background-color: var(--dark-grey);
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--yellow);
+  align-items: center;
+}
+.optionChoice h1 {
+  font-family: var(--main-font-family);
+  font-size: x-large;
+  color: var(--light-yellow);
+  margin-bottom: 0;
+}
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.choiceFormTitle {
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  text-align: center;
+  margin: 1vh 0;
+}
+.choiceFormArena {
+  color: var(--dark-grey);
+  font-family: var(--second-font-family);
+  text-align: center;
+  margin: 1vh 0 7vh 0;
+}
+.choiceForm {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-grey);
+  color: var(--black);
+  font-family: var(--second-font-family);
+  width: 85vw;
+  margin: 2vh 0;
+}
+.firstFormLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0.2vh 2vh;
+}
+.firstFormLine p {
+  width: 13vw;
+  text-align: center;
+  margin: 0.5vh 0;
+}
+.formLine {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 0.2vh 2vh;
+}
+.formFirstColumn {
+  height: auto;
+  margin: 0;
+  color: var(--dark-grey);
+}
+
+.formInput {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formInput input {
+  margin: 0 4.5vw;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--dark-grey);
+  transition: 0.2s all linear;
+}
+.formInput input:checked {
+  border: 6px solid var(--dark-grey);
+}
+
+.buttonContainer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-grey);
+}
+
+.launchFightButton {
+  border: solid 1px var(--dark-grey);
+  box-shadow: 5px 5px 10px var(--dark-grey);
+  color: var(--black);
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-weight: bold;
+  margin: 5px auto 25px auto;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10rem;
+  display: inline-block;
+  transition: all 0.3s;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.launchFightButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellow);
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.launchFightButton::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--light-yellow);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.launchFightButton:hover::before {
+  width: 100%;
+}
+
+:hover::before {
+  width: 100%;
+}
+
+#weather {
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .optionChoice {
+    width: 95vw;
+    margin-top: 2vh;
+  }
+  .optionsContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .choiceForm {
+    width: 29vw;
+    margin: 2vh 2vh;
+  }
+  .formInput input {
+    margin: 0 1.5vw;
+  }
+  .firstFormLine p {
+    width: 4.5vw;
+  }
+  .launchFightButton {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}

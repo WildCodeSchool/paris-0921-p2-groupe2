@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './Footer.module.css';
 
-function Footer() {
+export default function Footer() {
   return (
     <div className={styles.footer}>
-      <p className={styles.hfooter}>Who is behind this wonderful app ?</p>
+      <Link to="/about">
+        <p className={styles.hfooter}>About</p>
+      </Link>
     </div>
   );
 }
-export default Footer;
