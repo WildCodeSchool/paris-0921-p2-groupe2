@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Kumar+One&display=swap');
 
+.app {
+  margin: -10px;
+}
+
 .mainContainer {
   background-color: var(--light-grey);
   display: grid;
