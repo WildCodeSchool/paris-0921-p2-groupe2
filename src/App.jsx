@@ -45,57 +45,59 @@ export default function App() {
   }
 
   return (
-    <main className={styles.mainContainer}>
-      <FighterContext.Provider
-        value={{
-          playerA: playerA,
-          playerB: playerB,
-          teamA: teamA,
-          teamB: teamB,
-          options: options,
-          setPlayerA: setPlayerA,
-          setPlayerB: setPlayerB,
-          setTeamA: setTeamA,
-          setTeamB: setTeamB,
-          setOptions: setOptions,
-          updatePlayer: updatePlayer,
-          resetGame: resetGame,
-        }}
-      >
-        <Header />
-        <div className={styles.bodyContainer}>
-          <Switch>
-            <Route exact path="/" component={Menu3Modes} />
-            <Route path="/freemode">
-              <SelectedCharacters />
-              <CharactersChoice />
-              {playerB && <LaunchFightButton />}
-            </Route>
-            <Route path="/fight">
-              <DisplayFight />
-            </Route>
-            <Route path="/about">
-              <Team />
-            </Route>
-            <Route path="/challenge">
-              <ChallengeMode />
-            </Route>
-            <Route path="/challengefight">
-              <ChallengeFight />
-            </Route>
-            <Route path="/team">
-              <TeamChoice />
-            </Route>
-            <Route path="/teamfight">
-              <TeamFight />
-            </Route>
-            <Route path="/options">
-              <Form />
-            </Route>
-          </Switch>
-        </div>
-      </FighterContext.Provider>
-      <Footer />
-    </main>
+    <div className={styles.app}>
+      <main className={styles.mainContainer}>
+        <FighterContext.Provider
+          value={{
+            playerA: playerA,
+            playerB: playerB,
+            teamA: teamA,
+            teamB: teamB,
+            options: options,
+            setPlayerA: setPlayerA,
+            setPlayerB: setPlayerB,
+            setTeamA: setTeamA,
+            setTeamB: setTeamB,
+            setOptions: setOptions,
+            updatePlayer: updatePlayer,
+            resetGame: resetGame,
+          }}
+        >
+          <Header />
+          <div className={styles.bodyContainer}>
+            <Switch>
+              <Route exact path="/" component={Menu3Modes} />
+              <Route path="/freemode">
+                <SelectedCharacters />
+                <CharactersChoice />
+                {playerB && <LaunchFightButton />}
+              </Route>
+              <Route path="/fight">
+                <DisplayFight />
+              </Route>
+              <Route path="/about">
+                <Team />
+              </Route>
+              <Route path="/challenge">
+                <ChallengeMode />
+              </Route>
+              <Route path="/challengefight">
+                <ChallengeFight />
+              </Route>
+              <Route path="/team">
+                <TeamChoice />
+              </Route>
+              <Route path="/teamfight">
+                <TeamFight />
+              </Route>
+              <Route path="/options">
+                <Form />
+              </Route>
+            </Switch>
+          </div>
+        </FighterContext.Provider>
+        <Footer />
+      </main>
+    </div>
   );
 }
